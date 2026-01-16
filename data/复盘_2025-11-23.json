@@ -1,0 +1,1784 @@
+{
+  "nodes": [
+    {
+      "id": "1763906916898",
+      "type": "sectorNode",
+      "position": {
+        "x": -220.29279684275343,
+        "y": -235.27314114894514
+      },
+      "data": {
+        "label": "AI应用端",
+        "startDate": "2025-11-21",
+        "fundType": "游资",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [
+          "三六零、数据港"
+        ],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "divergence",
+          "stages": [
+            {
+              "id": "startup",
+              "label": "启动",
+              "color": "#f59e0b",
+              "bg": "#fef3c7"
+            },
+            {
+              "id": "rise",
+              "label": "主升",
+              "color": "#dc2626",
+              "bg": "#fef2f2"
+            },
+            {
+              "id": "divergence",
+              "label": "分歧",
+              "color": "#6366f1",
+              "bg": "#e0e7ff"
+            },
+            {
+              "id": "follow_up",
+              "label": "补涨",
+              "color": "#0ea5e9",
+              "bg": "#e0f2fe"
+            },
+            {
+              "id": "second_wave",
+              "label": "二波",
+              "color": "#059669",
+              "bg": "#ecfdf5"
+            },
+            {
+              "id": "decline",
+              "label": "退潮",
+              "color": "#64748b",
+              "bg": "#f8fafc"
+            },
+            {
+              "id": "switch",
+              "label": "切换",
+              "color": "#1e293b",
+              "bg": "#f1f5f9"
+            }
+          ],
+          "logs": {
+            "startup": "在市场极致二冰的时候，因为模型的迭代突破，推动应用端突破及能力增强  国外以谷歌为主，国内以阿里为主 后面持续突破延续热度"
+          }
+        },
+        "targetsStr": "三六零、数据港",
+        "endDate": "2025-11-26"
+      },
+      "width": 180,
+      "height": 111,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -220.29279684275343,
+        "y": -235.27314114894514
+      },
+      "dragging": false
+    },
+    {
+      "id": "1763906924583",
+      "type": "circleNode",
+      "position": {
+        "x": -631.2147032016906,
+        "y": -268.230681781849
+      },
+      "data": {
+        "label": "情绪",
+        "desc": "",
+        "color": "#ec4899",
+        "bgColor": "#fdf2f8",
+        "startDate": "2025-11-20",
+        "mood": "ice",
+        "endDate": "2025-11-23"
+      },
+      "width": 80,
+      "height": 80,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -631.2147032016906,
+        "y": -268.230681781849
+      },
+      "dragging": false
+    },
+    {
+      "id": "1763906975633",
+      "type": "diamondNode",
+      "position": {
+        "x": -459.8546952014004,
+        "y": -177.783843727369
+      },
+      "data": {
+        "label": "轮动试错方向",
+        "desc": "",
+        "color": "#f59e0b",
+        "bgColor": "#fffbeb",
+        "startDate": "2025-11-23",
+        "endDate": "2025-11-23"
+      },
+      "width": 100,
+      "height": 100,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -459.8546952014004,
+        "y": -177.783843727369
+      },
+      "dragging": false
+    },
+    {
+      "id": "1763907122308",
+      "type": "sectorNode",
+      "position": {
+        "x": -261.9151883521514,
+        "y": 312.2544682888626
+      },
+      "data": {
+        "label": "硬件业绩持续增长开发中国市场",
+        "startDate": "2025-11-23",
+        "fundType": "游资 机构",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "decline",
+          "stages": [
+            {
+              "id": "startup",
+              "label": "启动",
+              "color": "#f59e0b",
+              "bg": "#fef3c7"
+            },
+            {
+              "id": "rise",
+              "label": "主升",
+              "color": "#dc2626",
+              "bg": "#fef2f2"
+            },
+            {
+              "id": "divergence",
+              "label": "分歧",
+              "color": "#6366f1",
+              "bg": "#e0e7ff"
+            },
+            {
+              "id": "follow_up",
+              "label": "补涨",
+              "color": "#0ea5e9",
+              "bg": "#e0f2fe"
+            },
+            {
+              "id": "second_wave",
+              "label": "二波",
+              "color": "#059669",
+              "bg": "#ecfdf5"
+            },
+            {
+              "id": "decline",
+              "label": "退潮",
+              "color": "#64748b",
+              "bg": "#f8fafc"
+            },
+            {
+              "id": "switch",
+              "label": "切换",
+              "color": "#1e293b",
+              "bg": "#f1f5f9"
+            }
+          ],
+          "logs": {
+            "switch": "市场不认可",
+            "decline": "市场不认可"
+          }
+        },
+        "targetsStr": ""
+      },
+      "width": 224,
+      "height": 91,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -261.9151883521514,
+        "y": 312.2544682888626
+      },
+      "dragging": false
+    },
+    {
+      "id": "1764000285961",
+      "type": "sectorNode",
+      "position": {
+        "x": -242.26990200594162,
+        "y": 11.92165093999057
+      },
+      "data": {
+        "label": "军工-美国借日本牵制中国",
+        "startDate": "2025-11-21",
+        "fundType": "游资",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [
+          "航天发展、长城军工"
+        ],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "startup",
+          "stages": [
+            {
+              "id": "startup",
+              "label": "启动",
+              "color": "#f59e0b",
+              "bg": "#fef3c7"
+            },
+            {
+              "id": "rise",
+              "label": "主升",
+              "color": "#dc2626",
+              "bg": "#fef2f2"
+            },
+            {
+              "id": "divergence",
+              "label": "分歧",
+              "color": "#6366f1",
+              "bg": "#e0e7ff"
+            },
+            {
+              "id": "follow_up",
+              "label": "补涨",
+              "color": "#0ea5e9",
+              "bg": "#e0f2fe"
+            },
+            {
+              "id": "second_wave",
+              "label": "二波",
+              "color": "#059669",
+              "bg": "#ecfdf5"
+            },
+            {
+              "id": "decline",
+              "label": "退潮",
+              "color": "#64748b",
+              "bg": "#f8fafc"
+            },
+            {
+              "id": "switch",
+              "label": "切换",
+              "color": "#1e293b",
+              "bg": "#fef3c7"
+            }
+          ],
+          "logs": {}
+        },
+        "targetsStr": "航天发展、长城军工",
+        "endDate": "2025-11-26"
+      },
+      "width": 193,
+      "height": 111,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -242.26990200594162,
+        "y": 11.92165093999057
+      },
+      "dragging": false
+    },
+    {
+      "id": "1764162784538",
+      "type": "sectorNode",
+      "position": {
+        "x": 115.74631849216846,
+        "y": -218.23745215313375
+      },
+      "data": {
+        "label": "谷歌推动CPO继续增长",
+        "startDate": "2025-11-26",
+        "fundType": "机构",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "divergence",
+          "stages": [
+            {
+              "id": "startup",
+              "label": "启动",
+              "color": "#f59e0b",
+              "bg": "#fef3c7"
+            },
+            {
+              "id": "rise",
+              "label": "主升",
+              "color": "#dc2626",
+              "bg": "#fef2f2"
+            },
+            {
+              "id": "divergence",
+              "label": "分歧",
+              "color": "#6366f1",
+              "bg": "#e0e7ff"
+            },
+            {
+              "id": "follow_up",
+              "label": "补涨",
+              "color": "#0ea5e9",
+              "bg": "#e0f2fe"
+            },
+            {
+              "id": "second_wave",
+              "label": "二波",
+              "color": "#059669",
+              "bg": "#ecfdf5"
+            },
+            {
+              "id": "decline",
+              "label": "退潮",
+              "color": "#64748b",
+              "bg": "#f8fafc"
+            },
+            {
+              "id": "switch",
+              "label": "切换",
+              "color": "#1e293b",
+              "bg": "#f1f5f9"
+            }
+          ],
+          "logs": {
+            "startup": "推动CPO走强"
+          }
+        },
+        "targetsStr": ""
+      },
+      "width": 180,
+      "height": 91,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 115.74631849216846,
+        "y": -218.23745215313375
+      },
+      "dragging": false
+    },
+    {
+      "id": "1764241635450",
+      "type": "circleNode",
+      "position": {
+        "x": 246.99606937954934,
+        "y": 74.83471559611388
+      },
+      "data": {
+        "label": "轮动",
+        "desc": "",
+        "color": "#ec4899",
+        "bgColor": "#fdf2f8",
+        "startDate": "2025-11-27",
+        "mood": "chaos"
+      },
+      "width": 80,
+      "height": 80,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 246.99606937954934,
+        "y": 74.83471559611388
+      },
+      "dragging": false
+    },
+    {
+      "id": "1764510479586",
+      "type": "sectorNode",
+      "position": {
+        "x": 3130.1139458028656,
+        "y": -27.341214504051436
+      },
+      "data": {
+        "label": "（技术突破）商业航天 这个方向走成了一个倒三角，开始带动板块，进行加速。明日“分歧”。缩容",
+        "startDate": "2025-11-28",
+        "fundType": "游资",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [
+          "航天发展（换手）、通宇科技（加速一字）"
+        ],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "c_1766925191005",
+          "stages": [
+            {
+              "id": "c_1764595821323",
+              "typeId": "startup",
+              "label": "启动",
+              "color": "#f59e0b",
+              "bg": "#fef3c7",
+              "time": "2025-12-1 21:30:21",
+              "remark": "可回收火箭"
+            },
+            {
+              "id": "c_1764679646957",
+              "typeId": "divergence",
+              "label": "分歧",
+              "color": "#6366f1",
+              "bg": "#e0e7ff",
+              "time": "2025-12-2 20:47:26",
+              "remark": "弱分歧转一致，资金换手继续向上"
+            },
+            {
+              "id": "c_1764852551961",
+              "typeId": "divergence",
+              "label": "分歧",
+              "color": "#6366f1",
+              "bg": "#e0e7ff",
+              "time": "2025-12-4 20:49:11",
+              "remark": "目前这个事情处于突破 在持续发展的阶段，后续的预期是有实验成功的预期。"
+            },
+            {
+              "id": "c_1765276743553",
+              "typeId": "follow_up",
+              "label": "补涨",
+              "color": "#0ea5e9",
+              "bg": "#e0f2fe",
+              "time": "2025-12-9 18:39:03",
+              "remark": "高切底补涨"
+            },
+            {
+              "id": "c_1765698337484",
+              "typeId": "second_wave",
+              "label": "二波",
+              "color": "#059669",
+              "bg": "#ecfdf5",
+              "time": "2025-12-14 15:45:37",
+              "remark": "再消费出现分歧时，资金开始逐步又回到商业航天"
+            },
+            {
+              "id": "c_1765811875894",
+              "typeId": "repair",
+              "label": "修复",
+              "color": "#1e293b",
+              "bg": "#f1f5f9",
+              "time": "2025-12-15 23:17:55",
+              "remark": "商业航天强过消费，走一个分歧转修复，明天预期是修复转分歧"
+            },
+            {
+              "id": "c_1765894333825",
+              "typeId": "repair",
+              "label": "修复",
+              "color": "#1e293b",
+              "bg": "#f1f5f9",
+              "time": "2025-12-16 22:12:13",
+              "remark": "修复3天持续，明天还是需要跟消费pk  明天预期 还是分歧转修复 "
+            },
+            {
+              "id": "c_1765955340844",
+              "typeId": "divergence",
+              "label": "分歧",
+              "color": "#6366f1",
+              "bg": "#e0e7ff",
+              "time": "2025-12-17 15:09:00",
+              "remark": "没有按照预期走分歧转修复  陈小群做多资金枯竭 明牌布局了整个航空核心标  需要其它资金来接手，然而大资金的仓位基本在ai科技方向，后面大概率是一个轮动上涨，另外有没有其它资金会到商业航空"
+            },
+            {
+              "id": "c_1766062985041",
+              "typeId": "divergence",
+              "label": "分歧",
+              "color": "#6366f1",
+              "bg": "#e0e7ff",
+              "time": "2025-12-18 21:03:05",
+              "remark": "修复转分歧  昨天机构抢市场热度，今天市场资金回流到商业航天，修复走到再次分歧，明天预期是什么？"
+            },
+            {
+              "id": "c_1766485312394",
+              "typeId": "decline",
+              "label": "退潮",
+              "color": "#64748b",
+              "bg": "#f8fafc",
+              "time": "2025-12-23 18:21:52",
+              "remark": "后期的主要还是类似稳定币那种走法，独立抱团逻辑"
+            },
+            {
+              "id": "c_1766925191005",
+              "typeId": "rise",
+              "label": "主升",
+              "color": "#dc2626",
+              "bg": "#fef2f2",
+              "time": "2025-12-28 20:33:11",
+              "remark": "整个方向走成了一个“倒三角”，开始加速，热度人气很高，很适合出货"
+            }
+          ],
+          "logs": {}
+        },
+        "targetsStr": "航天发展（换手）、通宇科技（加速一字）"
+      },
+      "width": 635,
+      "height": 107,
+      "selected": true,
+      "positionAbsolute": {
+        "x": 3130.1139458028656,
+        "y": -27.341214504051436
+      },
+      "dragging": false
+    },
+    {
+      "id": "1764595762375",
+      "type": "sectorNode",
+      "position": {
+        "x": 443.99606937954934,
+        "y": 163.84027617651233
+      },
+      "data": {
+        "label": "AI手机+AI眼镜新终端",
+        "startDate": "2025-12-01",
+        "fundType": "游资",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [
+          "中兴通信"
+        ],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "c_1764679753317",
+          "stages": [
+            {
+              "id": "c_1764595857699",
+              "typeId": "startup",
+              "label": "启动",
+              "color": "#f59e0b",
+              "bg": "#fef3c7",
+              "time": "2025-12-1 21:30:57",
+              "remark": "中心与字节合作"
+            },
+            {
+              "id": "c_1764679753317",
+              "typeId": "divergence",
+              "label": "分歧",
+              "color": "#6366f1",
+              "bg": "#e0e7ff",
+              "time": "2025-12-2 20:49:13",
+              "remark": "属于新型终端，发酵中，游资为主，资金比较分散"
+            }
+          ],
+          "logs": {}
+        },
+        "targetsStr": "中兴通信"
+      },
+      "width": 180,
+      "height": 107,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 443.99606937954934,
+        "y": 163.84027617651233
+      },
+      "dragging": false
+    },
+    {
+      "id": "1764679742129",
+      "type": "sectorNode",
+      "position": {
+        "x": 445.6089876900995,
+        "y": 324.12658074918625
+      },
+      "data": {
+        "label": "海峡两岸 高位抱团 人气溢价",
+        "startDate": "2025-11-26",
+        "fundType": "游资",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [
+          "合富中国、平潭发展"
+        ],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "",
+          "stages": [],
+          "logs": {}
+        },
+        "targetsStr": "合富中国、平潭发展"
+      },
+      "width": 203,
+      "height": 105,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 445.6089876900995,
+        "y": 324.12658074918625
+      },
+      "dragging": false
+    },
+    {
+      "id": "1764681420926",
+      "type": "sectorNode",
+      "position": {
+        "x": 1210.719016819264,
+        "y": -259.682984543653
+      },
+      "data": {
+        "label": "？？？？？",
+        "startDate": "2025-12-02",
+        "fundType": "机构",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "c_1764681452057",
+          "stages": [
+            {
+              "id": "c_1764681452057",
+              "typeId": "startup",
+              "label": "启动",
+              "color": "#f59e0b",
+              "bg": "#fef3c7",
+              "time": "2025-12-2 21:17:32",
+              "remark": "成长型+加真假白银的业绩  而不是纯概念的"
+            }
+          ],
+          "logs": {}
+        },
+        "targetsStr": ""
+      },
+      "width": 180,
+      "height": 91,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1210.719016819264,
+        "y": -259.682984543653
+      },
+      "dragging": false
+    },
+    {
+      "id": "1764726948796",
+      "type": "diamondNode",
+      "position": {
+        "x": 735.5624816997837,
+        "y": 184.63063933780128
+      },
+      "data": {
+        "label": "衙门影响控制了市场高度",
+        "desc": "短线情绪影响",
+        "color": "#f59e0b",
+        "bgColor": "#fffbeb",
+        "startDate": "2025-12-03"
+      },
+      "width": 100,
+      "height": 100,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 735.5624816997837,
+        "y": 184.63063933780128
+      },
+      "dragging": false
+    },
+    {
+      "id": "1764727030031",
+      "type": "diamondNode",
+      "position": {
+        "x": 929.1155556414359,
+        "y": 186.12452525870432
+      },
+      "data": {
+        "label": "切换",
+        "desc": "高切低，还是切换方向",
+        "color": "#f59e0b",
+        "bgColor": "#fffbeb",
+        "startDate": "2025-12-03"
+      },
+      "width": 100,
+      "height": 100,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 929.1155556414359,
+        "y": 186.12452525870432
+      },
+      "dragging": false
+    },
+    {
+      "id": "1764852407486",
+      "type": "sectorNode",
+      "position": {
+        "x": 1473.8862686852412,
+        "y": 20.943560696958627
+      },
+      "data": {
+        "label": "摩尔线程带动国产替代",
+        "startDate": "2025-12-04",
+        "fundType": "游资",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "c_1764852616132",
+          "stages": [
+            {
+              "id": "c_1764852616132",
+              "typeId": "startup",
+              "label": "启动",
+              "color": "#f59e0b",
+              "bg": "#fef3c7",
+              "time": "2025-12-4 20:50:16",
+              "remark": "摩尔线程明天上科创，对于明天超预期是继续向上，会有一定带动效应，国产替代的带动效应"
+            }
+          ],
+          "logs": {}
+        },
+        "targetsStr": ""
+      },
+      "width": 180,
+      "height": 91,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1473.8862686852412,
+        "y": 20.943560696958627
+      },
+      "dragging": false
+    },
+    {
+      "id": "1764852438276",
+      "type": "sectorNode",
+      "position": {
+        "x": 1297.2316815131692,
+        "y": 302.8390816892098
+      },
+      "data": {
+        "label": "机器人国外政策推动",
+        "startDate": "2025-12-04",
+        "fundType": "游资",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "c_1765119939585",
+          "stages": [
+            {
+              "id": "c_1764852671845",
+              "typeId": "startup",
+              "label": "启动",
+              "color": "#f59e0b",
+              "bg": "#fef3c7",
+              "time": "2025-12-4 20:51:11",
+              "remark": "美国政府驱动，后续如果能有一些持续性的消息出来 比如量产或者突破  会具备一定推动性"
+            },
+            {
+              "id": "c_1765119939585",
+              "typeId": "divergence",
+              "label": "分歧",
+              "color": "#6366f1",
+              "bg": "#e0e7ff",
+              "time": "2025-12-7 23:05:39",
+              "remark": "在题材炒作后，开航天开板后陈小群接货，然后一致在分歧买做T，周末消息刺激，叠加后续陆续的发射测试，因此明天的加速 没有买点。"
+            }
+          ],
+          "logs": {}
+        },
+        "targetsStr": ""
+      },
+      "width": 180,
+      "height": 91,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1297.2316815131692,
+        "y": 302.8390816892098
+      },
+      "dragging": false
+    },
+    {
+      "id": "1765119843618",
+      "type": "sectorNode",
+      "position": {
+        "x": 1658.460748713208,
+        "y": 366.3498353738957
+      },
+      "data": {
+        "label": "释放流通性，保险证券银行",
+        "startDate": "2025-12-05",
+        "fundType": "游资 机构",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "c_1765119878622",
+          "stages": [
+            {
+              "id": "c_1765119878622",
+              "typeId": "startup",
+              "label": "启动",
+              "color": "#f59e0b",
+              "bg": "#fef3c7",
+              "time": "2025-12-7 23:04:38",
+              "remark": "券商行业迎重磅利好，吴清称适度拓宽其杠杆上限；A股将迎超千亿增量资金  释放流通性  周五先知资金拿了先手，看看周一会不会冲高回落"
+            }
+          ],
+          "logs": {}
+        },
+        "targetsStr": ""
+      },
+      "width": 196,
+      "height": 91,
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 1658.460748713208,
+        "y": 366.3498353738957
+      }
+    },
+    {
+      "id": "1765120167645",
+      "type": "sectorNode",
+      "position": {
+        "x": 1423.347038762745,
+        "y": -260.1251914559968
+      },
+      "data": {
+        "label": "半导体设备",
+        "startDate": "2025-12-07",
+        "fundType": "游资",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "",
+          "stages": [],
+          "logs": {}
+        },
+        "targetsStr": ""
+      },
+      "width": 180,
+      "height": 89,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1423.347038762745,
+        "y": -260.1251914559968
+      },
+      "dragging": false
+    },
+    {
+      "id": "1765120182170",
+      "type": "sectorNode",
+      "position": {
+        "x": 1651.3207569489387,
+        "y": -259.89571131125854
+      },
+      "data": {
+        "label": "新型终端",
+        "startDate": "2025-12-07",
+        "fundType": "游资",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "",
+          "stages": [],
+          "logs": {}
+        },
+        "targetsStr": ""
+      },
+      "width": 180,
+      "height": 89,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1651.3207569489387,
+        "y": -259.89571131125854
+      },
+      "dragging": false
+    },
+    {
+      "id": "1765120199804",
+      "type": "sectorNode",
+      "position": {
+        "x": 1910.246332634231,
+        "y": -260.5028255384364
+      },
+      "data": {
+        "label": "电力吃紧",
+        "startDate": "2025-12-07",
+        "fundType": "游资",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "",
+          "stages": [],
+          "logs": {}
+        },
+        "targetsStr": ""
+      },
+      "width": 180,
+      "height": 89,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1910.246332634231,
+        "y": -260.5028255384364
+      },
+      "dragging": false
+    },
+    {
+      "id": "1765276735385",
+      "type": "sectorNode",
+      "position": {
+        "x": 3019.852922940485,
+        "y": 749.3550634368956
+      },
+      "data": {
+        "label": "（政策环境）驱动消费  后期看抱团",
+        "startDate": "2025-12-09",
+        "fundType": "游资",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [],
+        "strategy": "",
+        "trades": [
+          {
+            "id": "t_1765714004398",
+            "name": "永辉超市",
+            "result": "wait",
+            "reflection": ""
+          }
+        ],
+        "lifecycle": {
+          "current": "c_1766406020656",
+          "stages": [
+            {
+              "id": "c_1765336153721",
+              "typeId": "rise",
+              "label": "主升",
+              "color": "#dc2626",
+              "bg": "#fef2f2",
+              "time": "2025-12-10 11:09:13",
+              "remark": "加速中"
+            },
+            {
+              "id": "c_1765376248550",
+              "typeId": "divergence",
+              "label": "分歧",
+              "color": "#6366f1",
+              "bg": "#e0e7ff",
+              "time": "2025-12-10 22:17:28",
+              "remark": "明天看分歧 资金切回商业航天"
+            },
+            {
+              "id": "c_1765698377812",
+              "typeId": "repair",
+              "label": "修复",
+              "color": "#1e293b",
+              "bg": "#f1f5f9",
+              "time": "2025-12-14 15:46:17",
+              "remark": "下周看修复预期 政策 在推动消费，但是商业航天的消息更多  因此明天修复 就撤退"
+            },
+            {
+              "id": "c_1765811846390",
+              "typeId": "divergence",
+              "label": "分歧",
+              "color": "#6366f1",
+              "bg": "#e0e7ff",
+              "time": "2025-12-15 23:17:26",
+              "remark": "消费因利好走了一个修复转分歧"
+            },
+            {
+              "id": "c_1765894303511",
+              "typeId": "rise",
+              "label": "主升",
+              "color": "#dc2626",
+              "bg": "#fef2f2",
+              "time": "2025-12-16 22:11:43",
+              "remark": "消费与商业航天互相卡位  明天预期一致转分歧"
+            },
+            {
+              "id": "c_1765955314365",
+              "typeId": "repair",
+              "label": "修复",
+              "color": "#1e293b",
+              "bg": "#f1f5f9",
+              "time": "2025-12-17 15:08:34",
+              "remark": "从一致到分歧  今天在商业航天分歧时，资金又轮栋到消费电子  加上盘后利好 明天大概率是会走一致 转分歧"
+            },
+            {
+              "id": "c_1766406020656",
+              "typeId": "divergence",
+              "label": "分歧",
+              "color": "#6366f1",
+              "bg": "#e0e7ff",
+              "time": "2025-12-22 20:20:20",
+              "remark": "消费持续两周多，后期更多看抱团"
+            }
+          ],
+          "logs": {}
+        },
+        "targetsStr": ""
+      },
+      "width": 241,
+      "height": 91,
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 3019.852922940485,
+        "y": 749.3550634368956
+      }
+    },
+    {
+      "id": "1765276784529",
+      "type": "sectorNode",
+      "position": {
+        "x": 1940.668113717839,
+        "y": 420.2622824478282
+      },
+      "data": {
+        "label": "ai硬件  英伟达持续回归中国市场 端带动 PCB+服务器",
+        "startDate": "2025-12-09",
+        "fundType": "机构",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [],
+        "strategy": "",
+        "trades": [
+          {
+            "id": "t_1765376417366",
+            "name": "工业",
+            "result": "wait",
+            "reflection": "应该买阴 不应该追"
+          }
+        ],
+        "lifecycle": {
+          "current": "c_1765376311687",
+          "stages": [
+            {
+              "id": "c_1765276938148",
+              "typeId": "startup",
+              "label": "启动",
+              "color": "#f59e0b",
+              "bg": "#fef3c7",
+              "time": "2025-12-9 18:42:18",
+              "remark": "机构要进场ai 软件测容量不够，还是在硬件 小心分流\n大资金合力了 其它地方势能就减弱了"
+            },
+            {
+              "id": "c_1765376311687",
+              "typeId": "divergence",
+              "label": "分歧",
+              "color": "#6366f1",
+              "bg": "#e0e7ff",
+              "time": "2025-12-10 22:18:31",
+              "remark": "这边操作有一点问题，ai硬件在8号开始 昨天属于消息放出来 然后资金去拉，第二天要持续就没有了 没有加速点"
+            }
+          ],
+          "logs": {}
+        },
+        "targetsStr": ""
+      },
+      "width": 355,
+      "height": 91,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1940.668113717839,
+        "y": 420.2622824478282
+      },
+      "dragging": false
+    },
+    {
+      "id": "1765698582300",
+      "type": "sectorNode",
+      "position": {
+        "x": 2424.9073174042264,
+        "y": 391.81660578695
+      },
+      "data": {
+        "label": "AI电力+核电",
+        "startDate": "2025-12-11",
+        "fundType": "游资",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "c_1765698602862",
+          "stages": [
+            {
+              "id": "c_1765698602862",
+              "typeId": "startup",
+              "label": "启动",
+              "color": "#f59e0b",
+              "bg": "#fef3c7",
+              "time": "2025-12-14 15:50:02",
+              "remark": "上周五开始发酵 看看后续资金进去的情况"
+            }
+          ],
+          "logs": {}
+        },
+        "targetsStr": ""
+      },
+      "width": 180,
+      "height": 91,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 2424.9073174042264,
+        "y": 391.81660578695
+      },
+      "dragging": false
+    },
+    {
+      "id": "1765955239862",
+      "type": "sectorNode",
+      "position": {
+        "x": 2751.8764167480317,
+        "y": 512.1668947457542
+      },
+      "data": {
+        "label": "国家队+保险券商 分流",
+        "startDate": "2025-12-17",
+        "fundType": "机构 量化",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "c_1765955411140",
+          "stages": [
+            {
+              "id": "c_1765955411140",
+              "typeId": "divergence",
+              "label": "分歧",
+              "color": "#6366f1",
+              "bg": "#e0e7ff",
+              "time": "2025-12-17 15:10:11",
+              "remark": "护盘的动作"
+            }
+          ],
+          "logs": {}
+        },
+        "targetsStr": ""
+      },
+      "width": 180,
+      "height": 91,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 2751.8764167480317,
+        "y": 512.1668947457542
+      },
+      "dragging": false
+    },
+    {
+      "id": "1765955268769",
+      "type": "sectorNode",
+      "position": {
+        "x": 2730.424142776963,
+        "y": 288.34954443142516
+      },
+      "data": {
+        "label": "（业绩增长）机构+消费电子（苹果）+硬件（谷歌）竞争关系 有资金优势  主逻辑 由英伟达链走到谷歌链 导致业绩增长",
+        "startDate": "2025-12-17",
+        "fundType": "机构",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "c_1766406119246",
+          "stages": [
+            {
+              "id": "c_1765955385126",
+              "typeId": "startup",
+              "label": "启动",
+              "color": "#f59e0b",
+              "bg": "#fef3c7",
+              "time": "2025-12-17 15:09:45",
+              "remark": "当前具不具备那么多资金去推动？就看市场要讲一个什么样子的故事了？让人去接货了 "
+            },
+            {
+              "id": "c_1766063161324",
+              "typeId": "divergence",
+              "label": "分歧",
+              "color": "#6366f1",
+              "bg": "#e0e7ff",
+              "time": "2025-12-18 21:06:01",
+              "remark": "果然这一块开始走分歧，逻辑又英伟达链 到谷歌链路"
+            },
+            {
+              "id": "c_1766406119246",
+              "typeId": "rise",
+              "label": "主升",
+              "color": "#dc2626",
+              "bg": "#fef2f2",
+              "time": "2025-12-22 20:21:59",
+              "remark": "机构资金聚集地  后面还是要看业绩"
+            }
+          ],
+          "logs": {}
+        },
+        "targetsStr": ""
+      },
+      "width": 760,
+      "height": 91,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 2730.424142776963,
+        "y": 288.34954443142516
+      },
+      "dragging": false
+    },
+    {
+      "id": "1766063288355",
+      "type": "sectorNode",
+      "position": {
+        "x": 2765.1923506176054,
+        "y": 101.64396200452677
+      },
+      "data": {
+        "label": "抱团炒作妖",
+        "startDate": "2025-11-04",
+        "fundType": "游资",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [
+          "合富中国",
+          "平潭发展"
+        ],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "",
+          "stages": [],
+          "logs": {}
+        },
+        "targetsStr": "合富中国, 平潭发展"
+      },
+      "width": 180,
+      "height": 105,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 2765.1923506176054,
+        "y": 101.64396200452677
+      },
+      "dragging": false
+    },
+    {
+      "id": "1766405670058",
+      "type": "sectorNode",
+      "position": {
+        "x": 3126.715392860083,
+        "y": 114.9851363444856
+      },
+      "data": {
+        "label": "22号魁首-海南自贸区（明日看分歧）",
+        "startDate": "2025-12-22",
+        "fundType": "游资",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "c_1766485347644",
+          "stages": [
+            {
+              "id": "c_1766405807923",
+              "typeId": "startup",
+              "label": "启动",
+              "color": "#f59e0b",
+              "bg": "#fef3c7",
+              "time": "2025-12-22 20:16:47",
+              "remark": "22号资金魁首，明日一致转分歧。兑现预期  后面的推动预期是什么？"
+            },
+            {
+              "id": "c_1766485347644",
+              "typeId": "rise",
+              "label": "主升",
+              "color": "#dc2626",
+              "bg": "#fef2f2",
+              "time": "2025-12-23 18:22:27",
+              "remark": "今天聚焦核心 直接走加速，明天正常预期一致转分歧"
+            }
+          ],
+          "logs": {}
+        },
+        "targetsStr": ""
+      },
+      "width": 262,
+      "height": 91,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 3126.715392860083,
+        "y": 114.9851363444856
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "1763906924583",
+      "sourceHandle": null,
+      "target": "1763906975633",
+      "targetHandle": null,
+      "id": "e-1763907013994",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      },
+      "selected": false
+    },
+    {
+      "source": "1763906975633",
+      "sourceHandle": null,
+      "target": "1763906916898",
+      "targetHandle": null,
+      "id": "e-1763907116412",
+      "type": "custom",
+      "label": "分流",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      },
+      "selected": false
+    },
+    {
+      "source": "1763906975633",
+      "sourceHandle": null,
+      "target": "1763907122308",
+      "targetHandle": null,
+      "id": "e-1763907178383",
+      "type": "custom",
+      "label": "分流",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      },
+      "selected": false
+    },
+    {
+      "source": "1763906975633",
+      "sourceHandle": null,
+      "target": "1764000285961",
+      "targetHandle": null,
+      "id": "e-1764000294967",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    },
+    {
+      "source": "1764000285961",
+      "sourceHandle": null,
+      "target": "1763906916898",
+      "targetHandle": null,
+      "id": "e-1764162758454",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    },
+    {
+      "source": "1763906916898",
+      "sourceHandle": null,
+      "target": "1764162784538",
+      "targetHandle": null,
+      "id": "e-1764162788589",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    },
+    {
+      "source": "1764162784538",
+      "sourceHandle": null,
+      "target": "1764241635450",
+      "targetHandle": null,
+      "id": "e-1764241667289",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    },
+    {
+      "source": "1764241635450",
+      "sourceHandle": null,
+      "target": "1764510479586",
+      "targetHandle": null,
+      "id": "e-1764595785467",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    },
+    {
+      "source": "1764241635450",
+      "sourceHandle": null,
+      "target": "1764595762375",
+      "targetHandle": null,
+      "id": "e-1764595788187",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    },
+    {
+      "source": "1764241635450",
+      "sourceHandle": null,
+      "target": "1764679742129",
+      "targetHandle": null,
+      "id": "e-1764679886166",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    },
+    {
+      "source": "1764595762375",
+      "sourceHandle": null,
+      "target": "1764726948796",
+      "targetHandle": null,
+      "id": "e-1764726989888",
+      "type": "custom",
+      "label": "影响",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      },
+      "selected": false
+    },
+    {
+      "source": "1764679742129",
+      "sourceHandle": null,
+      "target": "1764726948796",
+      "targetHandle": null,
+      "id": "e-1764726992715",
+      "type": "custom",
+      "label": "影响",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      },
+      "selected": false
+    },
+    {
+      "source": "1764726948796",
+      "sourceHandle": null,
+      "target": "1764727030031",
+      "targetHandle": null,
+      "id": "e-1764727052399",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    },
+    {
+      "source": "1764727030031",
+      "sourceHandle": null,
+      "target": "1764510479586",
+      "targetHandle": null,
+      "id": "e-1764852523353",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    },
+    {
+      "source": "1764727030031",
+      "sourceHandle": null,
+      "target": "1764852407486",
+      "targetHandle": null,
+      "id": "e-1764852530704",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      },
+      "selected": false
+    },
+    {
+      "source": "1764727030031",
+      "sourceHandle": null,
+      "target": "1764852438276",
+      "targetHandle": null,
+      "id": "e-1764852533013",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    },
+    {
+      "source": "1764852407486",
+      "sourceHandle": null,
+      "target": "1765119843618",
+      "targetHandle": null,
+      "id": "e-1765119923513",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    },
+    {
+      "source": "1764852438276",
+      "sourceHandle": null,
+      "target": "1765119843618",
+      "targetHandle": null,
+      "id": "e-1765120062350",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    },
+    {
+      "source": "1765119843618",
+      "sourceHandle": null,
+      "target": "1765276735385",
+      "targetHandle": null,
+      "id": "e-1765276914200",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      },
+      "selected": false
+    },
+    {
+      "source": "1765119843618",
+      "sourceHandle": null,
+      "target": "1765276784529",
+      "targetHandle": null,
+      "id": "e-1765276917351",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    },
+    {
+      "source": "1765276784529",
+      "sourceHandle": null,
+      "target": "1765698582300",
+      "targetHandle": null,
+      "id": "e-1765698591334",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    },
+    {
+      "source": "1765698582300",
+      "sourceHandle": null,
+      "target": "1765955239862",
+      "targetHandle": null,
+      "id": "e-1765955300906",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    },
+    {
+      "source": "1765698582300",
+      "sourceHandle": null,
+      "target": "1765955268769",
+      "targetHandle": null,
+      "id": "e-1765955303158",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    },
+    {
+      "source": "1765698582300",
+      "sourceHandle": null,
+      "target": "1766063288355",
+      "targetHandle": null,
+      "id": "e-1766063329849",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    },
+    {
+      "source": "1766063288355",
+      "sourceHandle": null,
+      "target": "1766405670058",
+      "targetHandle": null,
+      "id": "e-1766405708462",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    }
+  ],
+  "meta": {
+    "lastSaved": "2026-01-05T13:47:09.659Z",
+    "type": "file"
+  }
+}

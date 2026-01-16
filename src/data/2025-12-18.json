@@ -1,0 +1,112 @@
+{
+  "updateTime": "2025年12月18日",
+  "dailyFlow": [
+    { "name": "国防军工", "netFlow": 22.90, "type": "in", "desc": "行业主力资金净流入居首，商业航天概念活跃" },
+    { "name": "银行", "netFlow": 9.27, "type": "in", "desc": "权重板块走强，获资金净流入" },
+    { "name": "轻工制造", "netFlow": 5.55, "type": "in", "desc": "行业涨幅靠前，资金小幅流入" },
+    { "name": "电子", "netFlow": -110.42, "type": "out", "desc": "行业主力资金净流出最多" },
+    { "name": "电力设备", "netFlow": -73.47, "type": "out", "desc": "新能源赛道延续调整，资金大幅流出" },
+    { "name": "机械设备", "netFlow": -31.62, "type": "out", "desc": "资金净流出规模靠前" }
+  ],
+  "topStocks": [
+    { "name": "凯美特气", "value": 7.98, "type": "buy", "desc": "主力资金净流入额居两市首位" },
+    { "name": "兆易创新", "value": 8.60, "type": "buy", "desc": "电子行业资金净流入居首" },
+    { "name": "工业富联", "value": -23.17, "type": "sell", "desc": "主力资金净流出额居首" },
+    { "name": "宁德时代", "value": -13.94, "type": "sell", "desc": "权重股资金大幅流出" }
+  ],
+  "weeklyThemes": [
+    { "name": "商业航天", "value": 65, "color": "#10b981", "details": "概念股卷土重来，在分歧后实现强修复，多股涨停[citation:3][citation:4][citation:9]" },
+    { "name": "AI医疗", "value": 55, "color": "#3b82f6", "details": "受蚂蚁集团等消息刺激成为新晋热点[citation:1][citation:4]" },
+    { "name": "新零售/大消费", "value": 50, "color": "#f97316", "details": "零售板块持续活跃，多股连板[citation:1][citation:4][citation:9]" },
+    { "name": "智能驾驶", "value": 40, "color": "#8b5cf6", "details": "龙头股连板，保持题材热度" }
+  ],
+  "marketVolume": [
+    { "date": "12-09", "volume": null, "status": "待补充", "change": null, "sentiment": null, "desc": "历史数据缺失" },
+    { "date": "12-10", "volume": 1.78, "status": "缩量", "change": -0.12, "sentiment": 45, "desc": "缩量震荡" },
+    { "date": "12-11", "volume": 1.89, "status": "放量", "change": 0.11, "sentiment": 40, "desc": "普跌放量" },
+    { "date": "12-12", "volume": 2.09, "status": "放量", "change": 0.20, "sentiment": 60, "desc": "探底回升" },
+    { "date": "12-15", "volume": 1.77, "status": "大幅缩量", "change": -0.32, "sentiment": 40, "desc": "指数回调" },
+    { "date": "12-16", "volume": 1.72, "status": "缩量", "change": -0.05, "sentiment": 35, "desc": "市场普跌" },
+    { "date": "12-17", "volume": 1.81, "status": "放量", "change": 0.09, "sentiment": 70, "desc": "指数普涨反弹" },
+    { "date": "12-18", "volume": 1.66, "status": "大幅缩量", "change": -0.15, "sentiment": 50, "desc": "成交额较上一交易日减少1557亿元[citation:3][citation:9]" }
+  ],
+  "themeLifecycle": [
+    {
+      "name": "商业航天",
+      "daysActive": 20,
+      "phase": "高位震荡反抽",
+      "heat": 70,
+      "startDate": "2025-11-25",
+      "trend": "分化",
+      "insight": "板块在连续活跃后进入高位震荡。今日实现超预期强修复，行情演变为旧主线上的“反抽博弈”，资金在均线位置低吸，内部分歧加剧，后排跟风股风险较高[citation:4][citation:9]。",
+      "news": [
+        "【盘面】商业航天概念全线爆发，盛洋科技、天箭科技、顺灏股份等约10股涨停[citation:3]。",
+        "【情绪】昨日分歧后今日直接强修复，宣告其仍是当前市场核心主线[citation:9]。"
+      ]
+    },
+    {
+      "name": "AI医疗",
+      "daysActive": 1,
+      "phase": "启动试错期",
+      "heat": 75,
+      "startDate": "12-18",
+      "trend": "up",
+      "insight": "受蚂蚁集团等消息刺激，成为日内新晋热点并获游资大手笔买入。但龙虎榜显示顶级游资间出现“多空对轰”，博弈异常激烈，板块波动大，持续性有待观察[citation:4]。",
+      "news": [
+        "【事件】受蚂蚁集团相关消息刺激，AI医疗方向成为市场新焦点[citation:4]。",
+        "【个股】美年健康录得2连板，嘉和美康、华人健康等个股涨停[citation:4]。"
+      ]
+    }
+  ],
+  "activeSeats": [
+    {
+      "name": "成都系",
+      "type": "知名游资",
+      "tag": "广撒网 / 多点试错",
+      "direction": "AI医疗、智能驾驶、商业航天",
+      "stocks": [
+        { "name": "美年健康 (AI医疗)", "amount": "+1.51亿", "date": "12-18" },
+        { "name": "浙江世宝 (智能驾驶)", "amount": "+7682万", "date": "12-18" },
+        { "name": "天银机电 (商业航天)", "amount": "+7145万", "date": "12-18" }
+      ],
+      "desc": "在AI医疗、智能驾驶、商业航天等多个潜在热点中同时下注，反映了当前市场快速轮动、缺乏绝对主线下的游资操作范式。"
+    },
+    {
+      "name": "陈小群",
+      "type": "知名游资",
+      "tag": "做T / 持仓维护",
+      "direction": "新零售、商业航天",
+      "stocks": [
+        { "name": "东百集团", "amount": "买入1.1亿，卖出1.16亿", "date": "12-18" },
+        { "name": "通宇通讯", "amount": "买入9400万，卖出6000万", "date": "12-18" }
+      ],
+      "desc": "在东百集团和通宇通讯上进行高抛低吸的做T操作，整体小幅加仓商业航天股通宇通讯，在震荡市中维持持仓和影响力。"
+    }
+  ],
+  "fundNature": [
+    {
+      "sector": "AI医疗",
+      "dominant": "游资对决",
+      "icon": "Activity",
+      "color": "bg-blue-100 text-blue-800",
+      "desc": "游资混战试错新主线",
+      "composition": [
+        { "name": "进攻游资 (成都系等)", "val": 60, "color": "#60a5fa" },
+        { "name": "卖出游资 (宁波桑田路等)", "val": 30, "color": "#93c5fd" },
+        { "name": "散户", "val": 10, "color": "#dbeafe" }
+      ]
+    },
+    {
+      "sector": "商业航天",
+      "dominant": "游资套利与机构卖出",
+      "icon": "Rocket",
+      "color": "bg-purple-100 text-purple-800",
+      "desc": "旧主线反抽，资金割裂",
+      "composition": [
+        { "name": "套利游资 (低吸)", "val": 40, "color": "#a78bfa" },
+        { "name": "机构与深股通", "val": 35, "color": "#7c3aed" },
+        { "name": "获利了结资金", "val": 25, "color": "#c4b5fd" }
+      ]
+    }
+  ]
+}

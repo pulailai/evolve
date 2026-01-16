@@ -1,0 +1,124 @@
+{
+  "updateTime": "2025年12月24日",
+  "dailyFlow": [
+    { "name": "电子", "netFlow": 49.16, "type": "in", "desc": "行业主力资金净流入居首，半导体产业链受涨价消息驱动" },
+    { "name": "电力设备", "netFlow": 22.17, "type": "in", "desc": "新能源赛道获资金回流" },
+    { "name": "国防军工", "netFlow": 12.33, "type": "in", "desc": "商业航天概念爆发，带动板块资金大幅流入" },
+    { "name": "基础化工", "netFlow": -15.8, "type": "out", "desc": "行业主力资金净流出居前" },
+    { "name": "医药生物", "netFlow": -11.2, "type": "out", "desc": "板块调整，资金小幅流出" },
+    { "name": "农林牧渔", "netFlow": -8.5, "type": "out", "desc": "行业跌幅居前，资金流出" }
+  ],
+  "topStocks": [
+    { "name": "中际旭创", "value": 2.5, "type": "buy", "desc": "CPO龙头，尾盘获主力资金抢筹超2亿元[citation:3]" },
+    { "name": "新劲刚", "value": 11.12, "type": "buy", "desc": "商业航天领涨股之一，早盘涨幅居前[citation:5]" },
+    { "name": "生物股份", "value": -7.0, "type": "sell", "desc": "农林牧渔板块领跌股" },
+    { "name": "庄园牧场", "value": -9.99, "type": "sell", "desc": "乳业概念回调，触及跌停[citation:2][citation:8]" }
+  ],
+  "weeklyThemes": [
+    { "name": "商业航天", "value": 80, "color": "#10b981", "details": "概念股再度爆发，近20股涨停，成为日内最强主线[citation:2][citation:8]" },
+    { "name": "半导体芯片", "value": 65, "color": "#3b82f6", "details": "受中芯国际涨价消息刺激，龙头股走高[citation:1]" },
+    { "name": "海南自贸区", "value": 60, "color": "#ef4444", "details": "概念股持续活跃，多股涨停[citation:1]" },
+    { "name": "AI算力/CPO", "value": 55, "color": "#8b5cf6", "details": "硬件方向午后活跃，龙头股获资金青睐[citation:3]" }
+  ],
+  "marketVolume": [
+    { "date": "12-11", "volume": 1.89, "status": "放量", "change": 0.11, "sentiment": 40, "desc": "普跌放量" },
+    { "date": "12-12", "volume": 2.09, "status": "放量", "change": 0.20, "sentiment": 60, "desc": "探底回升" },
+    { "date": "12-15", "volume": 1.77, "status": "大幅缩量", "change": -0.32, "sentiment": 40, "desc": "指数回调" },
+    { "date": "12-16", "volume": 1.72, "status": "缩量", "change": -0.05, "sentiment": 35, "desc": "市场普跌" },
+    { "date": "12-17", "volume": 1.81, "status": "放量", "change": 0.09, "sentiment": 70, "desc": "指数普涨反弹" },
+    { "date": "12-18", "volume": 1.66, "status": "大幅缩量", "change": -0.15, "sentiment": 50, "desc": "成交萎缩" },
+    { "date": "12-19", "volume": 1.73, "status": "小幅放量", "change": 0.07, "sentiment": 65, "desc": "指数普涨" },
+    { "date": "12-22", "volume": 1.88, "status": "放量", "change": 0.15, "sentiment": 75, "desc": "高开高走" },
+    { "date": "12-23", "volume": 1.90, "status": "平量", "change": 0.02, "sentiment": 40, "desc": "指数与个股背离" },
+    { "date": "12-24", "volume": 1.88, "status": "小幅缩量", "change": -0.02, "sentiment": 70, "desc": "成交额18802亿元，较昨日减少197亿元[citation:2]" }
+  ],
+  "themeLifecycle": [
+    {
+      "name": "商业航天",
+      "daysActive": 22,
+      "phase": "主升浪（二次启动）",
+      "heat": 85,
+      "startDate": "2025-11-25",
+      "trend": "up",
+      "insight": "板块在经历短暂的高位分歧后，凭借持续的政策预期和事件催化，今日再次集体爆发，掀起涨停潮。这宣告了该主题并未结束，而是开启了第二波主升行情，市场认可度极高。",
+      "news": [
+        "【盘面】商业航天概念股午后再度爆发，近20只成分股涨停，如神剑股份5连板，新劲刚、广联航空等涨幅居前[citation:2][citation:8]。",
+        "【催化】国家推进航空航天等重点领域发展的政策预期持续强化[citation:8]。"
+      ]
+    },
+    {
+      "name": "半导体芯片",
+      "daysActive": 3,
+      "phase": "趋势加速",
+      "heat": 75,
+      "startDate": "2025-12-22",
+      "trend": "up",
+      "insight": "在龙头公司中芯国际部分产能涨价约10%的确切消息刺激下，半导体板块从技术反弹进入基本面驱动的趋势加速阶段，获得机构与主力资金的大幅流入[citation:1][citation:6]。",
+      "news": [
+        "【行业】据《上海证券报》从多个渠道求证获悉，中芯国际已对部分产能实施涨价，涨幅约10%[citation:1]。",
+        "【资金】电子行业获主力资金净流入49.16亿元，高居全市场第一[citation:6]。"
+      ]
+    }
+  ],
+  "activeSeats": [
+    {
+      "name": "量化打板",
+      "type": "量化游资",
+      "tag": "攻击主线 / 打造龙头",
+      "direction": "商业航天",
+      "stocks": [
+        { "name": "新劲刚", "amount": "大幅买入", "date": "12-24" },
+        { "name": "广联航空", "amount": "上榜买入", "date": "12-24" }
+      ],
+      "desc": "作为日内最强主线的主要推动力之一，集中火力攻击商业航天板块的领涨龙头，是板块形成涨停潮的关键资金。"
+    },
+    {
+      "name": "佛山系",
+      "type": "知名游资",
+      "tag": "挖掘补涨 / 助攻题材",
+      "direction": "商业航天、福建板块",
+      "stocks": [
+        { "name": "合众思壮", "amount": "封板", "date": "12-24" },
+        { "name": "安记食品", "amount": "7天4板", "date": "12-24" }
+      ],
+      "desc": "操作灵活，一方面在商业航天板块内挖掘人气补涨股，另一方面继续在反复活跃的福建本地股中进行运作，维持市场热度。"
+    },
+    {
+      "name": "机构席位",
+      "type": "主力",
+      "tag": "回补科技",
+      "direction": "电子、电力设备",
+      "stocks": [
+        { "name": "半导体产业链个股", "amount": "大幅净流入", "date": "12-24" },
+        { "name": "新能源权重股", "amount": "净买入", "date": "12-24" }
+      ],
+      "desc": "资金操作方向明确，大举回补电子（半导体）和电力设备（新能源）两大核心成长赛道，是推动指数上涨和风格切换的主导力量[citation:6]。"
+    }
+  ],
+  "fundNature": [
+    {
+      "sector": "商业航天",
+      "dominant": "游资主导，机构跟随",
+      "icon": "Rocket",
+      "color": "bg-purple-100 text-purple-800",
+      "desc": "情绪高潮，游资抱团",
+      "composition": [
+        { "name": "活跃游资 (量化、佛山系等)", "val": 60, "color": "#7c3aed" },
+        { "name": "散户跟风", "val": 25, "color": "#a78bfa" },
+        { "name": "机构资金", "val": 15, "color": "#c4b5fd" }
+      ]
+    },
+    {
+      "sector": "半导体芯片",
+      "dominant": "机构与游资合力",
+      "icon": "Cpu",
+      "color": "bg-blue-100 text-blue-800",
+      "desc": "基本面驱动，趋势增强",
+      "composition": [
+        { "name": "机构/主力资金", "val": 55, "color": "#1d4ed8" },
+        { "name": "外资/跟风盘", "val": 25, "color": "#60a5fa" },
+        { "name": "游资", "val": 20, "color": "#93c5fd" }
+      ]
+    }
+  ]
+}

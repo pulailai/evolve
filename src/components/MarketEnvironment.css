@@ -1,0 +1,175 @@
+.market-environment-indicator {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.env-icon {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.env-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.env-label {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.env-description {
+    font-size: 10px;
+    color: #64748b;
+    line-height: 1;
+}
+
+.env-stats {
+    display: flex;
+    gap: 12px;
+    margin-left: auto;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+}
+
+.stat-label {
+    color: #64748b;
+}
+
+.stat-value {
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.stat-change {
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.stat-change.positive {
+    color: #dc2626;
+}
+
+.stat-change.negative {
+    color: #059669;
+}
+
+.env-intensity {
+    width: 60px;
+}
+
+.intensity-bar {
+    height: 4px;
+    background: #e2e8f0;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.intensity-fill {
+    height: 100%;
+    transition: width 0.3s ease, background 0.3s ease;
+    border-radius: 2px;
+}
+
+/* 画布背景样式 */
+.canvas-environment-hot {
+    background: linear-gradient(135deg, #fee2e2 0%, #fecaca 50%, #fca5a5 100%);
+    transition: background 1s ease;
+}
+
+.canvas-environment-cold {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 50%, #93c5fd 100%);
+    transition: background 1s ease;
+}
+
+.canvas-environment-neutral {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+    transition: background 1s ease;
+}
+
+/* 粒子动画容器 */
+.environment-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: float 10s infinite ease-in-out;
+}
+
+.particle-hot {
+    background: radial-gradient(circle, #dc2626 0%, transparent 70%);
+    animation: float-up 8s infinite ease-in-out;
+}
+
+.particle-cold {
+    background: radial-gradient(circle, #1e3a8a 0%, transparent 70%);
+    animation: float-down 10s infinite ease-in-out;
+}
+
+.particle-neutral {
+    background: radial-gradient(circle, #94a3b8 0%, transparent 70%);
+    animation: float-drift 12s infinite ease-in-out;
+}
+
+@keyframes float-up {
+
+    0%,
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+
+    50% {
+        transform: translateY(-100px) translateX(20px);
+    }
+}
+
+@keyframes float-down {
+
+    0%,
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+
+    50% {
+        transform: translateY(100px) translateX(-20px);
+    }
+}
+
+@keyframes float-drift {
+
+    0%,
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+
+    25% {
+        transform: translateY(-30px) translateX(30px);
+    }
+
+    75% {
+        transform: translateY(30px) translateX(-30px);
+    }
+}

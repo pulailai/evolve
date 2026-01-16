@@ -1,0 +1,123 @@
+{
+  "updateTime": "2025年12月23日",
+  "dailyFlow": [
+    { "name": "电力设备", "netFlow": 37.93, "type": "in", "desc": "行业主力资金净流入居首，新能源赛道获资金回流" },
+    { "name": "基础化工", "netFlow": 10.02, "type": "in", "desc": "资金净流入居前" },
+    { "name": "建筑材料", "netFlow": 4.22, "type": "in", "desc": "板块涨幅靠前，资金小幅流入" },
+    { "name": "国防军工", "netFlow": -86.98, "type": "out", "desc": "行业主力资金净流出最多，商业航天概念退潮" },
+    { "name": "通信", "netFlow": -54.70, "type": "out", "desc": "资金大幅净流出" },
+    { "name": "汽车", "netFlow": -51.97, "type": "out", "desc": "行业主力资金净流出规模靠前" }
+  ],
+  "topStocks": [
+    { "name": "多氟多", "value": 12.48, "type": "buy", "desc": "氟化工概念，主力资金净流入额居前[citation:1]" },
+    { "name": "工业富联", "value": 13.04, "type": "buy", "desc": "主力资金净流入额居两市首位[citation:10]" },
+    { "name": "航天电子", "value": -12.97, "type": "sell", "desc": "商业航天高标，主力资金净流出额居前[citation:10]" },
+    { "name": "航天机电", "value": -12.57, "type": "sell", "desc": "商业航天人气股跌停，遭游资大额卖出[citation:9][citation:10]" }
+  ],
+  "weeklyThemes": [
+    { "name": "新能源（锂电/氟化工）", "value": 65, "color": "#10b981", "details": "资金高低切换的主要方向，多股涨停" },
+    { "name": "海南自贸区", "value": 50, "color": "#ef4444", "details": "板块内部分化，局部个股保持强势" },
+    { "name": "商业航天", "value": 30, "color": "#8b5cf6", "details": "概念冲高回落，资金大幅流出，显著退潮" },
+    { "name": "AI算力/液冷", "value": 45, "color": "#3b82f6", "details": "液冷服务器等细分方向午后拉升[citation:2]" }
+  ],
+  "marketVolume": [
+    { "date": "12-10", "volume": 1.78, "status": "缩量", "change": -0.12, "sentiment": 45, "desc": "缩量震荡" },
+    { "date": "12-11", "volume": 1.89, "status": "放量", "change": 0.11, "sentiment": 40, "desc": "普跌放量" },
+    { "date": "12-12", "volume": 2.09, "status": "放量", "change": 0.20, "sentiment": 60, "desc": "探底回升" },
+    { "date": "12-15", "volume": 1.77, "status": "大幅缩量", "change": -0.32, "sentiment": 40, "desc": "指数回调" },
+    { "date": "12-16", "volume": 1.72, "status": "缩量", "change": -0.05, "sentiment": 35, "desc": "市场普跌" },
+    { "date": "12-17", "volume": 1.81, "status": "放量", "change": 0.09, "sentiment": 70, "desc": "指数普涨反弹" },
+    { "date": "12-18", "volume": 1.66, "status": "大幅缩量", "change": -0.15, "sentiment": 50, "desc": "成交萎缩" },
+    { "date": "12-19", "volume": 1.73, "status": "小幅放量", "change": 0.07, "sentiment": 65, "desc": "指数普涨" },
+    { "date": "12-22", "volume": 1.88, "status": "放量", "change": 0.15, "sentiment": 75, "desc": "高开高走" },
+    { "date": "12-23", "volume": 1.90, "status": "平量", "change": 0.02, "sentiment": 40, "desc": "成交额约1.90万亿元，较昨日小幅增加[citation:1]" }
+  ],
+  "themeLifecycle": [
+    {
+      "name": "商业航天",
+      "daysActive": 21,
+      "phase": "主跌浪（退潮）",
+      "heat": 30,
+      "startDate": "2025-11-25",
+      "trend": "down",
+      "insight": "板块在经历长期炒作后，今日出现标志性退潮信号。行业指数下跌，主力资金净流出高达86.98亿元位居市场首位[citation:6][citation:10]。人气股航天机电跌停并遭一线游资巨额卖出，显示炒作资金正在集体撤离[citation:9]。",
+      "news": [
+        "【资金】国防军工（商业航天）行业主力资金净流出86.98亿元，为两市最多[citation:6][citation:10]。",
+        "【个股】航天机电跌停，遭一线游资“江苏路”席位大幅卖出5.29亿元[citation:9]。航天电子、中国卫星等前期热门股均遭主力资金大幅抛售[citation:10]。",
+        "【事件】长征十二号甲火箭今日首飞，但一级回收验证未达预期[citation:2]。"
+      ]
+    },
+    {
+      "name": "新能源（锂电/氟化工）",
+      "daysActive": 1,
+      "phase": "超跌反弹",
+      "heat": 70,
+      "startDate": "2025-12-23",
+      "trend": "up",
+      "insight": "在市场高低切换的背景下，前期调整充分的新能源赛道获得资金回流。电力设备行业获主力资金净流入37.93亿元，氟化工、锂电池等细分领域个股表现活跃[citation:1][citation:6]。",
+      "news": [
+        "【资金】电力设备行业获主力资金净流入37.93亿元，位居市场第一[citation:6]。",
+        "【盘面】多氟多、天际股份等锂电池产业链个股涨停，并登上龙虎榜[citation:1][citation:9]。"
+      ]
+    }
+  ],
+  "activeSeats": [
+    {
+      "name": "江苏路（国泰海通证券上海江苏路）",
+      "type": "一线游资",
+      "tag": "巨额卖出 / 获利了结",
+      "direction": "商业航天",
+      "stocks": [
+        { "name": "航天机电", "amount": "-5.29亿", "date": "12-23" }
+      ],
+      "desc": "对商业航天人气股航天机电进行巨额卖出，操作上体现坚决高位获利了结的意图，是板块退潮的风向标[citation:9]。"
+    },
+    {
+      "name": "量化打板 & 消闲派",
+      "type": "游资群体",
+      "tag": "合力进攻",
+      "direction": "电力设备（储能）",
+      "stocks": [
+        { "name": "保变电气", "amount": "合计买入2.75亿", "date": "12-23" }
+      ],
+      "desc": "两家活跃游资席位合力封板储能概念股保变电气[citation:4]，显示部分短线资金在攻击新能源超跌反弹方向。"
+    },
+    {
+      "name": "机构席位",
+      "type": "主力",
+      "tag": "有买有卖 / 聚焦个股",
+      "direction": "锂电池、海南自贸",
+      "stocks": [
+        { "name": "多氟多", "amount": "净买入约2.1亿", "date": "12-23" },
+        { "name": "康芝药业/神农种业等", "amount": "抢筹", "date": "12-23" }
+      ],
+      "desc": "机构操作存在分歧，但方向明确：一方面净买入多氟多等锂电池个股[citation:1]；另一方面抢筹部分海南自贸区概念股[citation:9]。"
+    }
+  ],
+  "fundNature": [
+    {
+      "sector": "商业航天",
+      "dominant": "游资与机构集体撤离",
+      "icon": "Rocket",
+      "color": "bg-gray-100 text-gray-800",
+      "desc": "退潮期，多杀多",
+      "composition": [
+        { "name": "获利了结游资", "val": 50, "color": "#6b7280" },
+        { "name": "机构与主力卖盘", "val": 35, "color": "#9ca3af" },
+        { "name": "散户承接", "val": 15, "color": "#d1d5db" }
+      ]
+    },
+    {
+      "sector": "新能源（锂电/氟化工）",
+      "dominant": "机构回补与游资套利",
+      "icon": "Zap",
+      "color": "bg-green-100 text-green-800",
+      "desc": "超跌反弹，资金回补",
+      "composition": [
+        { "name": "机构资金", "val": 50, "color": "#059669" },
+        { "name": "套利游资", "val": 30, "color": "#34d399" },
+        { "name": "跟风盘", "val": 20, "color": "#a7f3d0" }
+      ]
+    }
+  ]
+}

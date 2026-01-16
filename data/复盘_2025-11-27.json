@@ -1,0 +1,27 @@
+{
+  "nodes": [
+    {
+      "id": "1764241604757",
+      "type": "circleNode",
+      "position": {
+        "x": -248.4325492765306,
+        "y": -193.9115318941635
+      },
+      "data": {
+        "label": "情绪",
+        "desc": "",
+        "color": "#ec4899",
+        "bgColor": "#fdf2f8",
+        "startDate": "2025-11-27",
+        "mood": "ice"
+      },
+      "width": 92,
+      "height": 92
+    }
+  ],
+  "edges": [],
+  "meta": {
+    "lastSaved": "2025-11-27T11:06:49.737Z",
+    "type": "file"
+  }
+}

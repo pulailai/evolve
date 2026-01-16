@@ -1,0 +1,116 @@
+{
+  "updateTime": "2025年12月12日",
+  "dailyFlow": [
+    { "name": "商业航天", "netFlow": 15.0, "type": "in", "desc": "逆势抱团，板块涨停潮" },
+    { "name": "电网设备", "netFlow": 8.5, "type": "in", "desc": "与商业航天线缆概念联动走强" },
+    { "name": "商业零售", "netFlow": -10.2, "type": "out", "desc": "板块集体下挫" },
+    { "name": "房地产", "netFlow": -7.3, "type": "out", "desc": "政策预期落空，资金流出" },
+    { "name": "计算机", "netFlow": -5.1, "type": "out", "desc": "受中兴通讯利空拖累[citation:1][citation:3]" },
+    { "name": "非银金融", "netFlow": -2.8, "type": "out", "desc": "权重板块调整" }
+  ],
+  "topStocks": [
+    { "name": "天力复合", "value": 30.0, "type": "buy", "desc": "30CM涨停，商业航天材料龙头[citation:1][citation:8]" },
+    { "name": "再升科技", "value": 5.0, "type": "buy", "desc": "连续5日涨停，12日公告提示风险[citation:2][citation:4]" },
+    { "name": "东方通信", "value": 4.5, "type": "buy", "desc": "12日开盘1分钟直线封板[citation:2][citation:4]" },
+    { "name": "中兴通讯", "value": -9.8, "type": "sell", "desc": "受海外罚款利空影响跌停，拖累板块[citation:1][citation:3]" }
+  ],
+  "weeklyThemes": [
+    { "name": "商业航天", "value": 65, "color": "#10b981", "details": "政策、发射事件与SpaceX IPO预期多重催化，穿越市场调整" },
+    { "name": "可控核聚变", "value": 30, "color": "#8b5cf6", "details": "与航天主题联动，12日多股涨停[citation:10]" },
+    { "name": "电网设备", "value": 25, "color": "#3b82f6", "details": "受益于航天线缆等增量需求[citation:1]" },
+    { "name": "光模块/算力", "value": 20, "color": "#f59e0b", "details": "内部分化，龙头新高但板块受情绪影响[citation:3][citation:9]" }
+  ],
+  "marketVolume": [
+    { "date": "12-10", "volume": 1.78, "status": "缩量", "change": -0.12, "sentiment": 45, "desc": "缩量震荡" },
+    { "date": "12-11", "volume": 1.89, "status": "平量", "change": 0.11, "sentiment": 40, "desc": "普跌，超4300只个股下跌，商业航天抱团[citation:1][citation:3]" },
+    { "date": "12-12", "volume": 2.09, "status": "放量", "change": 0.20, "sentiment": 60, "desc": "探底回升，成交放量超2300亿[citation:6][citation:10]" }
+  ],
+  "themeLifecycle": [
+    {
+      "name": "商业航天",
+      "daysActive": 17,
+      "phase": "高位分歧转一致",
+      "heat": 85,
+      "startDate": "2025-11-25",
+      "trend": "up",
+      "insight": "板块在10-11日经历高位分歧后，于12日凭借长征十二号成功发射[citation:2][citation:4]及SpaceX万亿美元IPO预期[citation:4][citation:7][citation:9]两大重磅催化，实现弱转强，再度掀起涨停潮，确认主升浪延续。资金从老龙头向产业链（如线缆[citation:1]）、新材料等新分支扩散。",
+      "news": [
+        "【事件】12月12日，我国长征十二号运载火箭成功发射卫星互联网组网卫星[citation:2][citation:4]。SpaceX创始人马斯克暗示其或于2026年以超万亿美元估值IPO[citation:2][citation:4][citation:7]。",
+        "【盘面】12日板块指数创新高[citation:2][citation:4]，近20股涨停[citation:10]，天力复合30CM[citation:1][citation:8]。11日虽指数普跌，但商业航天仍是资金抱团方向[citation:1][citation:3][citation:7]。"
+      ]
+    },
+    {
+      "name": "商业零售",
+      "daysActive": 14,
+      "phase": "退潮期",
+      "heat": 25,
+      "startDate": "11-28",
+      "trend": "down",
+      "insight": "高位抱团在11日市场普跌中松动[citation:3][citation:9]，茂业商业触及跌停[citation:9]，永辉超市龙头虽尝试修复但板块整体走弱，资金明显流出。",
+      "news": [
+        "【盘面】12月11日，零售板块集体下挫，位居跌幅榜前列[citation:9]。茂业商业地天板失败[citation:3]。",
+        "【龙头】永辉超市11日宽幅震荡，陈小群席位做T[citation:3]。"
+      ]
+    }
+  ],
+  "activeSeats": [
+    {
+      "name": "陈小群",
+      "type": "知名游资",
+      "tag": "做T/坚守",
+      "direction": "商业零售",
+      "stocks": [
+        { "name": "永辉超市", "amount": "买入2.16亿，卖出2.15亿", "date": "12-11" },
+        { "name": "龙洲股份", "amount": "未上榜，推测持仓", "date": "12-11" }
+      ],
+      "desc": "在零售高标永辉超市上进行精准做T，锁定利润的同时维持席位影响力，显示其对持仓龙头仍有维护意图。[citation:3]"
+    },
+    {
+      "name": "章盟主",
+      "type": "知名游资",
+      "tag": "调仓/回补",
+      "direction": "商业航天",
+      "stocks": [
+        { "name": "航天动力", "amount": "+1.45亿", "date": "12-11" }
+      ],
+      "desc": "卖出地产股后迅速回补商业航天仓位，抓住板块分歧节点，操作紧跟市场最强主线。[citation:3]"
+    },
+    {
+      "name": "机构席位",
+      "type": "主力",
+      "tag": "分歧/加持",
+      "direction": "商业航天",
+      "stocks": [
+        { "name": "航天动力等", "amount": "净买入", "date": "12-11" },
+        { "name": "天力复合", "amount": "近期加仓", "date": "12月上旬" }
+      ],
+      "desc": "在商业航天板块中与游资形成合力。龙虎榜显示，11日有机构资金买入航天动力[citation:3]，而天力复合在12月8日获机构加仓信号后至11日上涨41%[citation:1]。"
+    }
+  ],
+  "fundNature": [
+    {
+      "sector": "商业航天",
+      "dominant": "游资与机构合力",
+      "icon": "Rocket",
+      "color": "bg-purple-100 text-purple-800",
+      "desc": "事件与预期双轮驱动",
+      "composition": [
+        { "name": "游资 (章盟主等)", "val": 45, "color": "#7c3aed" },
+        { "name": "机构资金", "val": 35, "color": "#3b82f6" },
+        { "name": "量化及跟风资金", "val": 20, "color": "#a78bfa" }
+      ]
+    },
+    {
+      "sector": "商业零售",
+      "dominant": "游资撤退/散户承接",
+      "icon": "Zap",
+      "color": "bg-gray-100 text-gray-800",
+      "desc": "抱团松动",
+      "composition": [
+        { "name": "游资 (陈小群做T)", "val": 40, "color": "#9ca3af" },
+        { "name": "散户", "val": 45, "color": "#d1d5db" },
+        { "name": "机构", "val": 15, "color": "#e5e7eb" }
+      ]
+    }
+  ]
+}

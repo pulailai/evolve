@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>1870-2025 全球经济金融周期复盘（黄金回归版）</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #e0e0e0;
+            --text-sub: #a0a0a0;
+            --accent: #4db8ff;
+            --highlight: #f0c75e;
+            --danger: #ff6b6b;
+            --bridge: #a370f0;
+            --gold: #FFD700;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 { margin-bottom: 5px; color: var(--highlight); text-align: center; font-size: 1.8em; }
+        .subtitle { font-size: 0.9em; color: var(--text-sub); margin-bottom: 20px; text-align: center; }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        #chart-container {
+            width: 100%;
+            height: 500px;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        button {
+            background: #333;
+            color: white;
+            border: 1px solid #555;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+            white-space: nowrap;
+        }
+        button:hover { background: var(--accent); border-color: var(--accent); color: #000; font-weight: bold; }
+        button.active { background: var(--highlight); border-color: var(--highlight); color: #000; font-weight: bold; box-shadow: 0 0 10px var(--highlight); }
+        button.reset-btn { border-color: var(--text-sub); color: var(--text-sub); }
+        button.reset-btn:hover { background: #fff; color: #000; }
+
+        #info-panel {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            border-left: 5px solid var(--accent);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+            min-height: 300px;
+            transition: all 0.3s ease;
+        }
+
+        .era-title { font-size: 1.8em; color: var(--accent); margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .tag { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.8em; margin-right: 8px; font-weight: bold; }
+        .tag-yellow { background: rgba(240, 199, 94, 0.2); color: var(--highlight); }
+        
+        .section-title { font-size: 1.1em; color: #fff; margin-top: 25px; margin-bottom: 10px; font-weight: bold; display: flex; align-items: center; }
+        .section-title::before { content: ''; display: block; width: 4px; height: 16px; background: var(--highlight); margin-right: 8px; }
+        
+        .text-content { color: #ddd; line-height: 1.8; margin-bottom: 15px; }
+        .text-content strong { color: #fff; font-weight: bold; }
+
+        .bridge-box {
+            background: rgba(163, 112, 240, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--bridge);
+            color: #e0e0e0;
+            line-height: 1.8;
+            margin-top: 25px;
+        }
+        
+        .chain-box {
+            background: rgba(0,0,0,0.3);
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Consolas', monospace;
+            color: #ccc;
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+        .arrow { color: var(--highlight); margin: 0 5px; }
+        
+        .trigger-detail {
+            background: rgba(255, 107, 107, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--danger);
+            margin-bottom: 15px;
+            color: #ddd;
+            line-height: 1.8;
+        }
+        
+        .solution-box {
+            background: rgba(77, 184, 255, 0.15);
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #4db8ff;
+            font-size: 0.95em;
+            margin-top: 15px;
+            color: #e0f7fa;
+            line-height: 1.7;
+        }
+        
+        /* 黄金回归专题样式 */
+        .gold-box {
+            background: rgba(255, 215, 0, 0.1);
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid var(--gold);
+            font-size: 0.95em;
+            margin-top: 15px;
+            color: #fffacd;
+            line-height: 1.7;
+        }
+        .gold-title {
+            color: var(--gold);
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .solution-title {
+            color: #4db8ff;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .country-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .country-card { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 6px; }
+        .flag { font-size: 1.2em; margin-right: 5px; }
+
+        .click-hint {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.7);
+            padding: 10px 20px;
+            border-radius: 30px;
+            pointer-events: none;
+            z-index: 100;
+            animation: fadeOut 3s forwards;
+            font-size: 0.9em;
+        }
+        @keyframes fadeOut { 0% {opacity:1;} 80% {opacity:1;} 100% {opacity:0;} }
+
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            h1 { font-size: 1.4em; }
+            #chart-container { height: 350px; }
+            .controls { gap: 8px; }
+            button { flex: 1 1 calc(50% - 10px); padding: 10px 5px; font-size: 0.85em; text-align: center; }
+            #info-panel { padding: 15px; }
+            .era-title { font-size: 1.5em; }
+            .country-grid { grid-template-columns: 1fr; }
+            .bridge-box, .trigger-detail, .solution-box, .gold-box { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>⚖️ 150年全球宏观经济演义 (黄金回归版)</h1>
+    <div class="subtitle">点击下方按钮，重点查看 <span style="color:#FFD700">金色方框</span> 里的黄金逻辑</div>
+
+    <div class="container">
+        <div id="chart-container">
+            <div class="click-hint">👆 点击/触摸图表查看详情</div>
+        </div>
+
+        <div class="controls">
+            <button class="reset-btn" onclick="resetView()">🌏 全景视图 (Reset)</button>
+            <button onclick="playHistory()" style="border-color:#4db8ff; color:#4db8ff">▶️ 自动演义</button>
+            <button onclick="selectEra(0)">1870-1914 黄金时代</button>
+            <button onclick="selectEra(1)">1914-1945 战争萧条</button>
+            <button onclick="selectEra(2)">1945-1971 美元崛起</button>
+            <button onclick="selectEra(3)">1971-2008 信用泡沫</button>
+            <button onclick="selectEra(4)">2008-至今 疯狂印钱</button>
+        </div>
+
+        <div id="info-panel">
+            <div style="text-align:center; padding-top:100px; color:#666;">
+                <h3>等待指令...</h3>
+                <p>请点击上方按钮或图表，解读历史密码</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- 核心数据源 (Data Source) ---
+        const eras = [
+            {
+                range: ['1870', '1914'],
+                name: "第一赛季：黄金说了算 (金本位时代)",
+                keywords: ["谁黄金多谁是爷", "英国是老大", "物价极稳"],
+                color: "rgba(255, 215, 0, 0.2)",
+                bg_desc: `
+                    <p>这是人类全球化的第一次高潮。规矩很简单：<strong>货币就是黄金代金券。</strong></p>
+                    <p>英国是世界霸主，英镑就像现在的美元。因为大家都承诺随时可以把纸币换成黄金，所以没人敢乱印钱，物价非常稳定，大家敢做长达几十年的跨国生意。</p>
+                `,
+                
+                trigger: `
+                    <strong>导火索：1907年大恐慌（死于“有资产没现金”）</strong><br>
+                    1. <strong>投机失败：</strong>几个大鳄借了银行的钱炒铜矿亏光了。<br>
+                    2. <strong>信任崩塌：</strong>老百姓听说银行亏了，吓得一窝蜂去取钱（挤兑）。<br>
+                    3. <strong>致命死局：</strong>银行其实有很多资产（大楼、贷款合同），但金库里的<strong>现金</strong>不够大家同时取。没有央行来“印钱救急”，银行只能眼睁睁看着自己倒闭，进而拖垮整个经济。<br>
+                    <div class="solution-box">
+                        <span class="solution-title">💡 历史的解药：发明“央行” (美联储)</span>
+                        为了防止这种“冤死”的情况，大家决定成立一个<strong>“最后贷款人”</strong>（即美联储）。<br>
+                        当银行有资产但没现金时，央行可以直接印钱借给银行，把恐慌的群众打发走。只要钱能取出来，大家反而就不取了。
+                    </div>
+                `,
+                chain: "投机亏损 <span class='arrow'>→</span> 挤兑 <span class='arrow'>→</span> 银行无现金流 <span class='arrow'>→</span> 倒闭 <span class='arrow'>→</span> 经济休克",
+                
+                bridge: `
+                    <strong>🎬 剧情反转：黄金不够分，只能靠抢</strong><br>
+                    <p>金本位虽然稳定，但有一个致命缺点：<strong>黄金挖出来的速度太慢了，跟不上工业发展的速度。</strong></p>
+                    <p>后来居上的德国工业实力强了，想要更多的市场和资源。但世界已经被英法瓜分完了。德国想扩军备战，手里的黄金根本不够买军火！</p>
+                    <p><strong>为了打仗，各国政府只能撕毁“金本位”契约：</strong>“对不起，纸币不能换黄金了，我们要开动印钞机买军火了！” 于是，人类被推向了战乱。</p>
+                `,
+                countries: [ {flag:"🇬🇧", name:"英国", desc:"吃老本的旧霸主"}, {flag:"🇩🇪", name:"德国", desc:"想通过战争重新洗牌"} ],
+                logic: "黄金限制了政府乱印钱，但也限制了政府“集中力量办大事（打仗）”。"
+            },
+            {
+                range: ['1914', '1945'],
+                name: "第二赛季：至暗时刻 (战争与大萧条)",
+                keywords: ["黄金流向美国", "产能过剩", "大萧条"],
+                color: "rgba(100, 100, 100, 0.3)",
+                bg_desc: `
+                    <p>这是一段极度混乱的时期。前半段（一战）各国疯狂印废纸打仗；中间段（大萧条）工厂东西卖不出去；后半段（二战）再次打仗消耗库存。</p>
+                `,
+                
+                trigger: `
+                    <strong>导火索：1929年大萧条（死于“生产过剩”）</strong><br>
+                    1. <strong>供需错配：</strong>电气化让工厂生产效率暴增，但工人工资没涨，买不起那么多东西。<br>
+                    2. <strong>信贷崩塌：</strong>之前大家借钱炒股、分期付款买东西来维持繁荣。股市一崩，大家都变成了穷光蛋，更没人买东西了。<br>
+                    3. <strong>通缩螺旋：</strong>东西卖不掉 → 工厂裁员 → 更加没钱买东西 → 工厂倒闭。
+                    <div class="solution-box">
+                        <span class="solution-title">💡 历史的解药：政府下场花钱 (罗斯福新政)</span>
+                        既然私人不敢花钱，<strong>政府就借债来花钱</strong>。<br>
+                        政府雇人修路、修大坝。工人拿到政府发的工资，去买面包，面包厂就能开工，经济循环就救活了。这叫“凯恩斯主义”。
+                    </div>
+                `,
+                chain: "生产>消费 <span class='arrow'>→</span> 库存积压 <span class='arrow'>→</span> 裁员/失业 <span class='arrow'>→</span> 没钱消费 <span class='arrow'>→</span> 彻底崩盘",
+                
+                bridge: `
+                    <strong>🎬 重点解析：为什么二战后黄金都流到了美国？</strong><br>
+                    <p>这个逻辑其实就是<strong>“卖东西收钱”</strong>：</p>
+                    <p>1. <strong>欧洲不生产了：</strong> 英国、法国、德国都在打仗，工厂全炸了或者转去造坦克，老百姓连饭都吃不上。</p>
+                    <p>2. <strong>美国是超市：</strong> 美国本土没打仗，工厂马力全开，生产粮食、衣服、子弹、汽油。</p>
+                    <p>3. <strong>只收黄金：</strong> 欧洲找美国买物资，想给英镑法郎。美国说：“你在打仗，你的纸币可能随时变废纸，<strong>我只要真金白银。</strong>”</p>
+                    <p>4. <strong>大搬家：</strong> 于是，一船一船的黄金从欧洲运到了美国。等到二战结束，<strong>全世界官方储备的黄金，有75%都被美国赚走了。</strong></p>
+                    <p>这就导致了下一个赛季：既然黄金都在我手里，那以后我的美元就是黄金！</p>
+                `,
+                
+                countries: [ {flag:"🇩🇪", name:"德国", desc:"没钱没资源，走极端发动战争"}, {flag:"🇺🇸", name:"美国", desc:"两边卖军火，掏空了世界家底"} ],
+                logic: "战争是最大的财富转移机器，把欧洲的存量财富（黄金）转移到了美国的增量产能（工厂）里。"
+            },
+            {
+                range: ['1945', '1971'],
+                name: "第三赛季：美元说了算 (布雷顿森林体系)",
+                keywords: ["美元=黄金", "美国一家独大"],
+                color: "rgba(77, 184, 255, 0.2)",
+                bg_desc: `
+                    <p>因为美国手里黄金太多了，它把大家叫来开会说：<strong>“以后你们别费劲运黄金了，直接用美元吧。我承诺：35美元随时换1盎司黄金，决不食言。”</strong></p>
+                    <p>这就是布雷顿森林体系：美元挂钩黄金，其他货币挂钩美元。</p>
+                `,
+                
+                trigger: `
+                    <strong>导火索：1971年尼克松冲击（死于“承诺太满”）</strong><br>
+                    1. <strong>乱印钱：</strong>美国为了打越南战争和搞福利，印的美元远远超过了它金库里的黄金储备。<br>
+                    2. <strong>被识破：</strong>法国等国家算了一笔账，发现美国在“开空头支票”，于是带头把手里的美元运到美国，强行要求换回实物黄金。<br>
+                    3. <strong>耍赖：</strong>美国黄金流失了一半，吓坏了。尼克松总统直接上电视宣布：<strong>“暂时停止”美元兑换黄金。</strong>（其实就是永久违约）。<br>
+                    <div class="solution-box">
+                        <span class="solution-title">💡 历史的解药：彻底信用货币</span>
+                        既然黄金不够用，干脆<strong>把黄金废了</strong>。<br>
+                        货币不再代表黄金，而是代表一个国家的信用（税收能力、军力）。从此，人类进入了“想印多少印多少”的纯纸币时代。
+                    </div>
+                `,
+                chain: "滥发美元 <span class='arrow'>→</span> 信用透支 <span class='arrow'>→</span> 各国挤兑黄金 <span class='arrow'>→</span> 美国违约 <span class='arrow'>→</span> 金本位终结",
+                
+                bridge: `
+                    <strong>🎬 剧情反转：没了枷锁，开始疯狂借钱</strong><br>
+                    <p>黄金的枷锁一旦打开，银行家和政客们发现了一个新大陆：<strong>只要印钞机转得快，就没有解决不了的问题。</strong></p>
+                    <p>以前借钱要考虑还不仅还得上，现在借钱只要考虑能不能“借新还旧”。</p>
+                    <p>于是，全球债务开始像滚雪球一样爆炸式增长。大家开始透支未来的钱来买今天的繁荣。</p>
+                `,
+                countries: [ {flag:"🇺🇸", name:"美国", desc:"从世界债主变成了世界老赖"}, {flag:"🇫🇷", name:"法国", desc:"带头挤兑美国黄金"} ],
+                logic: "特里芬难题：既想让美元流向全球（印钱），又想让美元保值（少印钱），这是不可能做到的。"
+            },
+            {
+                range: ['1971', '2008'],
+                name: "第四赛季：信用狂欢 (债务泡沫)",
+                keywords: ["把垃圾包装成钻石", "次贷危机"],
+                color: "rgba(255, 107, 107, 0.2)",
+                bg_desc: `
+                    <p>这是一个“钱生钱”的时代。华尔街发明了各种复杂的金融工具，把风险隐藏起来。普通人即便没钱，也能贷款买大房子。大家都觉得房价永远会涨。</p>
+                `,
+                
+                trigger: `
+                    <strong>导火索：2008年次贷危机（死于“把垃圾当宝贝”）</strong><br>
+                    1. <strong>乱放贷：</strong>银行为了赚利息，把钱借给连工作都没有的穷人买房（次级贷款）。<br>
+                    2. <strong>乱包装：</strong>华尔街把这些注定会违约的烂贷款，打包伪装成“AAA级安全资产”，卖给了全球的养老金和银行。<br>
+                    3. <strong>大穿帮：</strong>美联储一加息，穷人还不起钱，房价一跌，这些假冒的安全资产瞬间变成废纸。全球金融机构发现自己手里全是废纸，吓得心脏骤停。<br>
+                    <div class="solution-box">
+                        <span class="solution-title">💡 历史的解药：量化宽松 (QE)</span>
+                        银行因为恐惧，谁也不敢借钱给谁。经济马上要猝死。<br>
+                        美联储直接开着直升机撒钱，<strong>凭空印出万亿美金</strong>，把银行手里的烂账全买走。强行把钱塞进市场，让心脏重新跳动。
+                    </div>
+                `,
+                chain: "穷人断供 <span class='arrow'>→</span> 房价下跌 <span class='arrow'>→</span> 理财产品归零 <span class='arrow'>→</span> 银行破产 <span class='arrow'>→</span> 央行印钱兜底",
+                
+                bridge: `
+                    <strong>🎬 剧情反转：药吃多了，停不下来</strong><br>
+                    <p>2008年的救命药（QE印钱），变成了后来的常备药。</p>
+                    <p>因为印了太多钱，利率被压到了0。钱不值钱了，于是富人拿着便宜的钱去炒股、炒房，资产价格上天；而穷人手里的工资却不涨。</p>
+                    <p>这就导致了极度的贫富分化，也为现在的通胀埋下了巨大的地雷。</p>
+                `,
+                countries: [ {flag:"🇺🇸", name:"美国", desc:"输出通胀，收割全球"}, {flag:"🇨🇳", name:"中国", desc:"出口受挫，靠基建硬撑"} ],
+                logic: "为了掩盖一个错误的泡沫，我们吹起了一个更大的泡沫。"
+            },
+            {
+                range: ['2008', '2025'],
+                name: "第五赛季：大放水 (进退两难)",
+                keywords: ["零利率", "高通胀", "贫富悬殊"],
+                color: "rgba(163, 112, 240, 0.2)",
+                bg_desc: `
+                    <p>我们正身处其中。全球央行都在走钢丝：印钱吧，物价飞涨（通胀）；收钱吧，股市楼市要崩（债务暴雷）。</p>
+                `,
+                
+                trigger: `
+                    <strong>❓ 为什么工厂产能这么高，物价还会涨？</strong><br>
+                    这是一个结构性问题：<strong>钱流向了“无人工厂造不出来的稀缺资源”。</strong><br>
+                    1. <strong>工业品不涨：</strong>电视、手机因为产能过剩，确实没怎么涨（甚至跌）。<br>
+                    2. <strong>稀缺品暴涨：</strong>工厂造不出石油、造不出好医生、造不出市中心的地皮。钱印多了，大家抢这些稀缺资源，导致<strong>油价、医疗、教育、房租暴涨</strong>。<br>
+                    
+                    <div class="gold-box">
+                        <span class="gold-title">🏆 您的提问：为什么现在大家又回头买黄金？</span>
+                        <p><strong>逻辑反转：</strong>以前美国信用好，大家存美元；现在美国欠债太多（35万亿），大家怕美元变废纸。</p>
+                        <p><strong>1. 备胎逻辑：</strong> 美元是美国的“借条”，黄金是“现大洋”。如果美国赖账，有黄金在手，心里不慌。</p>
+                        <p><strong>2. 俄罗斯教训：</strong> 美国冻结了俄罗斯的美元储备。这让所有国家觉醒：<strong>“存在美国的钱是美国的，运回家的黄金才是自己的。”</strong></p>
+                        <p><strong>3. 入场券：</strong> 如果将来货币体系崩盘重组，谁手里的黄金多，谁在谈判桌上的话语权就大。</p>
+                    </div>
+
+                    <div class="solution-box">
+                        <span class="solution-title">💡 未来的解药：靠“AI技术”突然暴富</span>
+                        <p>举个例子：你欠了100万房贷（<strong>巨额债务</strong>），而你现在月薪只有5千（<strong>经济停滞</strong>），如果不吃不喝几十年才能还清，这就叫“硬着陆/破产”。</p>
+                        <p>现在的办法是：指望AI技术让你工作效率爆炸，月薪突然涨到了50万（<strong>技术带来的财富增量</strong>）。</p>
+                        <p>这时候，虽然你还欠着100万，但这笔债对现在的你来说只是“两个月工资”的事了。这就叫<strong>“把债务稀释掉”</strong>。</p>
+                    </div>
+                `,
+                chain: "印钱 <span class='arrow'>→</span> 抢夺稀缺资源 <span class='arrow'>→</span> 担心美元崩盘 <span class='arrow'>→</span> 抢购黄金保命",
+                
+                bridge: `
+                    <strong>🔮 最终展望：</strong>
+                    现在的痛苦，本质上是在为过去40年的“借钱消费”还债。
+                    谁能率先引爆下一次工业革命（AI、可控核聚变），谁就能拿到下一个赛季的“复活卡”。
+                `,
+                countries: [ {flag:"🇺🇸", name:"美国", desc:"科技封锁，防止老二上位"}, {flag:"🇨🇳", name:"中国", desc:"痛苦转型，押注高端制造"} ],
+                logic: "旧的债务周期已经到头，必须开启新的生产力周期。"
+            }
+        ];
+
+        // 模拟数据 (Year, Rate, Debt_Index)
+        const rawData = [
+            [1870,4,20],[1880,3.5,25],[1890,5,30],[1900,4,35],[1907,7,55],[1913,5,40],
+            [1918,4.5,80],[1920,6,60],[1929,6,98],[1932,1,85],[1939,1.5,70],[1945,1,100],
+            [1950,2,50],[1960,3,40],[1970,5,45],[1975,8,55],[1980,18,50],[1985,9,60],
+            [1990,8,70],[1995,6,65],[2000,6.5,80],[2001,3,75],[2007,5.25,95],[2008,0,90],
+            [2015,0.5,85],[2020,0,105],[2023,5.5,95]
+        ];
+        const years = rawData.map(item => item[0]);
+        const rates = rawData.map(item => item[1]);
+        const debts = rawData.map(item => item[2]);
+
+        var myChart = echarts.init(document.getElementById('chart-container'));
+        
+        var option = {
+            backgroundColor: 'transparent',
+            tooltip: { trigger: 'axis', axisPointer: { type: 'cross' } },
+            grid: { top: 40, bottom: 60, left: 50, right: 50 }, 
+            dataZoom: [
+                { type: 'inside', xAxisIndex: 0 },
+                { type: 'slider', xAxisIndex: 0, bottom: 10, height: 20, handleSize: '100%', textStyle: { color: '#888' }, borderColor: '#333' }
+            ],
+            xAxis: { type: 'category', data: years, axisLabel: { color: '#888' } },
+            yAxis: [
+                { type: 'value', name: '利息高低(%)', position: 'left', axisLabel: {color:'#4db8ff'}, splitLine:{show:false} },
+                { type: 'value', name: '泡沫指数(借债)', position: 'right', axisLabel: {color:'#f0c75e'}, splitLine:{lineStyle:{color:'#333'}} }
+            ],
+            series: [
+                { name: '资金成本 (水闸)', type: 'line', data: rates, smooth: true, lineStyle: { color: '#4db8ff', width: 3 }, itemStyle: { color: '#4db8ff' } },
+                { name: '债务泡沫 (贪婪)', type: 'line', yAxisIndex: 1, data: debts, smooth: true, lineStyle: { color: '#f0c75e', width: 2, type: 'dashed' }, areaStyle: { opacity: 0.1, color: '#f0c75e' } },
+                { type: 'line', markArea: { silent: false, data: [] } }
+            ]
+        };
+        myChart.setOption(option);
+
+        function renderEra(index) {
+            const data = eras[index];
+            const panel = document.getElementById('info-panel');
+            
+            let countriesHtml = data.countries.map(c => 
+                `<div class="country-card"><span class="flag">${c.flag}</span> <strong>${c.name}</strong><br><span style="font-size:0.9em;color:#aaa">${c.desc}</span></div>`
+            ).join('');
+
+            let tagsHtml = data.keywords.map(k => `<span class="tag tag-yellow">${k}</span>`).join('');
+
+            panel.innerHTML = `
+                <div class="era-title">${data.name}</div>
+                <div>${tagsHtml}</div>
+                
+                <div class="section-title">🌍 讲人话：这是个什么时代？</div>
+                <div class="text-content">${data.bg_desc}</div>
+
+                <div class="section-title">💣 为什么会炸？ vs 💡 历史的解药</div>
+                <div class="trigger-detail">${data.trigger}</div>
+                
+                <div class="section-title">🔗 怎么传导的？</div>
+                <div class="chain-box">${data.chain}</div>
+
+                <div class="bridge-box">
+                    ${data.bridge}
+                </div>
+
+                <div class="section-title">♟️ 几个大国在干啥？</div>
+                <div class="country-grid">${countriesHtml}</div>
+
+                <div class="section-title">💡 一句话总结逻辑</div>
+                <div style="color:var(--highlight); font-style:italic;">“${data.logic}”</div>
+            `;
+            panel.style.borderLeftColor = data.range[0] === '2008' ? '#a370f0' : '#4db8ff';
+        }
+
+        window.selectEra = function(index) {
+            renderEra(index);
+            const selectedEra = eras[index];
+            
+            const newMarkAreaData = eras.map((e, i) => {
+                const isSelected = i === index;
+                return [
+                    { 
+                        xAxis: e.range[0], 
+                        name: e.keywords[0],
+                        label: {
+                            color: isSelected ? '#fff' : 'rgba(255,255,255,0.3)', 
+                            position: 'insideTop',
+                            fontWeight: isSelected ? 'bold' : 'normal',
+                            fontSize: isSelected ? 16 : 12,
+                            distance: 10
+                        },
+                        itemStyle: { 
+                            color: e.color,
+                            opacity: isSelected ? 0.4 : 0.1, 
+                            borderWidth: isSelected ? 2 : 0,
+                            borderColor: isSelected ? '#fff' : 'transparent',
+                            borderType: 'solid'
+                        } 
+                    },
+                    { xAxis: e.range[1] }
+                ];
+            });
+
+            const startYear = parseInt(selectedEra.range[0]) - 5; 
+            const endYear = parseInt(selectedEra.range[1]) + 5;
+            const startIdx = Math.max(0, years.findIndex(y => y >= startYear));
+            let endIdx = years.findIndex(y => y >= endYear);
+            if (endIdx === -1) endIdx = years.length - 1;
+
+            myChart.setOption({
+                series: [{}, {}, { markArea: { data: newMarkAreaData } }],
+                dataZoom: [{ startValue: startIdx, endValue: endIdx }]
+            });
+
+            document.querySelectorAll('.controls button:not(.reset-btn)').forEach((btn, i) => {
+                btn.classList.toggle('active', i-1 === index);
+            });
+        }
+
+        window.resetView = function() {
+            const resetMarkArea = eras.map((e) => [{ 
+                xAxis: e.range[0], 
+                itemStyle: { color: e.color, opacity: 0.2 },
+                label: { color: '#aaa', position: 'insideTop' },
+                name: e.keywords[0]
+            }, { xAxis: e.range[1] }]);
+
+            myChart.setOption({
+                series: [{}, {}, { markArea: { data: resetMarkArea } }],
+                dataZoom: [{ start: 0, end: 100 }]
+            });
+            document.getElementById('info-panel').innerHTML = '<div style="text-align:center; padding-top:100px; color:#666;"><h3>🌍 全景模式</h3><p>已重置为上帝视角，请选择一个时代开始探索</p></div>';
+            document.querySelectorAll('.controls button').forEach(btn => btn.classList.remove('active'));
+        }
+
+        myChart.getZr().on('click', function (params) {
+            const pointInPixel = [params.offsetX, params.offsetY];
+            const pointInGrid = myChart.convertFromPixel({seriesIndex: 0}, pointInPixel);
+            if (pointInGrid) {
+                const xValue = pointInGrid[0]; 
+                const yearStr = years[xValue];
+                if(yearStr) {
+                    const year = parseInt(yearStr);
+                    const idx = eras.findIndex(e => year >= parseInt(e.range[0]) && year <= parseInt(e.range[1]));
+                    if(idx !== -1) selectEra(idx);
+                }
+            }
+        });
+
+        let playInterval;
+        window.playHistory = function() {
+            let i = 0;
+            if(playInterval) clearInterval(playInterval);
+            selectEra(0);
+            playInterval = setInterval(() => {
+                i++;
+                if(i < eras.length) {
+                    selectEra(i);
+                } else {
+                    clearInterval(playInterval);
+                    setTimeout(resetView, 3000); 
+                }
+            }, 8000); // 增加到8秒，给您足够的时间阅读详细文字
+        }
+
+        resetView(); 
+        window.addEventListener('resize', () => myChart.resize());
+    </script>
+</body>
+</html>

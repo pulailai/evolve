@@ -1,0 +1,110 @@
+{
+  "updateTime": "2025年12月31日 (年度收官)",
+  "dailyFlow": [
+    { "name": "国防军工", "netFlow": 18.0, "type": "in", "desc": "行业实现主力资金净流入[citation:1]" },
+    { "name": "教育", "netFlow": 5.0, "type": "in", "desc": "板块涨幅居前，凯文教育涨停[citation:3]" },
+    { "name": "文化传媒", "netFlow": 12.0, "type": "in", "desc": "AI应用方向领涨，蓝色光标等涨停[citation:3][citation:4]" },
+    { "name": "医药商业", "netFlow": -8.0, "type": "out", "desc": "板块相对低迷[citation:3]" },
+    { "name": "电力设备", "netFlow": -35.0, "type": "out", "desc": "新能源赛道延续调整态势" },
+    { "name": "电子", "netFlow": -40.0, "type": "out", "desc": "科技股内部分化，资金流出" }
+  ],
+  "topStocks": [
+    { "name": "蓝色光标", "value": 20.0, "type": "buy", "desc": "“20cm”涨停，带动AI应用板块[citation:3]" },
+    { "name": "航天电子", "value": 10.0, "type": "buy", "desc": "商业航天龙头涨停[citation:3]" },
+    { "name": "中公教育", "value": 4.0, "type": "buy", "desc": "教育股拉升[citation:3]" },
+    { "name": "宁德时代", "value": -15.0, "type": "sell", "desc": "创业板权重股调整，拖累指数" }
+  ],
+  "weeklyThemes": [
+    { "name": "商业航天", "value": 80, "color": "#10b981", "details": "发射事件催化，航天装备板块大涨[citation:3][citation:7]" },
+    { "name": "AI应用/文化传媒", "value": 70, "color": "#3b82f6", "details": "AI应用方向领涨，政策治理规范行业[citation:3][citation:4]" },
+    { "name": "年度收官行情", "value": 60, "color": "#ef4444", "details": "沪指十一连阳创阶段新高，全年主要指数均显著上涨[citation:3][citation:5]" },
+    { "name": "新质生产力", "value": 50, "color": "#8b5cf6", "details": "“十五五”开局年，商业航天、低空经济等受关注[citation:7]" }
+  ],
+  "marketVolume": [
+    { "date": "12-24", "volume": null, "status": "待补充", "change": null, "sentiment": null, "desc": "历史数据缺失" },
+    { "date": "12-25", "volume": null, "status": "待补充", "change": null, "sentiment": null, "desc": "历史数据缺失" },
+    { "date": "12-26", "volume": 1.55, "status": "放量", "change": null, "sentiment": 65, "desc": "成交额超1.5万亿元" },
+    { "date": "12-29", "volume": 2.16, "status": "缩量", "change": -0.01, "sentiment": 55, "desc": "成交额超2万亿元" },
+    { "date": "12-30", "volume": 2.16, "status": "平量", "change": 0.00, "sentiment": 45, "desc": "全市场成交2.16万亿元" },
+    { "date": "12-31", "volume": 2.05, "status": "缩量", "change": -0.11, "sentiment": 50, "desc": "两市成交20451.42亿元，较上日减少971.83亿元[citation:1]" }
+  ],
+  "themeLifecycle": [
+    {
+      "name": "商业航天",
+      "daysActive": 25,
+      "phase": "事件驱动冲高",
+      "heat": 85,
+      "startDate": "2025-11-25",
+      "trend": "up",
+      "insight": "在文昌发射场成功发射实践二十九号卫星的直接事件催化下[citation:7]，板块于年度收官日再度强势领涨，多只核心个股涨停[citation:3]，但板块整体资金博弈激烈，持续性需观察后续政策与产业进展。",
+      "news": [
+        "【事件】12月31日，文昌航天发射场使用长征七号运载火箭，成功将实践二十九号卫星A星、B星发射升空[citation:7]。",
+        "【政策】上交所以“新”为立所之本，表示支持优质商业火箭企业上市[citation:7]。",
+        "【盘面】航天航空股大涨，航天电子、中国卫星、中天火箭、航发科技等多股涨停[citation:3]。"
+      ]
+    },
+    {
+      "name": "AI应用/文化传媒",
+      "daysActive": 1,
+      "phase": "反弹修复",
+      "heat": 75,
+      "startDate": "2025-12-31",
+      "trend": "up",
+      "insight": "受龙头股蓝色光标“20cm”涨停带动[citation:3]，叠加市场对2026年AI应用落地的预期，板块在年末出现反弹。同时，国家广电总局部署开展“AI魔改”视频专项治理，短期可能影响情绪但长期利于行业规范发展[citation:4]。",
+      "news": [
+        "【治理】国家广播电视总局自2026年1月1日起，开展为期一个月的“AI魔改”视频专项治理[citation:4]。",
+        "【盘面】文化传媒板块涨幅居前，蓝色光标“20cm”涨停，掌阅科技涨停[citation:3]。"
+      ]
+    }
+  ],
+  "activeSeats": [
+    {
+      "name": "机构席位",
+      "type": "主力",
+      "tag": "布局未来 / 获利了结",
+      "direction": "商业航天、AI应用",
+      "stocks": [
+        { "name": "商业航天个股", "amount": "分歧较大", "date": "12-31" },
+        { "name": "AI应用个股", "amount": "部分买入", "date": "12-31" }
+      ],
+      "desc": "在年末最后一个交易日，机构操作呈现分歧。一方面，部分资金持续关注商业航天、AI等未来产业主线；另一方面，也有资金选择获利了结，进行仓位调整。"
+    },
+    {
+      "name": "活跃游资",
+      "type": "游资",
+      "tag": "聚焦题材",
+      "direction": "商业航天、AI应用",
+      "stocks": [
+        { "name": "航天晨光", "amount": "封板", "date": "12-31" },
+        { "name": "蓝色光标", "amount": "封板", "date": "12-31" }
+      ],
+      "desc": "积极参与当日最强题材，在商业航天和AI应用的龙头股上打造涨停，维持市场局部热度，为年度交易收官。"
+    }
+  ],
+  "fundNature": [
+    {
+      "sector": "商业航天",
+      "dominant": "游资与机构混合",
+      "icon": "Rocket",
+      "color": "bg-purple-100 text-purple-800",
+      "desc": "事件催化，游资主导",
+      "composition": [
+        { "name": "游资 (攻击前排)", "val": 55, "color": "#8b5cf6" },
+        { "name": "趋势机构", "val": 30, "color": "#3b82f6" },
+        { "name": "散户跟风", "val": 15, "color": "#a78bfa" }
+      ]
+    },
+    {
+      "sector": "AI应用/文化传媒",
+      "dominant": "游资与短线资金",
+      "icon": "Cpu",
+      "color": "bg-blue-100 text-blue-800",
+      "desc": "超跌反弹，游资驱动",
+      "composition": [
+        { "name": "游资 (打造龙头)", "val": 60, "color": "#60a5fa" },
+        { "name": "短线跟风资金", "val": 30, "color": "#93c5fd" },
+        { "name": "机构", "val": 10, "color": "#dbeafe" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "updateTime": "2025年12月22日",
+  "dailyFlow": [
+    { "name": "通信", "netFlow": 75.16, "type": "in", "desc": "行业主力资金净流入规模居首，CPO等算力硬件领涨" },
+    { "name": "电子", "netFlow": 60.73, "type": "in", "desc": "半导体产业链全线爆发，资金大幅流入" },
+    { "name": "电力设备", "netFlow": 33.92, "type": "in", "desc": "新能源赛道获得资金回流" },
+    { "name": "计算机", "netFlow": -24.08, "type": "out", "desc": "行业主力资金净流出最多，内部分化" },
+    { "name": "传媒", "netFlow": -22.63, "type": "out", "desc": "板块调整，资金流出" },
+    { "name": "商贸零售", "netFlow": -14.56, "type": "out", "desc": "资金从前期热点流出" }
+  ],
+  "topStocks": [
+    { "name": "卧龙电驱", "value": 21.26, "type": "buy", "desc": "机器人概念龙头，主力资金净流入额居两市首位" },
+    { "name": "中际旭创", "value": 14.85, "type": "buy", "desc": "CPO龙头，获主力大幅抢筹" },
+    { "name": "雪人集团", "value": -11.25, "type": "sell", "desc": "主力资金净流出规模居首" },
+    { "name": "航天电子", "value": -11.18, "type": "sell", "desc": "商业航天高标，资金大幅出逃" }
+  ],
+  "weeklyThemes": [
+    { "name": "海南自贸区", "value": 80, "color": "#ef4444", "details": "全岛封关运作启动引爆板块，近20股涨停" },
+    { "name": "AI算力/半导体", "value": 75, "color": "#3b82f6", "details": "通信、电子行业资金流入超135亿，新易盛创历史新高" },
+    { "name": "商业航天", "value": 50, "color": "#10b981", "details": "概念反复走强，但内部资金分歧巨大" },
+    { "name": "机器人概念", "value": 45, "color": "#8b5cf6", "details": "午后快速拉升，与智能制造联动" }
+  ],
+  "marketVolume": [
+    { "date": "12-09", "volume": 1.90, "status": "平量", "change": 0.0, "sentiment": 52, "desc": "方向不明" },
+    { "date": "12-10", "volume": 1.78, "status": "缩量", "change": -0.12, "sentiment": 45, "desc": "缩量震荡" },
+    { "date": "12-11", "volume": 1.89, "status": "放量", "change": 0.11, "sentiment": 40, "desc": "普跌放量" },
+    { "date": "12-12", "volume": 2.09, "status": "放量", "change": 0.20, "sentiment": 60, "desc": "探底回升" },
+    { "date": "12-15", "volume": 1.77, "status": "大幅缩量", "change": -0.32, "sentiment": 40, "desc": "指数回调" },
+    { "date": "12-16", "volume": 1.72, "status": "缩量", "change": -0.05, "sentiment": 35, "desc": "市场普跌" },
+    { "date": "12-17", "volume": 1.81, "status": "放量", "change": 0.09, "sentiment": 70, "desc": "指数普涨反弹" },
+    { "date": "12-18", "volume": 1.66, "status": "大幅缩量", "change": -0.15, "sentiment": 50, "desc": "成交萎缩" },
+    { "date": "12-19", "volume": 1.73, "status": "小幅放量", "change": 0.07, "sentiment": 65, "desc": "指数普涨" },
+    { "date": "12-22", "volume": 1.88, "status": "放量", "change": 0.15, "sentiment": 75, "desc": "高开高走，成交额较昨日增加约1360亿元" }
+  ],
+  "themeLifecycle": [
+    {
+      "name": "海南自贸区",
+      "daysActive": 5,
+      "phase": "主升浪（爆发）",
+      "heat": 90,
+      "startDate": "2025-12-18",
+      "trend": "up",
+      "insight": "受海南全岛封关运作正式启动的消息持续催化，板块从启动直接进入全面爆发阶段，掀起涨停潮，成为日内无可争议的最强新主线，赚钱效应极强。",
+      "news": [
+        "【政策】自2025年12月18日起，海南自由贸易港正式启动全岛封关运作[citation:9]。",
+        "【盘面】海南自贸区板块集体爆发，海南矿业、神农种业、海马汽车等近20股涨停[citation:5][citation:6]。"
+      ]
+    },
+    {
+      "name": "AI算力/半导体",
+      "daysActive": 2,
+      "phase": "主升浪（加速）",
+      "heat": 85,
+      "startDate": "2025-12-21",
+      "trend": "up",
+      "insight": "在光计算芯片突破等消息及市场风险偏好提升的驱动下，通信、电子等硬科技板块获得主力资金超135亿的巨额净流入，与海南板块形成市场双主线，机构回补特征明显。",
+      "news": [
+        "【资金】通信、电子行业主力资金净流入分别达75.16亿和60.73亿元，合计占全市场净流入主力资金的绝大部分[citation:4]。",
+        "【技术】上海交通大学在新一代光计算芯片领域取得突破，为AI算力提供硬件加速[citation:7]。"
+      ]
+    }
+  ],
+  "activeSeats": [
+    {
+      "name": "机构席位",
+      "type": "主力",
+      "tag": "回补科技",
+      "direction": "通信、电子",
+      "stocks": [
+        { "name": "卧龙电驱/中际旭创等", "amount": "大幅净买入", "date": "12-22" }
+      ],
+      "desc": "作为今日做多的绝对核心，集中火力大幅净流入通信、电子等科技权重板块，是推动指数和板块大涨的主要力量。"
+    },
+    {
+      "name": "量化/活跃游资",
+      "type": "游资群体",
+      "tag": "攻击题材",
+      "direction": "海南、机器人",
+      "stocks": [
+        { "name": "神农种业", "amount": "涨停", "date": "12-22" },
+        { "name": "卧龙电驱", "amount": "涨停", "date": "12-22" }
+      ],
+      "desc": "聚焦于海南自贸区这一最新最强题材，同时参与机器人等午后拉升的活跃概念，打造短线赚钱效应。"
+    }
+  ],
+  "fundNature": [
+    {
+      "sector": "海南自贸区",
+      "dominant": "游资与散户合力",
+      "icon": "Zap",
+      "color": "bg-red-100 text-red-800",
+      "desc": "消息驱动，情绪高潮",
+      "composition": [
+        { "name": "游资", "val": 50, "color": "#dc2626" },
+        { "name": "散户跟风", "val": 40, "color": "#fca5a5" },
+        { "name": "其他", "val": 10, "color": "#fecaca" }
+      ]
+    },
+    {
+      "sector": "AI算力/半导体",
+      "dominant": "机构主导",
+      "icon": "Cpu",
+      "color": "bg-blue-100 text-blue-800",
+      "desc": "机构回补，趋势增强",
+      "composition": [
+        { "name": "机构资金", "val": 70, "color": "#1d4ed8" },
+        { "name": "外资/跟风盘", "val": 20, "color": "#60a5fa" },
+        { "name": "游资", "val": 10, "color": "#93c5fd" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "updateTime": "2025年12月10日",
+  "dailyFlow": [
+    { "name": "房地产", "netFlow": 12.5, "type": "in", "desc": "政策预期驱动，万科A午后涨停" },
+    { "name": "商业零售", "netFlow": 12.2, "type": "in", "desc": "行业大会政策利好刺激" },
+    { "name": "电力设备", "netFlow": -9.7, "type": "out", "desc": "板块调整，净流出居首" },
+    { "name": "计算机", "netFlow": -3.8, "type": "out", "desc": "科技股内部分化" },
+    { "name": "国防军工", "netFlow": -2.1, "type": "out", "desc": "延续弱势" },
+    { "name": "汽车零部件", "netFlow": -1.5, "type": "out", "desc": "跟随市场调整" }
+  ],
+  "topStocks": [
+    { "name": "神农种业", "value": 2.30, "type": "buy", "desc": "海南+种业概念龙头" },
+    { "name": "永辉超市", "value": 7.37, "type": "buy", "desc": "零售高标，录得3连板" },
+    { "name": "中瓷电子", "value": -5.84, "type": "sell", "desc": "资金大幅出逃" },
+    { "name": "龙洲股份", "value": -2.41, "type": "sell", "desc": "高位股分歧，遭游资卖出" }
+  ],
+  "weeklyThemes": [
+    { "name": "商业航天", "value": 50, "color": "#10b981", "details": "政策与技术共振，市场延续性最强的主线[citation:2][citation:3]" },
+    { "name": "海南自贸区/种业", "value": 40, "color": "#ef4444", "details": "政策驱动的新热点" },
+    { "name": "新零售/商业百货", "value": 35, "color": "#f97316", "details": "游资抱团高标" },
+    { "name": "光模块/算力", "value": 30, "color": "#3b82f6", "details": "机构趋势持仓" }
+  ],
+  "marketVolume": [
+    { "date": "12-01", "volume": 1.88, "status": "平量", "change": 0.02, "sentiment": 60, "desc": "月初开局平稳" },
+    { "date": "12-04", "volume": 1.92, "status": "放量", "change": 0.05, "sentiment": 65, "desc": "尝试突破" },
+    { "date": "12-08", "volume": 1.90, "status": "平量", "change": 0.0, "sentiment": 55, "desc": "横盘震荡" },
+    { "date": "12-09", "volume": 1.90, "status": "平量", "change": 0.0, "sentiment": 52, "desc": "方向不明" },
+    { "date": "12-10", "volume": 1.78, "status": "缩量", "change": -0.12, "sentiment": 45, "desc": "缩量震荡，超2800股下跌" }
+  ],
+  "themeLifecycle": [
+    {
+  "name": "商业航天",
+  "daysActive": 15,
+  "phase": "高位分歧",
+  "heat": 70,
+  "startDate": "2025-11-25",
+  "trend": "高位震荡",
+  "insight": "板块在政策与事件密集催化下经历了快速主升[citation:1]。当前，高涨的股价与分化的基本面形成“温差”[citation:1]，在连续拉升后情绪趋于高潮，部分个股午后回落明显[citation:7]，资金在高位出现激烈博弈[citation:10]，行情进入震荡分化阶段。",
+  "news": [
+    "【政策】2025年11月25日，国家航天局印发《推进商业航天高质量安全发展行动计划（2025~2027年）》[citation:1]。",
+    "【资金】12月5日龙虎榜显示，龙头股航天发展虽获机构买入，但遭量化席位大额卖出，多路资金博弈激烈[citation:10]。12月8日亦有机构资金买入相关个股[citation:6]。",
+    "【盘面】截至12月初，龙头股航天发展在15个交易日内录得9个涨停，区间涨幅超118%[citation:1]。但12月9日板块情绪高潮后出现明显个股回落[citation:7]。",
+    "【业绩】2025年三季报显示板块内公司业绩分化显著，部分公司营收高增但利润亏损，股价上涨更多反映未来预期[citation:1]。"
+  ]
+},
+    {
+      "name": "海南自贸区/种业",
+      "daysActive": 1,
+      "phase": "启动发酵",
+      "heat": 90,
+      "startDate": "12-10",
+      "trend": "up",
+      "insight": "受海南“十五五”规划等政策消息直接刺激，成为日内无可争议的最强新主线，资金涌入明显。",
+      "news": [
+        "【政策】海南“十五五”规划建议引发市场对区域发展及种业安全的联想。",
+        "【盘面】神农种业、海马汽车等多只概念股涨停，板块效应强劲。"
+      ]
+    },
+    {
+      "name": "光模块/算力",
+      "daysActive": 60,
+      "phase": "主升浪",
+      "heat": 75,
+      "startDate": "10月中旬",
+      "trend": "up",
+      "insight": "作为全年核心赛道，在龙头公司新易盛再创新高的带动下，显示出极强的趋势韧性，成为机构资金的“压舱石”方向。",
+      "news": [
+        "【业绩】龙头公司新易盛股价创历史新高，彰显行业高景气度。",
+        "【资金】尽管市场震荡，该板块持续获得长线资金青睐。"
+      ]
+    }
+  ],
+  "activeSeats": [
+    {
+      "name": "陈小群",
+      "type": "知名游资",
+      "tag": "双线重仓 / 龙头战法",
+      "direction": "商业航天 & 商业零售",
+      "stocks": [
+        { "name": "航天发展", "amount": "持续做T/加仓", "date": "12-04至12-08" },
+        { "name": "永辉超市", "amount": "+3.06亿", "date": "12-09" },
+        { "name": "龙洲股份", "amount": "+1.02亿", "date": "12-04/05" }
+      ],
+      "desc": "精准布局本轮两大最强主线。在商业航天上，于龙头股航天发展启动初期介入并持续滚动操作[citation:1]；在零售上，重仓打造永辉超市为市场新龙头，展现其对主线行情的前瞻性把握和强大的造势能力。"
+    },
+    {
+      "name": "成都系",
+      "type": "知名游资",
+      "tag": "首板助攻 / 题材跟随",
+      "direction": "多题材轮动",
+      "stocks": [
+        { "name": "永辉超市", "amount": "+1.57亿", "date": "12-09" },
+        { "name": "神农种业", "amount": "封板主力", "date": "12-10" },
+        { "name": "航天机电", "amount": "+1.01亿", "date": "12-04/05" }
+      ],
+      "desc": "操作风格灵活，紧密跟随市场每日新热点，从商业航天、零售到海南，擅长在题材启动日介入首板。"
+    },
+    {
+      "name": "机构席位",
+      "type": "主力",
+      "tag": "趋势布局 / 高低切换",
+      "direction": "科技成长 & 低位蓝筹",
+      "stocks": [
+        { "name": "天孚通信", "amount": "大幅净买", "date": "12-08" },
+        { "name": "新易盛", "amount": "趋势增持", "date": "近10日" },
+        { "name": "万科A", "amount": "底部买入", "date": "12-10" }
+      ],
+      "desc": "呈现典型“杠铃策略”：一头持续加仓光模块等确定性高景气赛道；另一头在低位布局地产等有边际改善的板块。"
+    }
+  ],
+  "fundNature": [
+    {
+      "sector": "商业航天",
+      "dominant": "陈小群 / 章盟主等顶级游资",
+      "icon": "Rocket",
+      "color": "bg-purple-100 text-purple-800",
+      "desc": "游资主导的趋势投机",
+      "composition": [
+        { "name": "陈小群/章盟主等游资", "val": 60, "color": "#7c3aed" },
+        { "name": "量化/跟风资金", "val": 25, "color": "#a78bfa" },
+        { "name": "散户", "val": 15, "color": "#ddd6fe" }
+      ]
+    },
+    {
+      "sector": "新零售/商业百货",
+      "dominant": "陈小群/成都系",
+      "icon": "Zap",
+      "color": "bg-red-100 text-red-800",
+      "desc": "游资抱团猛攻高标",
+      "composition": [
+        { "name": "陈小群等游资", "val": 50, "color": "#dc2626" },
+        { "name": "成都系等游资", "val": 25, "color": "#f97316" },
+        { "name": "散户跟风", "val": 20, "color": "#fca5a5" },
+        { "name": "机构试探", "val": 5, "color": "#3b82f6" }
+      ]
+    },
+    {
+      "sector": "光模块/算力",
+      "dominant": "机构主导",
+      "icon": "TrendingUp",
+      "color": "bg-blue-100 text-blue-800",
+      "desc": "趋势投资",
+      "composition": [
+        { "name": "公募/外资", "val": 70, "color": "#1d4ed8" },
+        { "name": "长线资金", "val": 20, "color": "#60a5fa" },
+        { "name": "散户", "val": 10, "color": "#93c5fd" }
+      ]
+    }
+  ]
+}
+
+
+
+    

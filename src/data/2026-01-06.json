@@ -1,0 +1,108 @@
+{
+  "updateTime": "2026年1月6日",
+  "dailyFlow": [
+    { "name": "有色金属", "netFlow": 65.04, "type": "in", "desc": "行业涨幅及主力资金净流入均居市场首位" },
+    { "name": "非银金融", "netFlow": 55.0, "type": "in", "desc": "保险、券商板块集体拉升" },
+    { "name": "基础化工", "netFlow": 40.0, "type": "in", "desc": "板块涨幅2.77%，多股涨停" },
+    { "name": "通信", "netFlow": -25.10, "type": "out", "desc": "行业主力资金净流出，CPO等方向调整" },
+    { "name": "美容护理", "netFlow": -5.0, "type": "out", "desc": "行业小幅下跌，资金流出" },
+    { "name": "银行", "netFlow": -3.0, "type": "out", "desc": "板块微跌，表现相对滞后" }
+  ],
+  "topStocks": [
+    { "name": "鲁信创投", "value": 10.5, "type": "buy", "desc": "商业航天高标，录得8天6板" },
+    { "name": "华林证券", "value": 9.99, "type": "buy", "desc": "券商领涨股涨停" },
+    { "name": "天力复合", "value": 16.75, "type": "buy", "desc": "有色金属板块领涨" },
+    { "name": "通信高位股", "value": -8.31, "type": "sell", "desc": "通信行业领跌股，资金流出" }
+  ],
+  "weeklyThemes": [
+    { "name": "商业航天", "value": 90, "color": "#10b981", "details": "板块持续爆发，龙头股高度不断打开，十余股涨停" },
+    { "name": "大金融（保险/券商）", "value": 85, "color": "#ef4444", "details": "板块集体拉升，保险本周已累计涨逾11%" },
+    { "name": "有色金属", "value": 80, "color": "#f59e0b", "details": "行业涨幅居首，主力资金大幅流入65亿元" },
+    { "name": "脑机接口", "value": 75, "color": "#8b5cf6", "details": "概念延续强势，多股录得2连板" }
+  ],
+  "marketVolume": [
+    { "date": "12-29", "volume": 2.16, "status": "缩量", "change": -0.01, "sentiment": 55, "desc": "成交额超2万亿元" },
+    { "date": "12-30", "volume": 2.16, "status": "平量", "change": 0.00, "sentiment": 45, "desc": "全市场成交2.16万亿元" },
+    { "date": "12-31", "volume": 2.05, "status": "缩量", "change": -0.11, "sentiment": 50, "desc": "两市成交约2.05万亿元" },
+    { "date": "01-05", "volume": 2.55, "status": "大幅放量", "change": 0.50, "sentiment": 80, "desc": "沪深两市成交2.55万亿元" },
+    { "date": "01-06", "volume": 2.81, "status": "大幅放量", "change": 0.26, "sentiment": 85, "desc": "沪深两市成交额2.81万亿元，较上一交易日放量约2602亿元" }
+  ],
+  "themeLifecycle": [
+    {
+      "name": "商业航天",
+      "daysActive": 27,
+      "phase": "主升浪（加速）",
+      "heat": 95,
+      "startDate": "2025-11-25",
+      "trend": "up",
+      "insight": "板块无视指数高位，在龙头股连板高度不断打开的带动下持续加速，十余只个股涨停，赚钱效应爆棚，已成为市场无可争议的绝对核心主线。",
+      "news": [
+        "【高度】鲁信创投8天6板，北斗星通、中国卫通6天4板，龙头高度不断拓展。",
+        "【广度】板块内超10只成分股涨停，宽度和深度俱佳。"
+      ]
+    },
+    {
+      "name": "大金融（保险/券商）",
+      "daysActive": 2,
+      "phase": "主升浪",
+      "heat": 88,
+      "startDate": "2026-01-05",
+      "trend": "up",
+      "insight": "在业绩预期向好和市场风险偏好提升的双重驱动下，大金融板块放量拉升，成为推动沪指突破十年新高的重要力量，保险板块本周累计涨幅已十分可观。",
+      "news": [
+        "【业绩】保险业2025年11月业绩亮眼，2026年市场需求预期旺盛。",
+        "【盘面】保险板块单日涨4.22%领涨市场，券商股华林证券涨停。"
+      ]
+    }
+  ],
+  "activeSeats": [
+    {
+      "name": "机构席位",
+      "type": "主力",
+      "tag": "加仓周期与金融",
+      "direction": "有色金属、大金融",
+      "stocks": [
+        { "name": "紫金矿业/洛阳钼业", "amount": "大幅买入", "date": "01-06" },
+        { "name": "保险/券商龙头", "amount": "趋势增持", "date": "01-06" }
+      ],
+      "desc": "明显加大了对顺周期的有色金属和低估值的大金融板块的配置，操作风格偏向稳健与趋势。"
+    },
+    {
+      "name": "活跃游资",
+      "type": "游资",
+      "tag": "猛攻主线高标",
+      "direction": "商业航天、脑机接口",
+      "stocks": [
+        { "name": "鲁信创投", "amount": "打造高标", "date": "01-06" },
+        { "name": "三博脑科/创新医疗", "amount": "推动连板", "date": "01-06" }
+      ],
+      "desc": "火力高度集中于商业航天和脑机接口的连板高标股上，极致聚焦市场最强人气核心，风险偏好极高。"
+    }
+  ],
+  "fundNature": [
+    {
+      "sector": "商业航天",
+      "dominant": "顶级游资与散户合力",
+      "icon": "Rocket",
+      "color": "bg-purple-100 text-purple-800",
+      "desc": "情绪高潮，加速赶顶",
+      "composition": [
+        { "name": "顶级游资 (锁仓/加仓)", "val": 50, "color": "#8b5cf6" },
+        { "name": "散户跟风盘", "val": 45, "color": "#a78bfa" },
+        { "name": "机构", "val": 5, "color": "#c4b5fd" }
+      ]
+    },
+    {
+      "sector": "大金融（保险/券商）",
+      "dominant": "机构与主力资金",
+      "icon": "TrendingUp",
+      "color": "bg-blue-100 text-blue-800",
+      "desc": "估值修复，趋势行情",
+      "composition": [
+        { "name": "机构/主力资金", "val": 70, "color": "#3b82f6" },
+        { "name": "外资", "val": 20, "color": "#60a5fa" },
+        { "name": "跟风盘", "val": 10, "color": "#93c5fd" }
+      ]
+    }
+  ]
+}

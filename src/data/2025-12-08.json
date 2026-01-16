@@ -1,0 +1,106 @@
+{
+  "updateTime": "12月08日 (周一)",
+  "dailyFlow": [
+    { "name": "通信/CPO", "netFlow": 68.5, "type": "in", "desc": "AI算力核心爆发" },
+    { "name": "电子元件", "netFlow": 42.2, "type": "in", "desc": "光芯片/存储大涨" },
+    { "name": "非银金融", "netFlow": 35.6, "type": "in", "desc": "牛市旗手护盘" },
+    { "name": "能源金属", "netFlow": 12.8, "type": "in", "desc": "锂价反弹预期" },
+    { "name": "房地产", "netFlow": -8.5, "type": "out", "desc": "资金虹吸效应" },
+    { "name": "医药生物", "netFlow": -15.2, "type": "out", "desc": "防御板块失血" }
+  ],
+  "topStocks": [
+    { "name": "天孚通信", "value": 5.66, "type": "buy" },
+    { "name": "香农芯创", "value": 11.26, "type": "buy" },
+    { "name": "紫金矿业", "value": 2.27, "type": "buy" },
+    { "name": "航天机电", "value": -12.17, "type": "sell" },
+    { "name": "海欣食品", "value": -0.80, "type": "sell" }
+  ],
+  "weeklyThemes": [
+    { "name": "AI算力/CPO", "value": 40, "color": "#ef4444", "details": "天孚通信、新易盛" },
+    { "name": "机器人", "value": 25, "color": "#f97316", "details": "五洲新春、富吉瑞" },
+    { "name": "福建本地股", "value": 20, "color": "#eab308", "details": "实达集团、平潭发展" },
+    { "name": "商业航天", "value": 15, "color": "#64748b", "details": "高位分歧震荡" }
+  ],
+  "marketVolume": [
+    { "date": "12-04", "volume": 1.55, "status": "缩量", "change": -0.13, "sentiment": 45, "desc": "情绪冰点" },
+    { "date": "12-05", "volume": 1.74, "status": "放量", "change": 0.19, "sentiment": 85, "desc": "V型反转" },
+    { "date": "12-06", "volume": 1.65, "status": "缩量", "change": -0.09, "sentiment": 50, "desc": "周末效应" },
+    { "date": "12-08", "volume": 2.05, "status": "放量", "change": 0.40, "sentiment": 95, "desc": "两万亿高潮" }
+  ],
+  "themeLifecycle": [
+    {
+      "name": "CPO/光模块",
+      "daysActive": 1,
+      "phase": "主升浪 (爆发)",
+      "heat": 95,
+      "startDate": "12-08",
+      "trend": "up",
+      "insight": "机构大举买入，'易中天'再创新高，确立主线地位。",
+      "news": [
+        "【资金】'章盟主'5.66亿封板天孚通信。",
+        "【行业】北美云厂商资本开支超预期，光模块需求持续井喷。"
+      ]
+    },
+    {
+      "name": "商业航天",
+      "daysActive": 8,
+      "phase": "高位分歧",
+      "heat": 60,
+      "startDate": "11-28",
+      "trend": "volatile",
+      "insight": "资金被AI分流，前排个股筹码松动。",
+      "news": [
+        "【盘面】航天机电主力净流出超12亿。",
+        "【风险】部分高位股出现获利了结迹象。"
+      ]
+    }
+  ],
+  "activeSeats": [
+    {
+      "name": "章盟主",
+      "type": "顶级游资",
+      "tag": "大趋势 / 龙头",
+      "direction": "CPO",
+      "stocks": [
+        { "name": "天孚通信", "amount": "+5.66亿", "date": "12-08" }
+      ],
+      "desc": "极其大手笔的主攻操作，引领市场重回AI主线。"
+    },
+    {
+      "name": "机构专用",
+      "type": "主力",
+      "tag": "基本面",
+      "direction": "半导体分销",
+      "stocks": [
+        { "name": "香农芯创", "amount": "+11.2亿", "date": "12-08" }
+      ],
+      "desc": "机构大额抢筹存储芯片分销龙头。"
+    }
+  ],
+  "fundNature": [
+    {
+      "sector": "AI算力",
+      "dominant": "机构/游资合力",
+      "icon": "Zap",
+      "color": "bg-red-100 text-red-800",
+      "desc": "共识强化",
+      "composition": [
+        { "name": "机构", "val": 40, "color": "#dc2626" },
+        { "name": "游资", "val": 40, "color": "#f97316" },
+        { "name": "北向", "val": 20, "color": "#fca5a5" }
+      ]
+    },
+    {
+      "sector": "商业航天",
+      "dominant": "散户/撤退",
+      "icon": "Users",
+      "color": "bg-gray-100 text-gray-800",
+      "desc": "资金流出",
+      "composition": [
+        { "name": "散户", "val": 60, "color": "#94a3b8" },
+        { "name": "游资", "val": 20, "color": "#cbd5e1" },
+        { "name": "机构", "val": 20, "color": "#e2e8f0" }
+      ]
+    }
+  ]
+}

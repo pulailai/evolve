@@ -1,0 +1,111 @@
+{
+  "updateTime": "2025年12月30日",
+  "dailyFlow": [
+    { "name": "交运设备", "netFlow": 35.0, "type": "in", "desc": "主力资金净流入居前" },
+    { "name": "机械设备", "netFlow": 28.0, "type": "in", "desc": "获主力资金青睐" },
+    { "name": "文化传媒", "netFlow": 25.0, "type": "in", "desc": "短剧游戏等概念带动资金流入" },
+    { "name": "电力设备", "netFlow": -93.0, "type": "out", "desc": "电新行业主力资金净流出超93亿元，居首位" },
+    { "name": "国防军工", "netFlow": -45.0, "type": "out", "desc": "商业航天内部分化，板块资金大幅流出" },
+    { "name": "有色金属", "netFlow": -30.0, "type": "out", "desc": "小金属等板块调整" }
+  ],
+  "topStocks": [
+    { "name": "三花智控", "value": 25.54, "type": "buy", "desc": "主力资金净买入额高居两市首位[citation:7]" },
+    { "name": "山子高科", "value": 13.57, "type": "buy", "desc": "获主力资金大幅净买入[citation:4]" },
+    { "name": "金风科技", "value": -24.0, "type": "sell", "desc": "主力资金净卖出额居首[citation:7]" },
+    { "name": "航天发展", "value": -12.0, "type": "sell", "desc": "商业航天龙头，遭资金大幅流出[citation:7]" }
+  ],
+  "weeklyThemes": [
+    { "name": "商业航天", "value": 75, "color": "#10b981", "details": "概念反复活跃但内部分化加剧，中国卫通创新高[citation:5]" },
+    { "name": "科技题材（短剧/数字货币/液冷）", "value": 65, "color": "#3b82f6", "details": "短剧游戏、数字货币、液冷服务器等概念轮动活跃[citation:5]" },
+    { "name": "高端制造（电机/机械）", "value": 60, "color": "#8b5cf6", "details": "电机板块领涨，机械、交运设备获资金流入[citation:3][citation:7]" },
+    { "name": "新能源（电新）", "value": 20, "color": "#f59e0b", "details": "电新行业遭主力资金巨额流出，板块深度调整[citation:7]" }
+  ],
+  "marketVolume": [
+    { "date": "12-19", "volume": 1.73, "status": "小幅放量", "change": 0.07, "sentiment": 65, "desc": "指数普涨" },
+    { "date": "12-22", "volume": 1.88, "status": "放量", "change": 0.15, "sentiment": 75, "desc": "高开高走" },
+    { "date": "12-23", "volume": 1.90, "status": "平量", "change": 0.02, "sentiment": 40, "desc": "指数微涨" },
+    { "date": "12-24", "volume": null, "status": "待补充", "change": null, "sentiment": null, "desc": "历史数据缺失" },
+    { "date": "12-25", "volume": null, "status": "待补充", "change": null, "sentiment": null, "desc": "历史数据缺失" },
+    { "date": "12-26", "volume": 1.55, "status": "放量", "change": null, "sentiment": 65, "desc": "成交额超1.5万亿元" },
+    { "date": "12-29", "volume": 2.16, "status": "缩量", "change": -0.01, "sentiment": 55, "desc": "成交额超2万亿元" },
+    { "date": "12-30", "volume": 2.16, "status": "平量", "change": 0.00, "sentiment": 45, "desc": "全市场成交2.16万亿元，赚钱效应较差[citation:8]" }
+  ],
+  "themeLifecycle": [
+    {
+      "name": "商业航天",
+      "daysActive": 24,
+      "phase": "高位巨震与分化",
+      "heat": 70,
+      "startDate": "2025-11-25",
+      "trend": "剧烈分化",
+      "insight": "板块在持续炒作后进入高位剧烈分化阶段。一面是龙头股中国卫通再创新高，另一面是航天发展、中国卫星等个股遭主力资金大幅抛售[citation:5][citation:7]。板块整体强度减弱，行情从普涨转为个股博弈。",
+      "news": [
+        "【盘面】商业航天概念反复活跃，中国卫通3天2涨停股价创历史新高[citation:5]。",
+        "【资金】航天发展、中国卫星、神剑股份等前期热门股均遭主力资金大幅净流出[citation:7]。"
+      ]
+    },
+    {
+      "name": "新能源（电新）",
+      "daysActive": 2,
+      "phase": "主跌浪",
+      "heat": 25,
+      "startDate": "2025-12-29",
+      "trend": "down",
+      "insight": "板块延续昨日跌势，今日再遭主力资金超93亿元的大规模净流出，光伏、风电等细分方向集体走弱，成为市场主要的资金流出地和下跌源头[citation:7]。",
+      "news": [
+        "【资金】电新行业（电力设备）主力资金净流出超93亿元，连续两日净流出额居市场首位[citation:7]。",
+        "【盘面】风电设备、BC电池、光伏等板块跌幅居前[citation:5]。"
+      ]
+    }
+  ],
+  "activeSeats": [
+    {
+      "name": "机构席位",
+      "type": "主力",
+      "tag": "高低切换",
+      "direction": "流入制造，流出电新与军工",
+      "stocks": [
+        { "name": "三花智控", "amount": "+25.54亿", "date": "12-30" },
+        { "name": "电新/军工板块", "amount": "大幅卖出", "date": "12-30" }
+      ],
+      "desc": "操作方向明确，继续从电新、军工等前期热门赛道撤退，同时大额买入三花智控等制造业龙头，进行高低切换。"
+    },
+    {
+      "name": "实力游资",
+      "type": "游资",
+      "tag": "聚焦题材，博弈激烈",
+      "direction": "商业航天、科技概念",
+      "stocks": [
+        { "name": "中国卫通", "amount": "封板", "date": "12-30" },
+        { "name": "天际股份", "amount": "多空博弈", "date": "12-30" }
+      ],
+      "desc": "在商业航天等题材中继续寻找机会，但内部分化明显。部分个股如天际股份出现机构买入、游资卖出的激烈博弈局面[citation:7]。"
+    }
+  ],
+  "fundNature": [
+    {
+      "sector": "商业航天",
+      "dominant": "游资博弈，机构撤离",
+      "icon": "Rocket",
+      "color": "bg-purple-100 text-purple-800",
+      "desc": "高位分化，筹码松动",
+      "composition": [
+        { "name": "游资 (聚焦龙头)", "val": 50, "color": "#8b5cf6" },
+        { "name": "散户跟风", "val": 30, "color": "#a78bfa" },
+        { "name": "机构 (撤离)", "val": 20, "color": "#c4b5fd" }
+      ]
+    },
+    {
+      "sector": "新能源（电新）",
+      "dominant": "机构资金持续撤离",
+      "icon": "Zap",
+      "color": "bg-gray-100 text-gray-800",
+      "desc": "趋势性流出，承压明显",
+      "composition": [
+        { "name": "机构卖盘", "val": 75, "color": "#6b7280" },
+        { "name": "散户承接", "val": 20, "color": "#9ca3af" },
+        { "name": "套牢盘", "val": 5, "color": "#d1d5db" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "updateTime": "2026年1月8日",
+  "dailyFlow": [
+    { "name": "国防军工（商业航天）", "netFlow": 120.0, "type": "in", "desc": "板块爆发涨停潮，获主力资金大幅净流入" },
+    { "name": "计算机（工业软件）", "netFlow": 25.0, "type": "in", "desc": "题材活跃，资金关注度高[citation:2]" },
+    { "name": "医药", "netFlow": 15.0, "type": "in", "desc": "板块上扬，资金小幅流入[citation:2]" },
+    { "name": "非银金融（券商/保险）", "netFlow": -45.0, "type": "out", "desc": "板块走低，资金流出[citation:2]" },
+    { "name": "银行", "netFlow": -25.0, "type": "out", "desc": "金融板块整体承压[citation:2]" },
+    { "name": "电力设备（光伏）", "netFlow": -20.0, "type": "out", "desc": "新能源方向调整，资金流出[citation:8]" }
+  ],
+  "topStocks": [
+    { "name": "航天电子", "value": 12.0, "type": "buy", "desc": "主力资金净流入超10亿元，商业航天龙头[citation:6]" },
+    { "name": "岩山科技", "value": 11.5, "type": "buy", "desc": "主力资金净流入超10亿元[citation:6]" },
+    { "name": "航天宏图", "value": 10.2, "type": "buy", "desc": "商业航天概念，涨停[citation:6]" },
+    { "name": "券商/保险权重股", "value": -8.5, "type": "sell", "desc": "金融板块领跌股[citation:2]" }
+  ],
+  "weeklyThemes": [
+    { "name": "商业航天/卫星导航", "value": 95, "color": "#10b981", "details": "板块全线爆发，超30股涨停，成为市场绝对核心[citation:6]" },
+    { "name": "科技成长（科创方向）", "value": 75, "color": "#3b82f6", "details": "科创综指逆势大涨，工业软件等概念活跃[citation:2][citation:6]" },
+    { "name": "春季行情延续", "value": 70, "color": "#ef4444", "details": "机构认为市场风险偏好改善，行情有望延续[citation:6]" },
+    { "name": "大金融", "value": 20, "color": "#f59e0b", "details": "券商、保险、银行板块集体走低，拖累主板指数[citation:2]" }
+  ],
+  "marketVolume": [
+    { "date": "12-31", "volume": 2.05, "status": "缩量", "change": -0.11, "sentiment": 50, "desc": "两市成交约2.05万亿元" },
+    { "date": "01-05", "volume": 2.55, "status": "大幅放量", "change": 0.50, "sentiment": 80, "desc": "沪深两市成交2.55万亿元" },
+    { "date": "01-06", "volume": 2.81, "status": "大幅放量", "change": 0.26, "sentiment": 85, "desc": "沪深两市成交额2.81万亿元" },
+    { "date": "01-07", "volume": 2.85, "status": "放量", "change": 0.04, "sentiment": 60, "desc": "两市成交额2.85万亿元" },
+    { "date": "01-08", "volume": 2.83, "status": "缩量", "change": -0.02, "sentiment": 65, "desc": "沪深北三市成交约2.83万亿元，较上日缩量553亿元[citation:6]" }
+  ],
+  "themeLifecycle": [
+    {
+      "name": "商业航天/卫星导航",
+      "daysActive": 29,
+      "phase": "主升浪（二次加速）",
+      "heat": 98,
+      "startDate": "2025-11-25",
+      "trend": "up",
+      "insight": "板块在昨日高位分化后，今日无视指数调整，强势反包并掀起更猛烈的涨停潮，超过30只个股涨停，显示其作为市场核心主线的强大号召力与资金凝聚力，行情进入情绪驱动的二次加速阶段。",
+      "news": [
+        "【盘面】卫星导航、商业航天板块大涨，航天宏图、航天电器等超30股涨停[citation:6]。",
+        "【ETF】永赢卫星ETF涨6.2%，富国卫星ETF、万家航天航空ETF等均涨逾5%[citation:6]。",
+        "【资金】航天电子、岩山科技等获主力资金净流入超10亿元[citation:6]。"
+      ]
+    },
+    {
+      "name": "大金融（券商/保险/银行）",
+      "daysActive": 1,
+      "phase": "回调期",
+      "heat": 25,
+      "startDate": "2026-01-08",
+      "trend": "down",
+      "insight": "板块今日集体走低，成为拖累沪指终结连阳的主要力量。在存量资金博弈下，市场风格极致聚焦科技成长，导致金融等权重板块资金失血，进入短期调整。",
+      "news": [
+        "【盘面】券商、保险、银行、酿酒等板块走低[citation:2]。",
+        "【ETF】保险证券ETF等跌逾3%[citation:6]。"
+      ]
+    }
+  ],
+  "activeSeats": [
+    {
+      "name": "机构席位",
+      "type": "主力",
+      "tag": "猛攻航天",
+      "direction": "国防军工（商业航天）",
+      "stocks": [
+        { "name": "航天电子", "amount": "大幅净买入", "date": "01-08" },
+        { "name": "中国船舶", "amount": "净流入", "date": "01-08" }
+      ],
+      "desc": "成为推动商业航天板块高潮的核心力量，在龙头股上呈现巨额净买入，与游资形成共振[citation:6]。"
+    },
+    {
+      "name": "活跃游资",
+      "type": "游资",
+      "tag": "聚焦绝对主线",
+      "direction": "商业航天产业链",
+      "stocks": [
+        { "name": "航天科技", "amount": "攻击涨停", "date": "01-08" },
+        { "name": "顺灏股份", "amount": "攻击涨停", "date": "01-08" }
+      ],
+      "desc": "火力全开，集中攻击商业航天板块的涨停个股，打造板块宽度和涨停梯队，维持极高的市场热度[citation:6]。"
+    }
+  ],
+  "fundNature": [
+    {
+      "sector": "商业航天/卫星导航",
+      "dominant": "机构与游资合力猛攻",
+      "icon": "Rocket",
+      "color": "bg-purple-100 text-purple-800",
+      "desc": "情绪高潮，一致做多",
+      "composition": [
+        { "name": "机构资金", "val": 45, "color": "#3b82f6" },
+        { "name": "顶级游资", "val": 45, "color": "#8b5cf6" },
+        { "name": "散户跟风", "val": 10, "color": "#a78bfa" }
+      ]
+    },
+    {
+      "sector": "大金融",
+      "dominant": "资金流出，短期承压",
+      "icon": "TrendingDown",
+      "color": "bg-gray-100 text-gray-800",
+      "desc": "存量博弈下的资金挤出",
+      "composition": [
+        { "name": "获利了结资金", "val": 60, "color": "#6b7280" },
+        { "name": "观望资金", "val": 30, "color": "#9ca3af" },
+        { "name": "防御配置盘", "val": 10, "color": "#d1d5db" }
+      ]
+    }
+  ]
+}

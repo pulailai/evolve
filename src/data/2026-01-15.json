@@ -1,0 +1,378 @@
+{
+  "updateTime": "2026年01月15日",
+  "dailyFlow": [
+    {
+      "name": "半导体",
+      "netFlow": 53.2,
+      "type": "in",
+      "desc": "主力资金净流入居首，行业融资净买入42.26亿元，存储芯片、半导体设备午后走强[citation:3][citation:7][citation:9]。"
+    },
+    {
+      "name": "通信设备",
+      "netFlow": 37.34,
+      "type": "in",
+      "desc": "融资净买入额排名第二，与算力产业链关联密切，光模块等细分领域受关注[citation:3]。"
+    },
+    {
+      "name": "AI应用",
+      "netFlow": -15.5,
+      "type": "out",
+      "desc": "板块大幅下挫，高位人气股退潮，资金呈现分歧，但机构与游资在核心个股上仍有合力[citation:1][citation:2][citation:6]。"
+    },
+    {
+      "name": "商业航天",
+      "netFlow": -12.8,
+      "type": "out",
+      "desc": "游资单边大幅减仓，板块热度显著降温，前期逼空行情后出现调整[citation:1][citation:2]。"
+    },
+    {
+      "name": "风电设备",
+      "netFlow": -6.11,
+      "type": "out",
+      "desc": "行业融资净卖出额居前，资金流出明显[citation:3]。"
+    }
+  ],
+  "topStocks": [
+    {
+      "name": "中际旭创",
+      "value": 16.98,
+      "type": "buy",
+      "desc": "融资净买入额排名第一，算力龙头股午后拉升[citation:3][citation:9]。"
+    },
+    {
+      "name": "立讯精密",
+      "value": 14.47,
+      "type": "buy",
+      "desc": "消费电子龙头，获融资客大幅加仓[citation:3]。"
+    },
+    {
+      "name": "新易盛",
+      "value": 10.84,
+      "type": "buy",
+      "desc": "光模块核心标的，融资净买入额居前[citation:3]。"
+    },
+    {
+      "name": "利欧股份",
+      "value": -3.2,
+      "type": "sell",
+      "desc": "AI应用高标股，虽获游资关注但板块整体退潮，资金流出压力大[citation:2][citation:4]。"
+    },
+    {
+      "name": "众信旅游",
+      "value": 0.49,
+      "type": "buy",
+      "desc": "获游资‘作手新一’抢筹近5000万，旅游板块活跃[citation:10]。"
+    }
+  ],
+  "weeklyThemes": [
+    {
+      "name": "半导体国产化",
+      "value": 85,
+      "color": "#ff6b6b",
+      "details": "受业绩预告、行业复苏及AI算力需求拉动，存储芯片、设备等子板块全线走强，成为日内最强主线[citation:3][citation:9]。"
+    },
+    {
+      "name": "AI应用商业化",
+      "value": 70,
+      "color": "#4ecdc4",
+      "details": "板块内部分化，GEO、AI电商等细分方向仍有表现，但整体受监管关注与高位股退潮影响，处于去伪存真阶段[citation:2][citation:4]。"
+    },
+    {
+      "name": "旅游消费复苏",
+      "value": 65,
+      "color": "#45b7d1",
+      "details": "元旦数据良好叠加政策预期，板块受避险资金及游资青睐[citation:2][citation:10]。"
+    }
+  ],
+  "marketVolume": [
+    {
+      "date": "01-06",
+      "volume": 2.15,
+      "status": "温和放量",
+      "change": 0.15,
+      "sentiment": 68,
+      "desc": "市场延续开年活跃态势，成交额稳步站上2.1万亿台阶[citation:1]。"
+    },
+    {
+      "date": "01-07",
+      "volume": 2.01,
+      "status": "高位盘整",
+      "change": -0.14,
+      "sentiment": 65,
+      "desc": "成交额小幅回落，但仍维持在2万亿以上，市场进入高位震荡[citation:1]。"
+    },
+    {
+      "date": "01-08",
+      "volume": 2.50,
+      "status": "显著放量",
+      "change": 0.49,
+      "sentiment": 75,
+      "desc": "单日成交额突破2.5万亿元，市场热度显著提升，资金入场积极[citation:1]。"
+    },
+    {
+      "date": "01-09",
+      "volume": 2.25,
+      "status": "缩量整固",
+      "change": -0.25,
+      "sentiment": 62,
+      "desc": "在前一日放量大涨后，市场理性回调，成交额维持在健康水平。"
+    },
+    {
+      "date": "01-10",
+      "volume": 2.32,
+      "status": "企稳回升",
+      "change": 0.07,
+      "sentiment": 66,
+      "desc": "成交额重回升势，市场在整固后显示出韧性。"
+    },
+    {
+      "date": "01-11",
+      "volume": 2.65,
+      "status": "放量上涨",
+      "change": 0.33,
+      "sentiment": 78,
+      "desc": "市场情绪再度升温，成交额逼近2.7万亿，为后续天量成交蓄力。"
+    },
+    {
+      "date": "01-12",
+      "volume": 3.60,
+      "status": "天量上涨",
+      "change": 0.95,
+      "sentiment": 85,
+      "desc": "成交额创阶段新高并突破3.6万亿，增量资金大幅入场，市场进入亢奋状态[citation:2]。"
+    },
+    {
+      "date": "01-13",
+      "volume": 3.65,
+      "status": "天量震荡",
+      "change": 0.05,
+      "sentiment": 82,
+      "desc": "成交额再创新高，但指数出现获利回吐，显示高位分歧加大[citation:2]。"
+    },
+    {
+      "date": "01-14",
+      "volume": 3.94,
+      "status": "历史天量",
+      "change": 0.29,
+      "sentiment": 88,
+      "desc": "沪深京三市成交额接近4万亿元，刷新历史最高纪录，市场波动加剧[citation:3][citation:5][citation:6]。"
+    },
+    {
+      "date": "01-15",
+      "volume": 2.91,
+      "status": "巨量萎缩",
+      "change": -1.03,
+      "sentiment": 65,
+      "desc": "成交额较前一日历史天量大幅回落超1万亿元，市场在监管降温与主力博弈中转入高位震荡[citation:8]。"
+    }
+  ],
+  "themeLifecycle": [
+    {
+      "name": "AI应用",
+      "daysActive": 20,
+      "phase": "分化期",
+      "heat": 75,
+      "startDate": "2025-12-27",
+      "trend": "down",
+      "insight": "监管风险警示叠加涨幅过大，板块整体高潮后进入分化，资金向有业绩验证的细分龙头集中[citation:2][citation:4]。",
+      "news": [
+        "快手可灵AI年化收入达2.4亿美元",
+        "阿里千问C端月活破1亿",
+        "谷歌与全球头部零售商推出AI购物新标准"
+      ]
+    },
+    {
+      "name": "商业航天",
+      "daysActive": 15,
+      "phase": "退潮期",
+      "heat": 40,
+      "startDate": "2026-01-01",
+      "trend": "down",
+      "insight": "游资大幅撤离，监管直接干预（如对相关账户暂停交易），概念炒作迅速降温[citation:1][citation:2]。",
+      "news": [
+        "上交所对国晟科技相关投资者采取暂停账户交易措施",
+        "多家公司发布风险提示公告"
+      ]
+    },
+    {
+      "name": "半导体",
+      "daysActive": 8,
+      "phase": "主升期",
+      "heat": 88,
+      "startDate": "2026-01-08",
+      "trend": "up",
+      "insight": "由业绩驱动（如佰维存储业绩预增）和产业周期（扩产预期）接棒成为新主线，机构与融资盘共同推动[citation:3][citation:9]。",
+      "news": [
+        "佰维存储发布2025年业绩预盈公告，净利大增超4倍",
+        "SEMI报告称2025年全球半导体设备销售额将创新高"
+      ]
+    }
+  ],
+  "activeSeats": [
+    {
+      "name": "作手新一",
+      "type": "游资",
+      "tag": "题材挖掘",
+      "direction": "进攻",
+      "stocks": [
+        {
+          "name": "众信旅游",
+          "amount": "4922.64万元",
+          "date": "2026-01-15"
+        },
+        {
+          "name": "值得买",
+          "amount": "6554万元",
+          "date": "近期"
+        }
+      ],
+      "desc": "同时布局AI应用与旅游消费，手法灵活，善于把握题材轮动[citation:2][citation:10]。"
+    },
+    {
+      "name": "章盟主",
+      "type": "游资",
+      "tag": "格局龙头",
+      "direction": "分歧",
+      "stocks": [
+        {
+          "name": "岩山科技",
+          "amount": "2.97亿元",
+          "date": "近期"
+        },
+        {
+          "name": "烽火通信",
+          "amount": "5.12亿元",
+          "date": "近期"
+        }
+      ],
+      "desc": "在AI应用和商业航天中均有大手笔操作，但在商业航天板块内部与其他游资存在明显分歧[citation:2][citation:5]。"
+    },
+    {
+      "name": "中山东路",
+      "type": "游资",
+      "tag": "主线聚焦",
+      "direction": "进攻",
+      "stocks": [
+        {
+          "name": "美年健康",
+          "amount": "2.08亿元",
+          "date": "近期"
+        },
+        {
+          "name": "值得买",
+          "amount": "7157万元",
+          "date": "近期"
+        }
+      ],
+      "desc": "聚焦AI应用及AI医疗主线，买入金额大且集中，是推动主线行情的重要力量[citation:2]。"
+    },
+    {
+      "name": "机构专用",
+      "type": "机构",
+      "tag": "价值锚定",
+      "direction": "进攻",
+      "stocks": [
+        {
+          "name": "光云科技",
+          "amount": "8.4亿元",
+          "date": "2026-01-15"
+        },
+        {
+          "name": "利欧股份",
+          "amount": "3.97亿元",
+          "date": "近期"
+        },
+        {
+          "name": "陕西旅游",
+          "amount": "1.39亿元",
+          "date": "2026-01-15"
+        }
+      ],
+      "desc": "大举加仓AI应用核心标的，同时在市场震荡中布局旅游等避险板块，买盘力度创历史新高[citation:2]。"
+    }
+  ],
+  "fundNature": [
+    {
+      "sector": "AI应用及半导体",
+      "dominant": "游资与机构合力",
+      "icon": "alliance",
+      "color": "purple",
+      "desc": "核心主线板块。游资提供弹性与情绪，机构提供基本盘和趋势资金，融资盘活跃，形成强力资金共振[citation:2][citation:3]。",
+      "composition": [
+        {
+          "name": "机构资金",
+          "val": 45,
+          "color": "#36a2eb"
+        },
+        {
+          "name": "游资",
+          "val": 30,
+          "color": "#ff9f40"
+        },
+        {
+          "name": "融资盘",
+          "val": 20,
+          "color": "#4bc0c0"
+        },
+        {
+          "name": "其他",
+          "val": 5,
+          "color": "#9966ff"
+        }
+      ]
+    },
+    {
+      "sector": "商业航天",
+      "dominant": "游资博弈",
+      "icon": "crossed-swords",
+      "color": "red",
+      "desc": "行情由游资主导，短期博弈激烈。监管干预后，游资快速撤离导致板块退潮，缺乏机构资金支撑[citation:2][citation:5]。",
+      "composition": [
+        {
+          "name": "游资",
+          "val": 70,
+          "color": "#ff6384"
+        },
+        {
+          "name": "散户",
+          "val": 20,
+          "color": "#c9cbcf"
+        },
+        {
+          "name": "其他",
+          "val": 10,
+          "color": "#9966ff"
+        }
+      ]
+    },
+    {
+      "sector": "旅游消费",
+      "dominant": "避险资金+游资",
+      "icon": "shield",
+      "color": "green",
+      "desc": "在市场高位震荡时成为资金避险选择。机构小幅配置，游资挖掘个股机会，外资（深股通）也有参与[citation:2][citation:10]。",
+      "composition": [
+        {
+          "name": "机构资金",
+          "val": 40,
+          "color": "#36a2eb"
+        },
+        {
+          "name": "游资",
+          "val": 35,
+          "color": "#ff9f40"
+        },
+        {
+          "name": "外资",
+          "val": 15,
+          "color": "#ffcd56"
+        },
+        {
+          "name": "其他",
+          "val": 10,
+          "color": "#9966ff"
+        }
+      ]
+    }
+  ]
+}

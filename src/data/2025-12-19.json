@@ -1,0 +1,110 @@
+{
+  "updateTime": "2025年12月19日",
+  "dailyFlow": [
+    { "name": "商贸零售", "netFlow": 35.0, "type": "in", "desc": "板块全天强势，获主力资金大幅净流入" },
+    { "name": "汽车", "netFlow": 12.5, "type": "in", "desc": "行业涨幅居前，资金净流入" },
+    { "name": "综合", "netFlow": 8.2, "type": "in", "desc": "板块涨幅靠前，资金关注" },
+    { "name": "银行", "netFlow": -15.5, "type": "out", "desc": "行业指数下跌，资金净流出" },
+    { "name": "电子", "netFlow": -12.8, "type": "out", "desc": "板块整体调整，资金流出" },
+    { "name": "煤炭", "netFlow": -4.3, "type": "out", "desc": "行业跌幅居前，资金流出" }
+  ],
+  "topStocks": [
+    { "name": "德必集团", "value": 16.20, "type": "buy", "desc": "商贸零售领涨股，早盘涨幅居前[citation:1]" },
+    { "name": "永辉超市", "value": 9.8, "type": "buy", "desc": "零售高标，延续强势" },
+    { "name": "工业富联", "value": -8.6, "type": "sell", "desc": "电子权重股，资金流出" },
+    { "name": "宁德时代", "value": -5.2, "type": "sell", "desc": "新能源权重，延续调整" }
+  ],
+  "weeklyThemes": [
+    { "name": "新零售/大消费", "value": 75, "color": "#ef4444", "details": "板块爆发引领市场，政策与消费数据形成支撑" },
+    { "name": "智能驾驶", "value": 50, "color": "#3b82f6", "details": "概念反复活跃，与汽车板块联动[citation:7]" },
+    { "name": "商业航天", "value": 40, "color": "#10b981", "details": "高位震荡，内部分化" },
+    { "name": "AI算力", "value": 30, "color": "#8b5cf6", "details": "硬件方向开盘反弹，但整体强度一般[citation:8]" }
+  ],
+  "marketVolume": [
+    { "date": "12-10", "volume": 1.78, "status": "缩量", "change": -0.12, "sentiment": 45, "desc": "缩量震荡" },
+    { "date": "12-11", "volume": 1.89, "status": "放量", "change": 0.11, "sentiment": 40, "desc": "普跌放量" },
+    { "date": "12-12", "volume": 2.09, "status": "放量", "change": 0.20, "sentiment": 60, "desc": "探底回升" },
+    { "date": "12-15", "volume": 1.77, "status": "大幅缩量", "change": -0.32, "sentiment": 40, "desc": "指数回调" },
+    { "date": "12-16", "volume": 1.72, "status": "缩量", "change": -0.05, "sentiment": 35, "desc": "市场普跌" },
+    { "date": "12-17", "volume": 1.81, "status": "放量", "change": 0.09, "sentiment": 70, "desc": "指数普涨反弹" },
+    { "date": "12-18", "volume": 1.66, "status": "大幅缩量", "change": -0.15, "sentiment": 50, "desc": "成交萎缩" },
+    { "date": "12-19", "volume": 1.73, "status": "小幅放量", "change": 0.07, "sentiment": 65, "desc": "指数普涨，成交回暖[citation:2][citation:4]" }
+  ],
+  "themeLifecycle": [
+    {
+      "name": "新零售/大消费",
+      "daysActive": 3,
+      "phase": "主升浪",
+      "heat": 85,
+      "startDate": "12-17",
+      "trend": "up",
+      "insight": "在1-11月网上零售额增长数据[citation:7]及年底消费旺季预期催化下，板块结束调整开启主升，成为日内无可争议的最强主线，带动市场情绪回暖。",
+      "news": [
+        "【数据】商务部公布1-11月全国网上零售额同比增长9.1%[citation:7]。",
+        "【盘面】零售股爆发，中央商场、上海九百、东百集团等多股大涨[citation:7]。"
+      ]
+    },
+    {
+      "name": "商业航天",
+      "daysActive": 21,
+      "phase": "高位震荡",
+      "heat": 50,
+      "startDate": "2025-11-25",
+      "trend": "分化",
+      "insight": "在市场风格切换至低位消费板块的背景下，商业航天整体强度减弱，进入高位震荡阶段，部分个股虽有表现但板块效应减弱。",
+      "news": [
+        "【盘面】板块内部分化，前期高标股多数调整，少数个股跟随市场反弹。"
+      ]
+    }
+  ],
+  "activeSeats": [
+    {
+      "name": "成都系",
+      "type": "知名游资",
+      "tag": "聚焦主线",
+      "direction": "新零售",
+      "stocks": [
+        { "name": "东百集团", "amount": "+1.2亿", "date": "12-19" },
+        { "name": "中央商场", "amount": "+8800万", "date": "12-19" }
+      ],
+      "desc": "迅速切换至当日最强的新零售主线，攻击板块内人气龙头，操作与市场热点高度同步。"
+    },
+    {
+      "name": "陈小群",
+      "type": "知名游资",
+      "tag": "调仓换股",
+      "direction": "零售与航天",
+      "stocks": [
+        { "name": "永辉超市", "amount": "持仓未动/做T", "date": "12-19" },
+        { "name": "航天电子", "amount": "部分减仓", "date": "12-19" }
+      ],
+      "desc": "可能对持仓进行结构调整，在零售主线中维持仓位，同时对处于调整的商业航天持仓进行部分获利了结。"
+    }
+  ],
+  "fundNature": [
+    {
+      "sector": "新零售/大消费",
+      "dominant": "游资与机构合力",
+      "icon": "Zap",
+      "color": "bg-red-100 text-red-800",
+      "desc": "数据催化，高低切换",
+      "composition": [
+        { "name": "游资 (成都系等)", "val": 45, "color": "#dc2626" },
+        { "name": "机构/主力资金", "val": 35, "color": "#3b82f6" },
+        { "name": "散户跟风", "val": 20, "color": "#fca5a5" }
+      ]
+    },
+    {
+      "sector": "商业航天",
+      "dominant": "游资撤离/散户博弈",
+      "icon": "Rocket",
+      "color": "bg-gray-100 text-gray-800",
+      "desc": "退潮期，资金流出",
+      "composition": [
+        { "name": "散户博弈", "val": 50, "color": "#9ca3af" },
+        { "name": "游资 (部分撤离)", "val": 30, "color": "#6b7280" },
+        { "name": "机构", "val": 20, "color": "#d1d5db" }
+      ]
+    }
+  ]
+}

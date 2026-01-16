@@ -1,0 +1,111 @@
+{
+  "updateTime": "2025年12月29日",
+  "dailyFlow": [
+    { "name": "银行", "netFlow": 15.0, "type": "in", "desc": "主力资金净流入居前" },
+    { "name": "多元金融", "netFlow": 12.0, "type": "in", "desc": "板块涨幅与资金流入靠前" },
+    { "name": "石油石化", "netFlow": 10.0, "type": "in", "desc": "获主力资金净流入" },
+    { "name": "电力设备", "netFlow": -105.0, "type": "out", "desc": "电新行业主力资金净流出超105亿元，居首位" },
+    { "name": "有色金属", "netFlow": -60.0, "type": "out", "desc": "主力资金大幅净流出" },
+    { "name": "通信", "netFlow": -50.0, "type": "out", "desc": "资金净流出规模靠前" }
+  ],
+  "topStocks": [
+    { "name": "拓维信息", "value": 15.68, "type": "buy", "desc": "主力资金净买入额位居两市首位" },
+    { "name": "神剑股份", "value": 10.0, "type": "buy", "desc": "商业航天概念，录得8连板" },
+    { "name": "阳光电源", "value": -12.0, "type": "sell", "desc": "主力资金净卖出额居首" },
+    { "name": "中际旭创", "value": -8.0, "type": "sell", "desc": "主力资金净流出额居前" }
+  ],
+  "weeklyThemes": [
+    { "name": "商业航天", "value": 85, "color": "#10b981", "details": "受科创板上市标准利好刺激，板块全线爆发再创新高" },
+    { "name": "碳纤维/风电设备", "value": 70, "color": "#3b82f6", "details": "碳纤维概念强势，风电行业‘反内卷’见成效，板块拉升" },
+    { "name": "大金融", "value": 55, "color": "#ef4444", "details": "银行、多元金融板块获资金流入，起到稳定指数作用" },
+    { "name": "新能源赛道", "value": 20, "color": "#f59e0b", "details": "电新、锂电池产业链资金大幅流出，板块深度调整" }
+  ],
+  "marketVolume": [
+    { "date": "12-18", "volume": 1.66, "status": "大幅缩量", "change": -0.15, "sentiment": 50, "desc": "成交萎缩" },
+    { "date": "12-19", "volume": 1.73, "status": "小幅放量", "change": 0.07, "sentiment": 65, "desc": "指数普涨" },
+    { "date": "12-22", "volume": 1.88, "status": "放量", "change": 0.15, "sentiment": 75, "desc": "高开高走" },
+    { "date": "12-23", "volume": 1.90, "status": "平量", "change": 0.02, "sentiment": 40, "desc": "指数微涨" },
+    { "date": "12-24", "volume": null, "status": "待补充", "change": null, "sentiment": null, "desc": "历史数据缺失" },
+    { "date": "12-25", "volume": null, "status": "待补充", "change": null, "sentiment": null, "desc": "历史数据缺失" },
+    { "date": "12-26", "volume": 1.55, "status": "放量", "change": null, "sentiment": 65, "desc": "成交额超1.5万亿元" },
+    { "date": "12-29", "volume": 2.10, "status": "缩量", "change": -0.01, "sentiment": 55, "desc": "沪深两市成交额超2万亿元，较上日此时缩量238亿元" }
+  ],
+  "themeLifecycle": [
+    {
+      "name": "商业航天",
+      "daysActive": 23,
+      "phase": "主升浪（加速）",
+      "heat": 90,
+      "startDate": "2025-11-25",
+      "trend": "up",
+      "insight": "在科创板明确支持商业火箭企业上市的新政策催化下，板块无视指数分化，继续加速上行，龙头股连板高度打开，板块指数再创历史新高，主线地位无可动摇。",
+      "news": [
+        "【政策】上交所发布指引，支持商业火箭企业适用科创板第五套上市标准[citation:5]。",
+        "【盘面】航天装备概念指数大涨逾3%，神剑股份8连板，海格通信、航天发展等超10股涨停[citation:5][citation:9]。"
+      ]
+    },
+    {
+      "name": "新能源（电新）",
+      "daysActive": 1,
+      "phase": "主跌浪",
+      "heat": 25,
+      "startDate": "2025-12-29",
+      "trend": "down",
+      "insight": "板块遭遇主力资金集中抛售，单日净流出超105亿元，位居所有行业之首。锂电池、能源金属等细分方向集体大跌，与此前强势的商业航天形成鲜明“跷跷板”效应。",
+      "news": [
+        "【资金】电新行业主力资金净流出超105亿元，远超其他行业[citation:4]。",
+        "【盘面】能源金属、电池板块跌幅居前，锂电池产业链概念股股价下挫[citation:2][citation:7]。"
+      ]
+    }
+  ],
+  "activeSeats": [
+    {
+      "name": "机构席位",
+      "type": "主力",
+      "tag": "剧烈调仓",
+      "direction": "卖出电新，布局科技",
+      "stocks": [
+        { "name": "电新行业个股", "amount": "集体卖出", "date": "12-29" },
+        { "name": "寒武纪-U", "amount": "+14.59亿", "date": "12-29" }
+      ],
+      "desc": "操作方向明确：一方面从新能源赛道大举撤退；另一方面在科技股中寻找机会，如科创板寒武纪获大额净流入[citation:8]。"
+    },
+    {
+      "name": "活跃游资",
+      "type": "游资",
+      "tag": "聚焦主线",
+      "direction": "商业航天",
+      "stocks": [
+        { "name": "神剑股份", "amount": "打造高标", "date": "12-29" },
+        { "name": "航天发展", "amount": "封板", "date": "12-29" }
+      ],
+      "desc": "资金高度聚焦于商业航天这一最强题材，继续打造连板龙头，维持板块极高的短线热度。"
+    }
+  ],
+  "fundNature": [
+    {
+      "sector": "商业航天",
+      "dominant": "游资与机构混合",
+      "icon": "Rocket",
+      "color": "bg-purple-100 text-purple-800",
+      "desc": "政策与情绪双驱动",
+      "composition": [
+        { "name": "游资 (打造高度)", "val": 50, "color": "#7c3aed" },
+        { "name": "机构/趋势资金", "val": 40, "color": "#3b82f6" },
+        { "name": "散户跟风", "val": 10, "color": "#a78bfa" }
+      ]
+    },
+    {
+      "sector": "新能源（电新）",
+      "dominant": "机构资金撤离",
+      "icon": "Zap",
+      "color": "bg-gray-100 text-gray-800",
+      "desc": "资金流出，板块承压",
+      "composition": [
+        { "name": "机构卖盘", "val": 70, "color": "#6b7280" },
+        { "name": "散户承接", "val": 25, "color": "#9ca3af" },
+        { "name": "套牢盘", "val": 5, "color": "#d1d5db" }
+      ]
+    }
+  ]
+}

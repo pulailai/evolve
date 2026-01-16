@@ -1,0 +1,457 @@
+{
+  "nodes": [
+    {
+      "id": "1767620839274",
+      "type": "sectorNode",
+      "position": {
+        "x": -367.5670633158719,
+        "y": -40.79450519869036
+      },
+      "data": {
+        "label": "商业航天",
+        "startDate": "2025-11-11",
+        "fundType": "游资 机构 量化",
+        "color": "#dc2626",
+        "bgColor": "#fef3c7",
+        "targets": [
+          "航天发展（换手）、中国卫星、中国卫通"
+        ],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "c_1768489287457",
+          "stages": [
+            {
+              "id": "c_1768485198885",
+              "typeId": "acceleration",
+              "label": "加速",
+              "color": "#ef4444",
+              "bg": "#fee2e2",
+              "time": "2026-01-09 21:53",
+              "remark": "外面的资金大量进场，这个方向的量能到达7千亿 买盘逐渐枯竭"
+            },
+            {
+              "id": "c_1768485509176",
+              "typeId": "divergence",
+              "label": "分歧",
+              "color": "#6366f1",
+              "bg": "#e0e7ff",
+              "time": "2026-01-13 21:58",
+              "remark": "市场连续加速后，持续分歧，关注减弱\n这个板块资金摄入的很深，后面有很大概率的修复 \n大量资金聚合在商业航天，后面应该是有一个出货的预期的？",
+              "prediction": ""
+            },
+            {
+              "id": "c_1768489287457",
+              "typeId": "accelerated_divergence",
+              "label": "加速分歧",
+              "color": "#7c3aed",
+              "bg": "#f5f3ff",
+              "time": "2026-01-15 23:01",
+              "remark": "担保金融+地缘政策导致就是分歧",
+              "prediction": "repair"
+            }
+          ],
+          "logs": {}
+        },
+        "targetsStr": "航天发展（换手）、中国卫星、中国卫通",
+        "volumeDataStr": "5200, 7200, 7500, 7500, 7590, 4600",
+        "volumeData": [
+          5200,
+          7200,
+          7500,
+          7500,
+          7590,
+          4600
+        ]
+      },
+      "width": 211,
+      "height": 115,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -367.5670633158719,
+        "y": -40.79450519869036
+      },
+      "dragging": false
+    },
+    {
+      "id": "1768484552049",
+      "type": "sectorNode",
+      "position": {
+        "x": 39.452219885569605,
+        "y": -35.340506218578426
+      },
+      "data": {
+        "label": "AI应用 低位+春节应用端爆发",
+        "startDate": "2026-01-12",
+        "fundType": "游资",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [
+          "利欧"
+        ],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "c_1768487169228",
+          "stages": [
+            {
+              "id": "c_1768484599942",
+              "typeId": "startup",
+              "label": "启动",
+              "color": "#f59e0b",
+              "bg": "#fef3c7",
+              "time": "2026-01-09 22:17",
+              "remark": "在商业航天第一个“加速”资金高切低预期"
+            },
+            {
+              "id": "c_1768486949267",
+              "typeId": "outbreak",
+              "label": "爆发",
+              "color": "#b91c1c",
+              "bg": "#fef2f2",
+              "time": "2026-01-14 22:23",
+              "remark": "商业航天再次加速，AI应用也爆发，消耗了很多资金"
+            },
+            {
+              "id": "c_1768487068985",
+              "typeId": "contraction",
+              "label": "缩容",
+              "color": "#8b5cf6",
+              "bg": "#f5f3ff",
+              "time": "2026-01-13 22:25",
+              "remark": "逐步缩容聚焦，“利欧”作为核心载体"
+            },
+            {
+              "id": "c_1768487169228",
+              "typeId": "divergence",
+              "label": "分歧",
+              "color": "#6366f1",
+              "bg": "#e0e7ff",
+              "time": "2026-01-15 22:26",
+              "remark": "融资配额限制给市场降温",
+              "prediction": "repair"
+            }
+          ],
+          "logs": {}
+        },
+        "targetsStr": "利欧",
+        "volumeDataStr": "2300, 3600, 5200, 4700",
+        "volumeData": [
+          2300,
+          3600,
+          5200,
+          4700
+        ]
+      },
+      "width": 209,
+      "height": 115,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 39.452219885569605,
+        "y": -35.340506218578426
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "1767620839274",
+      "sourceHandle": "right",
+      "target": "1768484552049",
+      "targetHandle": "left",
+      "id": "e-1768488740074",
+      "type": "custom",
+      "label": "第一天就是就开始切换的痕迹",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      },
+      "selected": false
+    }
+  ],
+  "marketHistory": [
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "actualDays": 1,
+      "startTime": "2026-01-16T05:52:54.374Z",
+      "endTime": "2026-01-16T05:56:16.336Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 3,
+      "actualDays": 4,
+      "startTime": "2026-01-16T05:56:16.336Z",
+      "endTime": "2026-01-16T05:59:41.585Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 3,
+      "actualDays": 4,
+      "startTime": "2026-01-16T05:59:41.585Z",
+      "endTime": "2026-01-16T06:00:01.721Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 2,
+      "actualDays": 3,
+      "startTime": "2026-01-16T06:00:01.721Z",
+      "endTime": "2026-01-16T06:00:10.083Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 3,
+      "actualDays": 4,
+      "startTime": "2026-01-16T06:00:10.083Z",
+      "endTime": "2026-01-16T06:02:36.313Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 1,
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:02:36.313Z",
+      "endTime": "2026-01-16T06:06:10.013Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 4,
+      "actualDays": 5,
+      "startTime": "2026-01-16T06:06:10.013Z",
+      "endTime": "2026-01-16T06:06:26.119Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 1,
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:06:26.119Z",
+      "endTime": "2026-01-16T06:06:51.086Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "actualDays": 1,
+      "startTime": "2026-01-16T06:06:51.086Z",
+      "endTime": "2026-01-16T06:09:48.607Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 3,
+      "actualDays": 4,
+      "startTime": "2026-01-16T06:09:48.607Z",
+      "endTime": "2026-01-16T06:10:00.333Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "actualDays": 1,
+      "startTime": "2026-01-16T06:10:00.333Z",
+      "endTime": "2026-01-16T06:11:22.124Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "actualDays": 1,
+      "startTime": "2026-01-16T06:11:22.124Z",
+      "endTime": "2026-01-16T06:11:29.616Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "actualDays": 1,
+      "startTime": "2026-01-16T06:11:29.616Z",
+      "endTime": "2026-01-16T06:13:46.103Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 4,
+      "actualDays": 5,
+      "startTime": "2026-01-16T06:13:46.103Z",
+      "endTime": "2026-01-16T06:13:54.913Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 8,
+      "actualDays": 9,
+      "startTime": "2026-01-16T06:13:54.913Z",
+      "endTime": "2026-01-16T06:14:00.587Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 10,
+      "actualDays": 11,
+      "startTime": "2026-01-16T06:14:00.587Z",
+      "endTime": "2026-01-16T06:14:36.776Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 13,
+      "actualDays": 14,
+      "startTime": "2026-01-16T06:14:36.776Z",
+      "endTime": "2026-01-16T06:14:43.623Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 20,
+      "actualDays": 21,
+      "startTime": "2026-01-16T06:14:43.623Z",
+      "endTime": "2026-01-16T06:14:49.659Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 10,
+      "actualDays": 11,
+      "startTime": "2026-01-16T06:14:49.659Z",
+      "endTime": "2026-01-16T06:16:44.036Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 1,
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:16:44.036Z",
+      "endTime": "2026-01-16T06:18:25.169Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 10,
+      "phase": "normal",
+      "actualDays": 11,
+      "startTime": "2026-01-16T06:18:25.169Z",
+      "endTime": "2026-01-16T06:18:34.334Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 1,
+      "phase": "normal",
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:18:34.334Z",
+      "endTime": "2026-01-16T06:19:07.038Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 12,
+      "phase": "warming",
+      "actualDays": 13,
+      "startTime": "2026-01-16T06:19:07.038Z",
+      "endTime": "2026-01-16T06:22:12.302Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 12,
+      "phase": "normal",
+      "actualDays": 13,
+      "startTime": "2026-01-16T06:22:12.302Z",
+      "endTime": "2026-01-16T06:22:20.215Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 1,
+      "phase": "warming",
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:22:20.215Z",
+      "endTime": "2026-01-16T06:24:28.778Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 1,
+      "phase": "frozen",
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:24:28.778Z",
+      "endTime": "2026-01-16T06:26:17.711Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 1,
+      "phase": "warming",
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:26:17.711Z",
+      "endTime": "2026-01-16T06:26:38.865Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 1,
+      "phase": "frozen",
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:26:38.865Z",
+      "endTime": "2026-01-16T06:29:10.312Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 1,
+      "phase": "exhausted",
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:29:10.312Z",
+      "endTime": "2026-01-16T06:42:24.717Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 1,
+      "phase": "chilly",
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:42:24.717Z",
+      "endTime": "2026-01-16T06:42:30.769Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 1,
+      "phase": "exhausted",
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:42:30.769Z",
+      "endTime": "2026-01-16T06:46:55.902Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 1,
+      "startTime": "2026-01-16T06:46:55.902Z",
+      "endTime": "2026-01-16T06:47:04.345Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 2,
+      "phase": "frozen",
+      "actualDays": 3,
+      "startTime": "2026-01-16T06:47:04.345Z",
+      "endTime": "2026-01-16T06:54:17.038Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 1,
+      "phase": "exhausted",
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:54:17.038Z",
+      "endTime": "2026-01-16T06:54:41.357Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 1,
+      "phase": "frozen",
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:54:41.357Z",
+      "endTime": "2026-01-16T06:55:03.244Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 1,
+      "phase": "exhausted",
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:55:03.244Z",
+      "endTime": "2026-01-16T06:56:23.215Z"
+    }
+  ],
+  "currentEnv": {
+    "mode": "cold",
+    "initialDays": 1,
+    "phase": "frozen",
+    "startTime": "2026-01-16T06:56:23.215Z"
+  },
+  "meta": {
+    "lastSaved": "2026-01-16T06:56:27.906Z",
+    "type": "file"
+  }
+}

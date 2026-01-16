@@ -1,0 +1,114 @@
+{
+  "updateTime": "2025年12月11日",
+  "dailyFlow": [
+    { "name": "商业航天", "netFlow": 15.0, "type": "in", "desc": "逆势走强，成为唯一抱团方向" },
+    { "name": "电网设备", "netFlow": 8.5, "type": "in", "desc": "特高压概念活跃，与航天线缆联动" },
+    { "name": "商业零售", "netFlow": -10.2, "type": "out", "desc": "板块集体下挫，资金大幅流出" },
+    { "name": "房地产", "netFlow": -7.3, "type": "out", "desc": "延续调整" },
+    { "name": "计算机", "netFlow": -5.1, "type": "out", "desc": "受中兴通讯跌停拖累" },
+    { "name": "食品饮料", "netFlow": -3.8, "type": "out", "desc": "消费股普跌" }
+  ],
+  "topStocks": [
+    { "name": "雪人集团", "value": 3.25, "type": "buy", "desc": "龙虎榜净买入额两市第一" },
+    { "name": "永辉超市", "value": 6.12, "type": "buy", "desc": "游资做T，剧烈震荡" },
+    { "name": "中兴通讯", "value": -10.0, "type": "sell", "desc": "受海外调查报道影响跌停" },
+    { "name": "茂业商业", "value": -9.8, "type": "sell", "desc": "触及跌停，零售高标松动" }
+  ],
+  "weeklyThemes": [
+    { "name": "商业航天", "value": 65, "color": "#10b981", "details": "逆市涨停潮，绝对主线" },
+    { "name": "电网设备/特高压", "value": 35, "color": "#3b82f6", "details": "政策预期与题材联动" },
+    { "name": "北交所", "value": 30, "color": "#8b5cf6", "details": "指数逆势大涨，个股活跃" },
+    { "name": "光模块/算力", "value": 15, "color": "#f59e0b", "details": "受权重股利空冲击调整" }
+  ],
+  "marketVolume": [
+    { "date": "12-10", "volume": 1.78, "status": "缩量", "change": -0.12, "sentiment": 45, "desc": "缩量震荡" },
+    { "date": "12-11", "volume": 1.89, "status": "放量", "change": 0.11, "sentiment": 40, "desc": "普跌放量，超4300股下跌，冰点特征" }
+  ],
+  "themeLifecycle": [
+    {
+      "name": "商业航天",
+      "daysActive": 16,
+      "phase": "高位分歧转一致",
+      "heat": 80,
+      "startDate": "2025-11-25",
+      "trend": "up",
+      "insight": "在市场普跌环境下，板块凭借马斯克确认SpaceX明年IPO等事件催化，实现逆势走强并掀起涨停潮，资金抱团效应显著，确认主线地位。炒作向火箭线缆等新分支扩散[citation:3][citation:5][citation:9]。",
+      "news": [
+        "【事件】马斯克确认SpaceX计划于2026年启动IPO[citation:5][citation:9]。我国“力箭一号”遥十一运载火箭成功实施“一箭九星”发射[citation:9]。",
+        "【分支】火箭线缆概念受关注，华菱线缆涨停[citation:3]。"
+      ]
+    },
+    {
+      "name": "商业零售",
+      "daysActive": 13,
+      "phase": "退潮期",
+      "heat": 30,
+      "startDate": "11-28",
+      "trend": "down",
+      "insight": "在市场整体风险释放过程中，高位抱团松动，板块集体下挫，龙头股宽幅震荡，资金流出明显，进入退潮阶段[citation:5][citation:8]。",
+      "news": [
+        "【盘面】零售板块集体下挫，多股跌幅居前[citation:5]。茂业商业触及跌停[citation:5]。",
+        "【龙头】永辉超市巨震，游资席位做T[citation:3]。"
+      ]
+    }
+  ],
+  "activeSeats": [
+    {
+      "name": "陈小群",
+      "type": "知名游资",
+      "tag": "做T/维护",
+      "direction": "商业零售",
+      "stocks": [
+        { "name": "永辉超市", "amount": "买入2.1559亿，卖出2.1506亿", "date": "12-11" }
+      ],
+      "desc": "在市场普跌、零售板块退潮时，对核心持仓永辉超市进行精准做T，以维持仓位和席位影响力，操作具有防守性。"
+    },
+    {
+      "name": "章盟主",
+      "type": "知名游资",
+      "tag": "调仓/进攻",
+      "direction": "商业航天",
+      "stocks": [
+        { "name": "航天动力", "amount": "+1.45亿", "date": "12-11" }
+      ],
+      "desc": "果断卖出表现不佳的地产股，将仓位切换至当日最强的商业航天主线，买入航天动力并获涨停，体现了高效的短线跟随策略[citation:3]。"
+    },
+    {
+      "name": "机构席位",
+      "type": "主力",
+      "tag": "分歧/抄底",
+      "direction": "多空博弈",
+      "stocks": [
+        { "name": "中兴通讯", "amount": "+6.32亿", "date": "12-11" },
+        { "name": "永辉超市", "amount": "-3.95亿", "date": "12-11" }
+      ],
+      "desc": "操作呈现显著分歧：一方面大额抄底因利空跌停的中兴通讯[citation:1][citation:7]；另一方面大幅抛售零售高标永辉超市[citation:1][citation:7]，与游资形成对手盘。"
+    }
+  ],
+  "fundNature": [
+    {
+      "sector": "商业航天",
+      "dominant": "游资主导，机构跟随",
+      "icon": "Rocket",
+      "color": "bg-purple-100 text-purple-800",
+      "desc": "事件驱动，逆市抱团",
+      "composition": [
+        { "name": "活跃游资 (章盟主等)", "val": 50, "color": "#7c3aed" },
+        { "name": "跟风量化/散户", "val": 30, "color": "#a78bfa" },
+        { "name": "机构资金", "val": 20, "color": "#3b82f6" }
+      ]
+    },
+    {
+      "sector": "商业零售",
+      "dominant": "游资撤退，机构卖出",
+      "icon": "Zap",
+      "color": "bg-gray-100 text-gray-800",
+      "desc": "抱团瓦解，资金出逃",
+      "composition": [
+        { "name": "机构卖盘", "val": 50, "color": "#475569" },
+        { "name": "游资 (陈小群做T)", "val": 30, "color": "#9ca3af" },
+        { "name": "散户", "val": 20, "color": "#d1d5db" }
+      ]
+    }
+  ]
+}

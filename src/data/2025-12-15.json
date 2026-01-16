@@ -1,0 +1,79 @@
+{
+  "updateTime": "2025年12月15日",
+  "dailyFlow": [
+    { "name": "国防军工", "netFlow": 22.87, "type": "in", "desc": "行业主力资金净流入规模居首[citation:4]" },
+    { "name": "食品饮料", "netFlow": 11.24, "type": "in", "desc": "资金净流入居前[citation:4]" },
+    { "name": "商贸零售", "netFlow": 9.55, "type": "in", "desc": "行业涨幅靠前，主力资金净流入[citation:4][citation:7]" },
+    { "name": "电子", "netFlow": -163.31, "type": "out", "desc": "行业主力资金净流出居首[citation:4]" },
+    { "name": "电力设备", "netFlow": -59.19, "type": "out", "desc": "主力资金净流出规模靠前[citation:4]" },
+    { "name": "有色金属", "netFlow": -55.32, "type": "out", "desc": "主力资金大幅净流出[citation:4]" }
+  ],
+  "topStocks": [
+    { "name": "雷科防务", "value": 14.81, "type": "buy", "desc": "主力资金净流入最多，龙虎榜获机构与深股通买入[citation:4][citation:6]" },
+    { "name": "东方日升", "value": 3.63, "type": "buy", "desc": "20CM涨停，获三家游资席位合力净买入[citation:3]" },
+    { "name": "长盈精密", "value": -14.21, "type": "sell", "desc": "主力资金净流出规模居首[citation:4]" },
+    { "name": "龙洲股份", "value": -2.42, "type": "sell", "desc": "龙虎榜合计净卖出，陈小群净卖出1.67亿元[citation:6][citation:9]" }
+  ],
+  "weeklyThemes": [
+    { "name": "商业航天", "value": 70, "color": "#10b981", "details": "主题延续高热度，相关概念股获主力资金重点抢筹[citation:5][citation:10]" },
+    { "name": "能源强国", "value": 40, "color": "#f97316", "details": "政策聚焦新型能源体系，智能电网、核聚变等主题热度提升[citation:5]" },
+    { "name": "AI应用", "value": 35, "color": "#3b82f6", "details": "政策深化‘人工智能+’，光模块等方向资金关注度高[citation:5]" },
+    { "name": "内需消费", "value": 30, "color": "#8b5cf6", "details": "政策提振消费，商贸零售、食品饮料板块今日走强[citation:5][citation:7]" }
+  ],
+  "marketVolume": [
+    { "date": "12-12", "volume": 2.09, "status": "放量", "change": 0.20, "sentiment": 60, "desc": "前情参考" },
+    { "date": "12-15", "volume": 1.77, "status": "大幅缩量", "change": -0.32, "sentiment": 40, "desc": "两市成交额较上一交易日减少约3187亿元[citation:1][citation:7]" }
+  ],
+  "themeLifecycle": [
+    {
+      "name": "商业航天",
+      "daysActive": 18,
+      "phase": "高位震荡",
+      "heat": 80,
+      "startDate": "2025-11-25",
+      "trend": "分化",
+      "insight": "板块在政策与发射事件密集催化下维持高热度，但内部分化加剧。龙头股虽获资金抢筹，但前期高标出现游资大幅获利了结迹象，筹码交换剧烈[citation:5][citation:9][citation:10]。",
+      "news": [
+        "【政策】国家航天局此前印发《推进商业航天高质量安全发展行动计划（2025—2027年）》[citation:5]。",
+        "【事件】长征十二号、长征八号甲等火箭近期完成发射，低轨卫星组网进度显著加快[citation:8]。",
+        "【盘面】12月15日，商业航天概念股再度集体爆发，雷科防务等获主力大幅净流入，但龙洲股份遭游资陈小群净卖出1.67亿元[citation:9][citation:10]。"
+      ]
+    }
+  ],
+  "activeSeats": [
+    {
+      "name": "陈小群",
+      "type": "知名游资",
+      "tag": "获利了结",
+      "direction": "商业航天",
+      "stocks": [
+        { "name": "龙洲股份", "amount": "-1.67亿", "date": "12-15" }
+      ],
+      "desc": "对商业航天高标股龙洲股份进行大额净卖出，操作上体现高位锁定利润的意图[citation:9]。"
+    },
+    {
+      "name": "量化打板 & 成都系 & 中山东路",
+      "type": "游资群体",
+      "tag": "合力进攻",
+      "direction": "电力设备（光伏）",
+      "stocks": [
+        { "name": "东方日升", "amount": "合计净买入3.63亿", "date": "12-15" }
+      ],
+      "desc": "三家活跃游资席位合力封板20CM光伏股东方日升，显示短线资金在寻找新的进攻方向[citation:3]。"
+    }
+  ],
+  "fundNature": [
+    {
+      "sector": "商业航天",
+      "dominant": "机构与游资混合",
+      "icon": "Rocket",
+      "color": "bg-purple-100 text-purple-800",
+      "desc": "高位博弈加剧",
+      "composition": [
+        { "name": "机构与深股通", "val": 50, "color": "#3b82f6" },
+        { "name": "游资 (分歧)", "val": 40, "color": "#7c3aed" },
+        { "name": "散户跟风", "val": 10, "color": "#a78bfa" }
+      ]
+    }
+  ]
+}

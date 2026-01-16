@@ -1,0 +1,107 @@
+{
+  "updateTime": "12月09日 (周二)",
+  "dailyFlow": [
+    { "name": "通信设备", "netFlow": 31.5, "type": "in", "desc": "CPO概念资金回流" },
+    { "name": "电子元件", "netFlow": 26.2, "type": "in", "desc": "AI硬件端修复" },
+    { "name": "零售/物流", "netFlow": 18.5, "type": "in", "desc": "福建自贸区发酵" },
+    { "name": "商业航天", "netFlow": -45.2, "type": "out", "desc": "高位分歧剧烈" },
+    { "name": "有色金属", "netFlow": -22.1, "type": "out", "desc": "期货回调拖累" },
+    { "name": "房地产", "netFlow": -15.6, "type": "out", "desc": "获利盘持续兑现" }
+  ],
+  "topStocks": [
+    { "name": "德科立", "value": 4.67, "type": "buy" },
+    { "name": "永辉超市", "value": 3.06, "type": "buy" },
+    { "name": "天通股份", "value": 2.33, "type": "buy" },
+    { "name": "航天发展", "value": -4.45, "type": "sell" },
+    { "name": "海欣食品", "value": -1.88, "type": "sell" }
+  ],
+  "weeklyThemes": [
+    { "name": "商业航天(分歧)", "value": 30, "color": "#64748b", "details": "龙洲股份、顺灏股份" },
+    { "name": "福建自贸区", "value": 25, "color": "#ef4444", "details": "平潭发展、厦门港务" },
+    { "name": "AI硬件/CPO", "value": 25, "color": "#f97316", "details": "中际旭创、新易盛" },
+    { "name": "机器人", "value": 20, "color": "#eab308", "details": "巨轮智能、柯力传感" }
+  ],
+  "marketVolume": [
+    { "date": "12-05", "volume": 1.74, "status": "放量", "change": 0.19, "sentiment": 85, "desc": "V型反转" },
+    { "date": "12-06", "volume": 1.65, "status": "缩量", "change": -0.09, "sentiment": 50, "desc": "周末效应" },
+    { "date": "12-08", "volume": 1.90, "status": "放量", "change": 0.25, "sentiment": 90, "desc": "普涨高潮" },
+    { "date": "12-09", "volume": 1.72, "status": "缩量", "change": -0.18, "sentiment": 45, "desc": "高位分歧" }
+  ],
+  "themeLifecycle": [
+    {
+      "name": "福建自贸区",
+      "daysActive": 2,
+      "phase": "主升浪 (加速)",
+      "heat": 85,
+      "startDate": "12-08",
+      "trend": "up",
+      "insight": "政策预期升温，龙洲股份5连板打出空间。",
+      "news": [
+        "【政策】商务部推进消费新场景试点，福建板块多股涨停。",
+        "【盘面】龙洲股份、平潭发展开盘秒板，资金抢筹意愿强烈。"
+      ]
+    },
+    {
+      "name": "商业航天",
+      "daysActive": 9,
+      "phase": "高位震荡",
+      "heat": 60,
+      "startDate": "11-28",
+      "trend": "volatile",
+      "insight": "板块内部分化严重，前排锁仓，后排掉队。",
+      "news": [
+        "【盘面】航天发展尾盘跳水，通宇通讯放量下跌。",
+        "【逻辑】第一波炒作接近尾声，等待充分换手后的二波机会。"
+      ]
+    }
+  ],
+  "activeSeats": [
+    {
+      "name": "陈小群",
+      "type": "顶级游资",
+      "tag": "大格局 / 消费",
+      "direction": "新零售",
+      "stocks": [
+        { "name": "永辉超市", "amount": "+3.06亿", "date": "12-09" }
+      ],
+      "desc": "重仓出击低位消费股，博弈跨年妖股预期。"
+    },
+    {
+      "name": "机构专用",
+      "type": "主力",
+      "tag": "基本面 / 趋势",
+      "direction": "CPO/光模块",
+      "stocks": [
+        { "name": "德科立", "amount": "+3.53亿", "date": "12-09" },
+        { "name": "天孚通信", "amount": "净买入", "date": "12-09" }
+      ],
+      "desc": "由于AI应用端回流，机构资金重新回补硬件龙头。"
+    }
+  ],
+  "fundNature": [
+    {
+      "sector": "福建本地股",
+      "dominant": "游资/短线",
+      "icon": "Zap",
+      "color": "bg-red-100 text-red-800",
+      "desc": "地域题材博弈",
+      "composition": [
+        { "name": "顶级游资", "val": 60, "color": "#dc2626" },
+        { "name": "散户跟风", "val": 30, "color": "#fca5a5" },
+        { "name": "量化", "val": 10, "color": "#e2e8f0" }
+      ]
+    },
+    {
+      "sector": "CPO/通信",
+      "dominant": "机构/量化",
+      "icon": "Shield",
+      "color": "bg-blue-100 text-blue-800",
+      "desc": "业绩趋势",
+      "composition": [
+        { "name": "公募/北向", "val": 50, "color": "#2563eb" },
+        { "name": "量化基金", "val": 40, "color": "#60a5fa" },
+        { "name": "游资", "val": 10, "color": "#bfdbfe" }
+      ]
+    }
+  ]
+}

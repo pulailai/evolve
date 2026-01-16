@@ -1,0 +1,108 @@
+{
+  "updateTime": "2026年1月7日",
+  "dailyFlow": [
+    { "name": "通信", "netFlow": 47.52, "type": "in", "desc": "行业主力资金净流入规模居首" },
+    { "name": "煤炭", "netFlow": 18.70, "type": "in", "desc": "板块大幅走高，获资金流入" },
+    { "name": "综合", "netFlow": 2.79, "type": "in", "desc": "行业涨幅居前，资金小幅流入" },
+    { "name": "国防军工", "netFlow": -116.25, "type": "out", "desc": "行业主力资金净流出最多，商业航天内部分化" },
+    { "name": "计算机", "netFlow": -81.22, "type": "out", "desc": "资金大幅净流出" },
+    { "name": "汽车", "netFlow": -68.25, "type": "out", "desc": "行业主力资金净流出规模靠前" }
+  ],
+  "topStocks": [
+    { "name": "航天发展", "value": 21.31, "type": "buy", "desc": "主力资金净流入额居两市首位" },
+    { "name": "格林美", "value": 13.90, "type": "buy", "desc": "获主力资金大幅净买入" },
+    { "name": "雷科防务", "value": -19.43, "type": "sell", "desc": "主力资金净流出最多" },
+    { "name": "海格通信", "value": -19.34, "type": "sell", "desc": "主力资金净流出额居前" }
+  ],
+  "weeklyThemes": [
+    { "name": "半导体产业链", "value": 85, "color": "#3b82f6", "details": "光刻胶、存储芯片、设备等分支全线活跃，成为新领涨主线" },
+    { "name": "资源周期（煤炭）", "value": 70, "color": "#ef4444", "details": "低估值高股息属性受避险资金青睐，逆势走强" },
+    { "name": "商业航天", "value": 60, "color": "#10b981", "details": "内部分化加剧，部分个股涨停但板块资金大幅流出" },
+    { "name": "大金融", "value": 30, "color": "#f59e0b", "details": "券商、保险板块回调，资金流出" }
+  ],
+  "marketVolume": [
+    { "date": "12-30", "volume": 2.16, "status": "平量", "change": 0.00, "sentiment": 45, "desc": "全市场成交2.16万亿元" },
+    { "date": "12-31", "volume": 2.05, "status": "缩量", "change": -0.11, "sentiment": 50, "desc": "两市成交约2.05万亿元" },
+    { "date": "01-05", "volume": 2.55, "status": "大幅放量", "change": 0.50, "sentiment": 80, "desc": "沪深两市成交2.55万亿元" },
+    { "date": "01-06", "volume": 2.81, "status": "大幅放量", "change": 0.26, "sentiment": 85, "desc": "沪深两市成交额2.81万亿元" },
+    { "date": "01-07", "volume": 2.85, "status": "放量", "change": 0.04, "sentiment": 60, "desc": "两市成交额2.85万亿元，较上一交易日放量约476亿元[citation:3]" }
+  ],
+  "themeLifecycle": [
+    {
+      "name": "半导体产业链",
+      "daysActive": 1,
+      "phase": "启动爆发",
+      "heat": 88,
+      "startDate": "2026-01-07",
+      "trend": "up",
+      "insight": "在市场高低切换的背景下，半导体产业链凭借光刻胶、存储芯片等细分领域的强劲表现，成为承接流出资金的新主线。行业逻辑清晰（国产替代、周期复苏），有望接替前期高位题材成为新的进攻方向。",
+      "news": [
+        "【盘面】光刻机(胶)、存储芯片、半导体设备等概念板块涨幅居前[citation:1][citation:6]。",
+        "【资金】电子行业虽整体上涨1.25%，但主力资金呈净流出，显示内部存在博弈[citation:4]；通信行业获主力大幅净流入47.52亿元[citation:4]。"
+      ]
+    },
+    {
+      "name": "商业航天",
+      "daysActive": 28,
+      "phase": "高位巨震与分化",
+      "heat": 65,
+      "startDate": "2025-11-25",
+      "trend": "剧烈分化",
+      "insight": "板块在连续加速后迎来剧烈分化。虽有个股涨停维持热度，但行业整体遭遇主力资金高达116.25亿元的净流出，位居两市首位[citation:4]。前期龙头股资金出逃明显，显示筹码开始松动，行情进入高风险博弈阶段。",
+      "news": [
+        "【资金】国防军工（商业航天）行业主力资金净流出116.25亿元，规模遥遥领先[citation:4]。",
+        "【个股】雷科防务、海格通信遭主力资金巨额净卖出[citation:4]，但航天发展获主力净流入21.31亿元，内部分化极致[citation:4]。"
+      ]
+    }
+  ],
+  "activeSeats": [
+    {
+      "name": "机构席位",
+      "type": "主力",
+      "tag": "有买有卖 / 调仓换股",
+      "direction": "卖出高位，布局低位",
+      "stocks": [
+        { "name": "三博脑科", "amount": "机构净买入", "date": "01-07" },
+        { "name": "金风科技", "amount": "机构净卖出", "date": "01-07" }
+      ],
+      "desc": "机构操作分歧加大，整体呈现净卖出。从龙虎榜看，机构在部分医疗、科技股上有买入，但对新能源等板块个股进行卖出[citation:5]。"
+    },
+    {
+      "name": "营业部席位 (游资)",
+      "type": "游资",
+      "tag": "聚焦新热点 / 获利了结",
+      "direction": "半导体、卖出高位",
+      "stocks": [
+        { "name": "通宇通讯", "amount": "营业部净买入", "date": "01-07" },
+        { "name": "雷科防务", "amount": "营业部净卖出", "date": "01-07" }
+      ],
+      "desc": "游资活跃度不减，但方向切换明显。一方面在通信等新热点上进攻，另一方面从商业航天等高位题材中大幅撤出，进行获利了结[citation:5]。"
+    }
+  ],
+  "fundNature": [
+    {
+      "sector": "半导体产业链",
+      "dominant": "机构与游资合力",
+      "icon": "Cpu",
+      "color": "bg-blue-100 text-blue-800",
+      "desc": "高低切换的新共识",
+      "composition": [
+        { "name": "机构/趋势资金", "val": 50, "color": "#3b82f6" },
+        { "name": "活跃游资", "val": 40, "color": "#60a5fa" },
+        { "name": "散户跟风", "val": 10, "color": "#93c5fd" }
+      ]
+    },
+    {
+      "sector": "商业航天",
+      "dominant": "游资撤离，散户博弈",
+      "icon": "Rocket",
+      "color": "bg-gray-100 text-gray-800",
+      "desc": "退潮期，筹码派发",
+      "composition": [
+        { "name": "获利了结游资", "val": 55, "color": "#6b7280" },
+        { "name": "散户接盘", "val": 35, "color": "#9ca3af" },
+        { "name": "坚守机构", "val": 10, "color": "#d1d5db" }
+      ]
+    }
+  ]
+}

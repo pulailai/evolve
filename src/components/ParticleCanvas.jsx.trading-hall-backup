@@ -1,0 +1,716 @@
+import React, { useEffect, useRef } from 'react';
+
+/**
+ * ParticleCanvas - Canvas粒子动画组件
+ * 冰冷期：3D企鹅冰封场景
+ * 狂热期：3D交易大厅场景
+ * 灰白期：雾气混沌场景
+ */
+export const ParticleCanvas = ({ mode = 'neutral', days = 0, phase = 'normal' }) => {
+    const canvasRef = useRef(null);
+    const particlesRef = useRef([]);
+    const windParticlesRef = useRef([]);
+    const tradersRef = useRef([]);
+    const bubblesRef = useRef([]);
+    const animationRef = useRef(null);
+    const penguinRef = useRef(null);
+    const timeRef = useRef(0);
+
+    useEffect(() => {
+        const canvas = canvasRef.current;
+        if (!canvas) return;
+
+        const ctx = canvas.getContext('2d');
+        const resizeCanvas = () => {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+        };
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const getVisualIntensity = () => {
+            if (mode === 'cold') {
+                const phaseConfig = {
+                    'chilly': { iceLevel: 0.3, particleCount: 30, penguinFrozen: 0.2, windStrength: 0.3 },
+                    'freezing': { iceLevel: 0.6, particleCount: 50, penguinFrozen: 0.5, windStrength: 0.6 },
+                    'frozen': { iceLevel: 0.9, particleCount: 70, penguinFrozen: 0.85, windStrength: 0.9 }
+                };
+                return phaseConfig[phase] || phaseConfig['chilly'];
+            } else if (mode === 'hot') {
+                const phaseConfig = {
+                    'warming': { traderCount: 3, excitement: 0.3, screenIntensity: 0.3, waterColor: { r: 100, g: 150, b: 200 } },
+                    'heating': { traderCount: 8, excitement: 0.6, screenIntensity: 0.6, waterColor: { r: 255, g: 180, b: 100 } },
+                    'boiling': { traderCount: 15, excitement: 0.9, screenIntensity: 0.9, waterColor: { r: 255, g: 100, b: 80 } },
+                    'exhausted': { traderCount: 5, excitement: 0.4, screenIntensity: 0.5, waterColor: { r: 150, g: 100, b: 100 } }
+                };
+                return phaseConfig[phase] || phaseConfig['warming'];
+            } else {
+                if (days <= 3) return { chaos: 0.2, fogOpacity: 0.05, particleCount: 20 };
+                if (days <= 7) return { chaos: 0.5, fogOpacity: 0.12, particleCount: 30 };
+                return { chaos: 0.9, fogOpacity: 0.2, particleCount: 45 };
+            }
+        };
+
+        const intensity = getVisualIntensity();
+
+        // ========== 冰冷期初始化 ==========
+        if (!penguinRef.current && mode === 'cold') {
+            penguinRef.current = {
+                x: canvas.width * 0.65,
+                y: canvas.height * 0.72,
+                wobble: 0,
+                jumpPhase: 0
+            };
+        }
+
+        const initParticles = () => {
+            particlesRef.current = [];
+            const count = mode === 'cold' ? intensity.particleCount : (mode === 'neutral' ? intensity.particleCount : 0);
+
+            for (let i = 0; i < count; i++) {
+                particlesRef.current.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    size: 2 + Math.random() * 3,
+                    speedY: 0.5 + Math.random() * 1.5,
+                    speedX: (Math.random() - 0.5) * 0.5,
+                    opacity: 0.4 + Math.random() * 0.4,
+                    phase: Math.random() * Math.PI * 2
+                });
+            }
+        };
+
+        const initWindParticles = () => {
+            if (mode !== 'cold') return;
+            windParticlesRef.current = [];
+            const count = Math.floor(intensity.windStrength * 40);
+
+            for (let i = 0; i < count; i++) {
+                windParticlesRef.current.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    length: 40 + Math.random() * 80,
+                    speed: 5 + Math.random() * 8,
+                    opacity: 0.4 + Math.random() * 0.5,
+                    thickness: 1 + Math.random() * 2
+                });
+            }
+        };
+
+        // ========== 狂热期初始化 ==========
+        const initTraders = () => {
+            if (mode !== 'hot') return;
+            tradersRef.current = [];
+            const count = intensity.traderCount || 0;
+
+            for (let i = 0; i < count; i++) {
+                tradersRef.current.push({
+                    x: Math.random() * canvas.width,
+                    y: canvas.height + Math.random() * 50,
+                    targetX: canvas.width * 0.5 + (Math.random() - 0.5) * canvas.width * 0.4,
+                    targetY: canvas.height * (0.55 + Math.random() * 0.15),
+                    speed: 2 + Math.random() * 3,
+                    size: 12 + Math.random() * 8,
+                    color: Math.random() > 0.5 ? 'red' : 'blue',
+                    armWave: Math.random() * Math.PI * 2,
+                    depth: 0.5 + Math.random() * 0.5
+                });
+            }
+        };
+
+        const initBubbles = () => {
+            if (mode !== 'hot') return;
+            bubblesRef.current = [];
+            const count = Math.floor(10 + intensity.excitement * 20);
+
+            for (let i = 0; i < count; i++) {
+                bubblesRef.current.push({
+                    x: Math.random() * canvas.width,
+                    y: canvas.height * (0.7 + Math.random() * 0.3),
+                    size: 2 + Math.random() * 4,
+                    speed: 0.5 + Math.random() * 1.5,
+                    opacity: 0.3 + Math.random() * 0.3
+                });
+            }
+        };
+
+        // ========== 更新函数 ==========
+        const updateParticles = () => {
+            if (mode === 'cold') {
+                timeRef.current += 0.016;
+                const windOffset = Math.sin(timeRef.current * 0.5) * intensity.windStrength * 2;
+
+                particlesRef.current.forEach(particle => {
+                    particle.y += particle.speedY;
+                    particle.x += particle.speedX + windOffset;
+                    particle.phase += 0.02;
+
+                    if (particle.y > canvas.height + 10) {
+                        particle.y = -10;
+                        particle.x = Math.random() * canvas.width;
+                    }
+                    if (particle.x < -10) particle.x = canvas.width + 10;
+                    if (particle.x > canvas.width + 10) particle.x = -10;
+                });
+
+                windParticlesRef.current.forEach(wind => {
+                    wind.x += wind.speed * intensity.windStrength;
+                    if (wind.x > canvas.width + 100) {
+                        wind.x = -100;
+                        wind.y = Math.random() * canvas.height;
+                    }
+                });
+            } else if (mode === 'neutral') {
+                particlesRef.current.forEach(particle => {
+                    particle.y += Math.sin(Date.now() * 0.001 + particle.x) * 0.5 * intensity.chaos;
+                    particle.x += particle.speedX;
+                    if (Math.random() < 0.01 * intensity.chaos) {
+                        particle.speedX = (Math.random() - 0.5) * intensity.chaos;
+                    }
+                    if (particle.x < -10) particle.x = canvas.width + 10;
+                    if (particle.x > canvas.width + 10) particle.x = -10;
+                });
+            }
+        };
+
+        const updateTraders = () => {
+            if (mode !== 'hot') return;
+
+            tradersRef.current.forEach(trader => {
+                const dx = trader.targetX - trader.x;
+                const dy = trader.targetY - trader.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+
+                if (dist > 5) {
+                    trader.x += (dx / dist) * trader.speed * (1 + intensity.excitement);
+                    trader.y += (dy / dist) * trader.speed * (1 + intensity.excitement);
+                } else {
+                    trader.targetX = canvas.width * 0.5 + (Math.random() - 0.5) * canvas.width * 0.4;
+                    trader.targetY = canvas.height * (0.55 + Math.random() * 0.15);
+                }
+
+                trader.armWave += 0.3 + intensity.excitement * 0.5;
+            });
+        };
+
+        const updateBubbles = () => {
+            if (mode !== 'hot') return;
+
+            bubblesRef.current.forEach(bubble => {
+                bubble.y -= bubble.speed;
+                if (bubble.y < canvas.height * 0.3) {
+                    bubble.y = canvas.height;
+                    bubble.x = Math.random() * canvas.width;
+                }
+            });
+        };
+
+        // ========== 绘制函数 - 交易大厅 ==========
+        const drawTradingHall = () => {
+            if (mode !== 'hot') return;
+
+            const c = intensity.waterColor;
+            const exc = intensity.excitement;
+
+            // 1. 大厅背景
+            const bgGradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+            bgGradient.addColorStop(0, 'rgba(25, 30, 40, 0.95)');
+            bgGradient.addColorStop(1, 'rgba(15, 20, 30, 0.98)');
+            ctx.fillStyle = bgGradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // 2. 地板透视网格
+            ctx.strokeStyle = `rgba(80, 90, 110, 0.25)`;
+            ctx.lineWidth = 1;
+            for (let i = 0; i < 12; i++) {
+                const y = canvas.height * (0.5 + i * 0.04);
+                const width = canvas.width * (0.2 + i * 0.065);
+                const x = (canvas.width - width) / 2;
+                ctx.strokeRect(x, y, width, 3);
+            }
+
+            // 3. 巨型LED屏幕
+            const screenW = canvas.width * 0.75;
+            const screenH = canvas.height * 0.22;
+            const screenX = canvas.width * 0.125;
+            const screenY = canvas.height * 0.08;
+
+            // 屏幕外框
+            ctx.fillStyle = 'rgba(20, 25, 35, 0.95)';
+            ctx.fillRect(screenX - 8, screenY - 8, screenW + 16, screenH + 16);
+
+            // 屏幕主体
+            const screenGrad = ctx.createLinearGradient(screenX, screenY, screenX, screenY + screenH);
+            screenGrad.addColorStop(0, `rgba(${c.r}, ${c.g}, ${c.b}, 0.35)`);
+            screenGrad.addColorStop(1, `rgba(${c.r - 40}, ${c.g - 40}, ${c.b - 40}, 0.5)`);
+            ctx.fillStyle = screenGrad;
+            ctx.fillRect(screenX, screenY, screenW, screenH);
+
+            // K线图
+            const barCount = 25;
+            const barW = screenW / barCount;
+            for (let i = 0; i < barCount; i++) {
+                const x = screenX + i * barW;
+                const barH = (Math.sin(i * 0.4 + timeRef.current * 2.5) * 0.35 + 0.5) * screenH * 0.55;
+                const y = screenY + screenH * 0.65 - barH;
+
+                const isRed = (i + Math.floor(timeRef.current * 3)) % 2 === 0;
+                ctx.fillStyle = isRed
+                    ? `rgba(239, 68, 68, ${0.65 + exc * 0.25})`
+                    : `rgba(34, 197, 94, ${0.55 + exc * 0.2})`;
+                ctx.fillRect(x + 1, y, barW - 2, barH);
+            }
+
+            // 屏幕文字
+            ctx.font = `bold ${canvas.height * 0.038}px Arial`;
+            const textOpacity = 0.85 + Math.sin(timeRef.current * 6) * 0.15;
+            ctx.fillStyle = `rgba(255, ${210 - exc * 80}, ${120 - exc * 60}, ${textOpacity})`;
+            const phaseTexts = {
+                'warming': '试探入场',
+                'heating': '快速升温 ↑',
+                'boiling': '疯狂抢筹！！',
+                'exhausted': '资金枯竭 ↓'
+            };
+            ctx.textAlign = 'center';
+            ctx.fillText(phaseTexts[phase] || '市场交易', canvas.width * 0.5, screenY + screenH * 0.28);
+
+            // 4. 交易柜台（3D透视）
+            const counterY = canvas.height * 0.42;
+            const counterH = canvas.height * 0.14;
+
+            ctx.fillStyle = 'rgba(90, 70, 50, 0.75)';
+            ctx.beginPath();
+            ctx.moveTo(canvas.width * 0.18, counterY);
+            ctx.lineTo(canvas.width * 0.82, counterY);
+            ctx.lineTo(canvas.width * 0.72, counterY + counterH);
+            ctx.lineTo(canvas.width * 0.28, counterY + counterH);
+            ctx.closePath();
+            ctx.fill();
+
+            // 柜台高光
+            ctx.fillStyle = 'rgba(140, 110, 80, 0.6)';
+            ctx.fillRect(canvas.width * 0.22, counterY - 4, canvas.width * 0.56, 4);
+
+            // 5. 人气温度计
+            const meterX = canvas.width * 0.04;
+            const meterY = canvas.height * 0.38;
+            const meterH = canvas.height * 0.42;
+
+            ctx.strokeStyle = 'rgba(180, 180, 190, 0.6)';
+            ctx.lineWidth = 2.5;
+            ctx.strokeRect(meterX, meterY, 28, meterH);
+
+            const fillH = meterH * exc;
+            const fillGrad = ctx.createLinearGradient(meterX, meterY + meterH - fillH, meterX, meterY + meterH);
+            fillGrad.addColorStop(0, `rgba(${c.r}, ${c.g}, ${c.b}, 0.85)`);
+            fillGrad.addColorStop(1, `rgba(${c.r - 25}, ${c.g - 25}, ${c.b}, 0.95)`);
+            ctx.fillStyle = fillGrad;
+            ctx.fillRect(meterX + 2, meterY + meterH - fillH, 24, fillH);
+
+            ctx.fillStyle = 'rgba(240, 240, 250, 0.75)';
+            ctx.font = `${canvas.height * 0.018}px Arial`;
+            ctx.textAlign = 'left';
+            ctx.fillText('人气', meterX + 32, meterY + 12);
+
+            // 6. 入场箭头动画
+            const arrowCount = Math.floor(4 + exc * 6);
+            for (let i = 0; i < arrowCount; i++) {
+                const x = canvas.width * (0.25 + Math.random() * 0.5);
+                const y = canvas.height * 0.88;
+                const offset = Math.sin(timeRef.current * 4 + i * 0.8) * 6;
+
+                ctx.fillStyle = `rgba(255, 215, 50, ${0.55 + Math.sin(timeRef.current * 3 + i) * 0.35})`;
+                ctx.beginPath();
+                ctx.moveTo(x, y + offset);
+                ctx.lineTo(x - 9, y + 18 + offset);
+                ctx.lineTo(x + 9, y + 18 + offset);
+                ctx.closePath();
+                ctx.fill();
+            }
+        };
+
+        const drawTraders = () => {
+            if (mode !== 'hot') return;
+
+            // 按深度排序（远的先画）
+            const sorted = [...tradersRef.current].sort((a, b) => a.depth - b.depth);
+
+            sorted.forEach(trader => {
+                const scale = 0.6 + trader.depth * 0.4;
+                const size = trader.size * scale;
+
+                ctx.save();
+                ctx.translate(trader.x, trader.y);
+                ctx.scale(scale, scale);
+
+                // 阴影
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+                ctx.beginPath();
+                ctx.ellipse(0, size * 1.2, size * 0.8, size * 0.2, 0, 0, Math.PI * 2);
+                ctx.fill();
+
+                // 身体
+                const bodyColor = trader.color === 'red' ? '#ef4444' : '#3b82f6';
+                ctx.fillStyle = bodyColor;
+                ctx.beginPath();
+                ctx.ellipse(0, 0, size * 0.6, size * 0.9, 0, 0, Math.PI * 2);
+                ctx.fill();
+
+                // 头
+                ctx.fillStyle = '#fbbf24';
+                ctx.beginPath();
+                ctx.arc(0, -size * 0.7, size * 0.5, 0, Math.PI * 2);
+                ctx.fill();
+
+                // 眼睛
+                ctx.fillStyle = '#1f2937';
+                ctx.beginPath();
+                ctx.arc(-size * 0.2, -size * 0.75, size * 0.1, 0, Math.PI * 2);
+                ctx.arc(size * 0.2, -size * 0.75, size * 0.1, 0, Math.PI * 2);
+                ctx.fill();
+
+                // 挥舞的手臂
+                const armAngle = Math.sin(trader.armWave) * 0.6;
+                ctx.strokeStyle = bodyColor;
+                ctx.lineWidth = size * 0.15;
+                ctx.lineCap = 'round';
+
+                ctx.beginPath();
+                ctx.moveTo(-size * 0.5, 0);
+                ctx.lineTo(-size * 0.8, -size * 0.3 + Math.sin(trader.armWave) * size * 0.4);
+                ctx.stroke();
+
+                ctx.beginPath();
+                ctx.moveTo(size * 0.5, 0);
+                ctx.lineTo(size * 0.8, -size * 0.3 - Math.sin(trader.armWave) * size * 0.4);
+                ctx.stroke();
+
+                ctx.restore();
+            });
+        };
+
+        const drawBubbles = () => {
+            if (mode !== 'hot') return;
+
+            bubblesRef.current.forEach(bubble => {
+                const grad = ctx.createRadialGradient(
+                    bubble.x - bubble.size * 0.3, bubble.y - bubble.size * 0.3, 0,
+                    bubble.x, bubble.y, bubble.size
+                );
+                grad.addColorStop(0, `rgba(255, 255, 255, ${bubble.opacity})`);
+                grad.addColorStop(0.6, `rgba(200, 230, 255, ${bubble.opacity * 0.5})`);
+                grad.addColorStop(1, 'rgba(150, 200, 255, 0)');
+
+                ctx.fillStyle = grad;
+                ctx.beginPath();
+                ctx.arc(bubble.x, bubble.y, bubble.size, 0, Math.PI * 2);
+                ctx.fill();
+            });
+        };
+
+        // ========== 绘制函数 - 冰冷期 ==========
+        const drawMountains = () => {
+            if (mode !== 'cold') return;
+
+            const mountainLayers = [
+                { baseHeight: 0.4, peaks: 4, color: '#7dd3fc', opacity: 0.4 },
+                { baseHeight: 0.5, peaks: 5, color: '#bae6fd', opacity: 0.6 },
+                { baseHeight: 0.6, peaks: 6, color: '#e0f2fe', opacity: 0.8 }
+            ];
+
+            mountainLayers.forEach((layer, idx) => {
+                const baseY = canvas.height * layer.baseHeight;
+
+                ctx.beginPath();
+                ctx.moveTo(0, canvas.height);
+
+                for (let i = 0; i <= layer.peaks; i++) {
+                    const x = (canvas.width / layer.peaks) * i;
+                    const peakHeight = (80 + Math.sin(i * 0.7 + idx) * 40) * intensity.iceLevel;
+                    const y = baseY - peakHeight;
+
+                    if (i === 0) {
+                        ctx.lineTo(x, y);
+                    } else {
+                        const prevX = (canvas.width / layer.peaks) * (i - 1);
+                        const cpX = (prevX + x) / 2;
+                        const cpY = y - 30;
+                        ctx.quadraticCurveTo(cpX, cpY, x, y);
+                    }
+                }
+
+                ctx.lineTo(canvas.width, canvas.height);
+                ctx.closePath();
+
+                const gradient = ctx.createLinearGradient(0, baseY - 150, 0, canvas.height);
+                gradient.addColorStop(0, layer.color);
+                gradient.addColorStop(0.5, '#f0f9ff');
+                gradient.addColorStop(1, '#ffffff');
+
+                ctx.fillStyle = gradient;
+                ctx.globalAlpha = layer.opacity * intensity.iceLevel;
+                ctx.fill();
+
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.8)';
+                ctx.lineWidth = 2;
+                ctx.globalAlpha = layer.opacity * 0.6;
+                ctx.stroke();
+
+                ctx.shadowColor = 'rgba(59, 130, 246, 0.3)';
+                ctx.shadowBlur = 20;
+                ctx.shadowOffsetX = -10;
+                ctx.shadowOffsetY = 10;
+                ctx.fill();
+
+                ctx.shadowColor = 'transparent';
+                ctx.globalAlpha = 1;
+            });
+        };
+
+        const drawPenguin = () => {
+            if (mode !== 'cold' || !penguinRef.current) return;
+
+            const penguin = penguinRef.current;
+            const size = 50;
+            const frozen = intensity.penguinFrozen;
+
+            penguin.wobble += 0.08 * (1 - frozen);
+            penguin.jumpPhase += 0.05 * (1 - frozen);
+            const wobbleX = Math.sin(penguin.wobble) * 4 * (1 - frozen);
+            const jumpY = Math.abs(Math.sin(penguin.jumpPhase)) * 8 * (1 - frozen);
+
+            ctx.save();
+            ctx.translate(penguin.x + wobbleX, penguin.y - jumpY);
+
+            // 阴影
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
+            ctx.beginPath();
+            ctx.ellipse(0, size + 5, size * 0.6, size * 0.2, 0, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 身体
+            const bodyGradient = ctx.createRadialGradient(-10, -5, 0, 0, 0, size);
+            bodyGradient.addColorStop(0, '#475569');
+            bodyGradient.addColorStop(0.7, '#1e293b');
+            bodyGradient.addColorStop(1, '#0f172a');
+            ctx.fillStyle = bodyGradient;
+            ctx.globalAlpha = 1 - frozen * 0.4;
+            ctx.beginPath();
+            ctx.ellipse(0, 0, size * 0.65, size * 0.85, 0, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 肚子
+            const bellyGradient = ctx.createRadialGradient(-8, 0, 0, 0, 5, size * 0.7);
+            bellyGradient.addColorStop(0, '#ffffff');
+            bellyGradient.addColorStop(0.8, '#f1f5f9');
+            bellyGradient.addColorStop(1, '#e2e8f0');
+            ctx.fillStyle = bellyGradient;
+            ctx.beginPath();
+            ctx.ellipse(0, 8, size * 0.45, size * 0.65, 0, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 翅膀
+            ctx.fillStyle = '#1e293b';
+            ctx.beginPath();
+            ctx.ellipse(-28, 8, 10, 25, -0.4, 0, Math.PI * 2);
+            ctx.ellipse(28, 8, 10, 25, 0.4, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 眼睛
+            const eyeGradient = ctx.createRadialGradient(-10, -12, 0, -10, -12, 6);
+            eyeGradient.addColorStop(0, '#ffffff');
+            eyeGradient.addColorStop(1, '#e2e8f0');
+            ctx.fillStyle = eyeGradient;
+            ctx.beginPath();
+            ctx.arc(-12, -15, 6, 0, Math.PI * 2);
+            ctx.arc(12, -15, 6, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = '#0f172a';
+            ctx.beginPath();
+            ctx.arc(-12, -15, 3, 0, Math.PI * 2);
+            ctx.arc(12, -15, 3, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+            ctx.beginPath();
+            ctx.arc(-13, -16, 1.5, 0, Math.PI * 2);
+            ctx.arc(11, -16, 1.5, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 嘴巴
+            const beakGradient = ctx.createLinearGradient(-8, -8, 8, 0);
+            beakGradient.addColorStop(0, '#fb923c');
+            beakGradient.addColorStop(1, '#f97316');
+            ctx.fillStyle = beakGradient;
+            ctx.beginPath();
+            ctx.moveTo(0, -8);
+            ctx.lineTo(-8, -2);
+            ctx.lineTo(8, -2);
+            ctx.closePath();
+            ctx.fill();
+
+            // 脚
+            ctx.fillStyle = '#f97316';
+            ctx.beginPath();
+            ctx.ellipse(-12, 42, 10, 6, 0, 0, Math.PI * 2);
+            ctx.ellipse(12, 42, 10, 6, 0, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.globalAlpha = 1;
+
+            // 冰封效果
+            if (frozen > 0) {
+                const iceSize = size * (1.1 + frozen * 0.4);
+
+                const iceGradient = ctx.createRadialGradient(-15, -15, 0, 0, 0, iceSize * 1.3);
+                iceGradient.addColorStop(0, `rgba(219, 234, 254, ${frozen * 0.1})`);
+                iceGradient.addColorStop(0.4, `rgba(191, 219, 254, ${frozen * 0.3})`);
+                iceGradient.addColorStop(0.7, `rgba(147, 197, 253, ${frozen * 0.4})`);
+                iceGradient.addColorStop(1, `rgba(219, 234, 254, ${frozen * 0.5})`);
+
+                ctx.fillStyle = iceGradient;
+                ctx.beginPath();
+                ctx.ellipse(0, 0, iceSize, iceSize * 1.3, 0, 0, Math.PI * 2);
+                ctx.fill();
+
+                ctx.strokeStyle = `rgba(255, 255, 255, ${frozen * 0.7})`;
+                ctx.lineWidth = 3;
+                ctx.stroke();
+
+                ctx.strokeStyle = `rgba(255, 255, 255, ${frozen * 0.4})`;
+                ctx.lineWidth = 1;
+                for (let i = 0; i < 8; i++) {
+                    const angle = (Math.PI * 2 / 8) * i;
+                    ctx.beginPath();
+                    ctx.moveTo(0, 0);
+                    ctx.lineTo(Math.cos(angle) * iceSize * 0.9, Math.sin(angle) * iceSize * 1.1);
+                    ctx.stroke();
+                }
+            }
+
+            ctx.restore();
+        };
+
+        const drawWind = () => {
+            if (mode !== 'cold') return;
+
+            windParticlesRef.current.forEach(wind => {
+                // 光晕
+                ctx.strokeStyle = `rgba(200, 230, 255, ${wind.opacity * intensity.windStrength * 0.3})`;
+                ctx.lineWidth = wind.thickness * 3;
+                ctx.beginPath();
+                ctx.moveTo(wind.x, wind.y);
+                ctx.lineTo(wind.x + wind.length, wind.y + wind.length * 0.1);
+                ctx.stroke();
+
+                // 主体
+                ctx.strokeStyle = `rgba(255, 255, 255, ${wind.opacity * intensity.windStrength})`;
+                ctx.lineWidth = wind.thickness;
+                ctx.beginPath();
+                ctx.moveTo(wind.x, wind.y);
+                ctx.lineTo(wind.x + wind.length, wind.y + wind.length * 0.1);
+                ctx.stroke();
+
+                // 尾迹
+                ctx.strokeStyle = `rgba(255, 255, 255, ${wind.opacity * intensity.windStrength * 0.5})`;
+                ctx.lineWidth = wind.thickness * 0.5;
+                ctx.beginPath();
+                ctx.moveTo(wind.x + wind.length * 0.3, wind.y + wind.length * 0.03);
+                ctx.lineTo(wind.x + wind.length * 1.2, wind.y + wind.length * 0.12);
+                ctx.stroke();
+            });
+        };
+
+        const drawParticles = () => {
+            particlesRef.current.forEach(particle => {
+                ctx.save();
+                ctx.translate(particle.x, particle.y);
+                ctx.rotate(particle.phase);
+
+                ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity})`;
+                ctx.beginPath();
+                for (let i = 0; i < 6; i++) {
+                    const angle = (Math.PI / 3) * i;
+                    const x = Math.cos(angle) * particle.size;
+                    const y = Math.sin(angle) * particle.size;
+                    if (i === 0) ctx.moveTo(x, y);
+                    else ctx.lineTo(x, y);
+                }
+                ctx.closePath();
+                ctx.fill();
+
+                ctx.restore();
+            });
+        };
+
+        const drawBackground = () => {
+            if (mode === 'cold') {
+                const skyGradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+                skyGradient.addColorStop(0, `rgba(224, 242, 254, ${intensity.iceLevel * 0.3})`);
+                skyGradient.addColorStop(0.5, `rgba(186, 230, 253, ${intensity.iceLevel * 0.4})`);
+                skyGradient.addColorStop(1, `rgba(224, 242, 254, ${intensity.iceLevel * 0.5})`);
+                ctx.fillStyle = skyGradient;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            } else if (mode === 'neutral') {
+                ctx.fillStyle = `rgba(148, 163, 184, ${intensity.fogOpacity})`;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            }
+        };
+
+        // 动画循环
+        const animate = () => {
+            timeRef.current += 0.016;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            drawBackground();
+
+            if (mode === 'cold') {
+                drawMountains();
+                drawWind();
+                updateParticles();
+                drawParticles();
+                drawPenguin();
+            } else if (mode === 'hot') {
+                drawTradingHall();
+                updateBubbles();
+                drawBubbles();
+                updateTraders();
+                drawTraders();
+            } else {
+                updateParticles();
+                drawParticles();
+            }
+
+            animationRef.current = requestAnimationFrame(animate);
+        };
+
+        initParticles();
+        initWindParticles();
+        initTraders();
+        initBubbles();
+        animate();
+
+        return () => {
+            window.removeEventListener('resize', resizeCanvas);
+            if (animationRef.current) {
+                cancelAnimationFrame(animationRef.current);
+            }
+        };
+    }, [mode, days, phase]);
+
+    return (
+        <canvas
+            ref={canvasRef}
+            style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                pointerEvents: 'none',
+                zIndex: 1
+            }}
+        />
+    );
+};

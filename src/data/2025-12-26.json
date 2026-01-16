@@ -1,0 +1,115 @@
+{
+  "updateTime": "2025年12月26日",
+  "dailyFlow": [
+    { "name": "电力设备", "netFlow": 77.52, "type": "in", "desc": "行业主力资金净流入规模居首，光伏板块爆发" },
+    { "name": "有色金属", "netFlow": 38.14, "type": "in", "desc": "行业涨幅居首，资金大幅流入" },
+    { "name": "银行", "netFlow": 3.0, "type": "in", "desc": "资金净流入居前" },
+    { "name": "电子", "netFlow": -116.74, "type": "out", "desc": "行业主力资金净流出最多" },
+    { "name": "通信", "netFlow": -55.15, "type": "out", "desc": "资金大幅净流出" },
+    { "name": "机械设备", "netFlow": -40.0, "type": "out", "desc": "主力资金净流出规模靠前" }
+  ],
+  "topStocks": [
+    { "name": "阳光电源", "value": 23.72, "type": "buy", "desc": "主力资金净流入额居两市首位，光伏龙头" },
+    { "name": "航天发展", "value": 20.72, "type": "buy", "desc": "商业航天龙头涨停，获主力及机构大额买入" },
+    { "name": "胜宏科技", "value": -7.0, "type": "sell", "desc": "主力资金净流出额居前" },
+    { "name": "中际旭创", "value": -7.0, "type": "sell", "desc": "前期热门股遭资金流出" }
+  ],
+  "weeklyThemes": [
+    { "name": "商业航天", "value": 85, "color": "#10b981", "details": "政策、事件与产业共振，板块掀起涨停潮" },
+    { "name": "新能源（光伏/锂电）", "value": 70, "color": "#f59e0b", "details": "电力设备资金流入第一，光伏大会提振预期" },
+    { "name": "有色金属", "value": 60, "color": "#8b5cf6", "details": "板块大涨，资金积极布局" },
+    { "name": "AI算力", "value": 30, "color": "#3b82f6", "details": "硬件方向承压，资金明显流出" }
+  ],
+  "marketVolume": [
+    { "date": "12-13", "volume": null, "status": "待补充", "change": null, "sentiment": null, "desc": "历史数据缺失" },
+    { "date": "12-16", "volume": 1.72, "status": "缩量", "change": -0.05, "sentiment": 35, "desc": "市场普跌" },
+    { "date": "12-17", "volume": 1.81, "status": "放量", "change": 0.09, "sentiment": 70, "desc": "指数普涨反弹" },
+    { "date": "12-18", "volume": 1.66, "status": "大幅缩量", "change": -0.15, "sentiment": 50, "desc": "成交萎缩" },
+    { "date": "12-19", "volume": 1.73, "status": "小幅放量", "change": 0.07, "sentiment": 65, "desc": "指数普涨" },
+    { "date": "12-22", "volume": 1.88, "status": "放量", "change": 0.15, "sentiment": 75, "desc": "高开高走" },
+    { "date": "12-23", "volume": 1.90, "status": "平量", "change": 0.02, "sentiment": 40, "desc": "指数微涨" },
+    { "date": "12-24", "volume": null, "status": "待补充", "change": null, "sentiment": null, "desc": "历史数据缺失" },
+    { "date": "12-25", "volume": null, "status": "待补充", "change": null, "sentiment": null, "desc": "历史数据缺失" },
+    { "date": "12-26", "volume": 1.55, "status": "放量", "change": null, "sentiment": 65, "desc": "成交额超1.5万亿元，较上日此时放量" }
+  ],
+  "themeLifecycle": [
+    {
+      "name": "商业航天",
+      "daysActive": 22,
+      "phase": "主升浪（加速）",
+      "heat": 90,
+      "startDate": "2025-11-25",
+      "trend": "up",
+      "insight": "在工信部会议将其列为新兴支柱产业、长征八号甲发射成功及地方政策密集出台等多重利好催化下，板块结束高位震荡，开启第二波强势主升浪，超过20只个股涨停，成为市场绝对核心[citation:5]。",
+      "news": [
+        "【政策】全国工业和信息化工作会议强调，2026年要打造航空航天等新兴支柱产业[citation:5]。",
+        "【事件】我国在海南商业航天发射场使用长征八号甲运载火箭，成功发射卫星互联网低轨卫星[citation:5]。",
+        "【地方】上海出台措施，加速航空航天产业发展，对相关企业给予高额奖励[citation:5]。"
+      ]
+    },
+    {
+      "name": "新能源（光伏）",
+      "daysActive": 1,
+      "phase": "反弹启动",
+      "heat": 75,
+      "startDate": "2025-12-26",
+      "trend": "up",
+      "insight": "在“2025中国光伏行业年度大会”聚焦行业转型发展的消息提振下，板块获得主力资金大幅回补，行业净流入额高居榜首，属于典型的受行业会议催化的超跌反弹[citation:1]。",
+      "news": [
+        "【行业】“2025中国光伏行业年度大会”召开，聚焦行业提质增效与创新发展[citation:1]。",
+        "【资金】电力设备行业获主力资金净流入77.52亿元，规模远超其他行业[citation:1]。"
+      ]
+    }
+  ],
+  "activeSeats": [
+    {
+      "name": "机构席位",
+      "type": "主力",
+      "tag": "大手笔买入",
+      "direction": "商业航天",
+      "stocks": [
+        { "name": "航天发展", "amount": "+4.82亿", "date": "12-26" },
+        { "name": "德明利", "amount": "+2.05亿", "date": "12-26" },
+        { "name": "航天电子", "amount": "+1.50亿", "date": "12-26" }
+      ],
+      "desc": "成为推动商业航天主线暴涨的核心力量，在龙头股上呈现巨额净买入，与游资形成合力[citation:4][citation:7]。"
+    },
+    {
+      "name": "量化打板",
+      "type": "量化游资",
+      "tag": "广泛参与",
+      "direction": "商业航天及多题材",
+      "stocks": [
+        { "name": "航天发展", "amount": "榜上有名", "date": "12-26" },
+        { "name": "通宇通讯", "amount": "榜上有名", "date": "12-26" }
+      ],
+      "desc": "在商业航天等涨停股中活跃，是维持板块高热度的重要短线力量。"
+    }
+  ],
+  "fundNature": [
+    {
+      "sector": "商业航天",
+      "dominant": "机构与游资合力",
+      "icon": "Rocket",
+      "color": "bg-purple-100 text-purple-800",
+      "desc": "政策与事件双轮驱动",
+      "composition": [
+        { "name": "机构资金", "val": 50, "color": "#3b82f6" },
+        { "name": "游资与量化", "val": 40, "color": "#8b5cf6" },
+        { "name": "散户跟风", "val": 10, "color": "#a78bfa" }
+      ]
+    },
+    {
+      "sector": "新能源（光伏）",
+      "dominant": "机构回补",
+      "icon": "Zap",
+      "color": "bg-yellow-100 text-yellow-800",
+      "desc": "行业预期催化",
+      "composition": [
+        { "name": "机构/主力资金", "val": 70, "color": "#eab308" },
+        { "name": "中长期配置资金", "val": 20, "color": "#fde047" },
+        { "name": "游资", "val": 10, "color": "#fef3c7" }
+      ]
+    }
+  ]
+}

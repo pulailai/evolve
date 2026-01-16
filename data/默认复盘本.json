@@ -1,0 +1,480 @@
+{
+  "nodes": [
+    {
+      "id": "1763856767147",
+      "type": "sectorNode",
+      "position": {
+        "x": -2406.5205351914938,
+        "y": -105
+      },
+      "data": {
+        "label": "CPO",
+        "startDate": "2025-11-11",
+        "fundType": "机构 游资",
+        "color": "#0ea5e9",
+        "bgColor": "#fef3c7",
+        "targets": [],
+        "strategy": "",
+        "trades": [
+          {
+            "id": "trade_1763858263019",
+            "name": "aSa",
+            "result": "loss",
+            "reflection": "aSa's"
+          }
+        ],
+        "lifecycle": {
+          "current": "rise",
+          "stages": [
+            {
+              "id": "startup",
+              "label": "启动",
+              "color": "#f59e0b",
+              "bg": "#fef3c7"
+            },
+            {
+              "id": "rise",
+              "label": "主升",
+              "color": "#dc2626",
+              "bg": "#fef2f2"
+            },
+            {
+              "id": "divergence",
+              "label": "分歧",
+              "color": "#6366f1",
+              "bg": "#e0e7ff"
+            },
+            {
+              "id": "follow_up",
+              "label": "补涨",
+              "color": "#0ea5e9",
+              "bg": "#e0f2fe"
+            },
+            {
+              "id": "second_wave",
+              "label": "二波",
+              "color": "#059669",
+              "bg": "#ecfdf5"
+            },
+            {
+              "id": "decline",
+              "label": "退潮",
+              "color": "#64748b",
+              "bg": "#f8fafc"
+            },
+            {
+              "id": "switch",
+              "label": "切换",
+              "color": "#1e293b",
+              "bg": "#f1f5f9"
+            }
+          ],
+          "logs": {
+            "rise": "见客户很厉害快乐就好哈哈哈哈哈哈哈哈哈哈"
+          }
+        },
+        "targetsStr": "",
+        "endDate": "2025-11-23"
+      },
+      "width": 212,
+      "height": 94,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -2406.5205351914938,
+        "y": -105
+      },
+      "dragging": false
+    },
+    {
+      "id": "1763862853101",
+      "type": "sectorNode",
+      "position": {
+        "x": -2412,
+        "y": 55
+      },
+      "data": {
+        "label": "国产替代（GPU）",
+        "startDate": "2025-11-23",
+        "fundType": "游资 机构",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "startup",
+          "stages": [
+            {
+              "id": "startup",
+              "label": "启动",
+              "color": "#f59e0b",
+              "bg": "#fef3c7"
+            },
+            {
+              "id": "rise",
+              "label": "主升",
+              "color": "#dc2626",
+              "bg": "#fef2f2"
+            },
+            {
+              "id": "divergence",
+              "label": "分歧",
+              "color": "#6366f1",
+              "bg": "#e0e7ff"
+            },
+            {
+              "id": "follow_up",
+              "label": "补涨",
+              "color": "#0ea5e9",
+              "bg": "#e0f2fe"
+            },
+            {
+              "id": "second_wave",
+              "label": "二波",
+              "color": "#059669",
+              "bg": "#ecfdf5"
+            },
+            {
+              "id": "decline",
+              "label": "退潮",
+              "color": "#64748b",
+              "bg": "#f8fafc"
+            },
+            {
+              "id": "switch",
+              "label": "切换",
+              "color": "#1e293b",
+              "bg": "#f1f5f9"
+            }
+          ],
+          "logs": {}
+        },
+        "targetsStr": "",
+        "endDate": "2025-11-23"
+      },
+      "width": 212,
+      "height": 94,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -2412,
+        "y": 55
+      },
+      "dragging": false
+    },
+    {
+      "id": "1763863241724",
+      "type": "circleNode",
+      "position": {
+        "x": -1541,
+        "y": -31
+      },
+      "data": {
+        "label": "情绪",
+        "desc": "",
+        "color": "#ec4899",
+        "bgColor": "#fdf2f8",
+        "startDate": "2025-11-21",
+        "mood": "ice"
+      },
+      "width": 92,
+      "height": 92,
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": -1541,
+        "y": -31
+      }
+    },
+    {
+      "id": "1763865269331",
+      "type": "sectorNode",
+      "position": {
+        "x": -1869,
+        "y": -95
+      },
+      "data": {
+        "label": "存储芯片",
+        "startDate": "2025-11-23",
+        "fundType": "游资",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "divergence",
+          "stages": [
+            {
+              "id": "startup",
+              "label": "启动",
+              "color": "#f59e0b",
+              "bg": "#fef3c7"
+            },
+            {
+              "id": "rise",
+              "label": "主升",
+              "color": "#dc2626",
+              "bg": "#fef2f2"
+            },
+            {
+              "id": "divergence",
+              "label": "分歧",
+              "color": "#6366f1",
+              "bg": "#e0e7ff"
+            },
+            {
+              "id": "follow_up",
+              "label": "补涨",
+              "color": "#0ea5e9",
+              "bg": "#e0f2fe"
+            },
+            {
+              "id": "second_wave",
+              "label": "二波",
+              "color": "#059669",
+              "bg": "#ecfdf5"
+            },
+            {
+              "id": "decline",
+              "label": "退潮",
+              "color": "#64748b",
+              "bg": "#f8fafc"
+            },
+            {
+              "id": "switch",
+              "label": "切换",
+              "color": "#1e293b",
+              "bg": "#f1f5f9"
+            }
+          ],
+          "logs": {}
+        },
+        "targetsStr": "",
+        "endDate": "2025-11-23"
+      },
+      "width": 212,
+      "height": 94,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -1869,
+        "y": -95
+      },
+      "dragging": false
+    },
+    {
+      "id": "1763865313014",
+      "type": "sectorNode",
+      "position": {
+        "x": -1864,
+        "y": 57
+      },
+      "data": {
+        "label": "能源",
+        "startDate": "2025-11-23",
+        "fundType": "游资 机构",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "startup",
+          "stages": [
+            {
+              "id": "startup",
+              "label": "启动",
+              "color": "#f59e0b",
+              "bg": "#fef3c7"
+            },
+            {
+              "id": "rise",
+              "label": "主升",
+              "color": "#dc2626",
+              "bg": "#fef2f2"
+            },
+            {
+              "id": "divergence",
+              "label": "分歧",
+              "color": "#6366f1",
+              "bg": "#e0e7ff"
+            },
+            {
+              "id": "follow_up",
+              "label": "补涨",
+              "color": "#0ea5e9",
+              "bg": "#e0f2fe"
+            },
+            {
+              "id": "second_wave",
+              "label": "二波",
+              "color": "#059669",
+              "bg": "#ecfdf5"
+            },
+            {
+              "id": "decline",
+              "label": "退潮",
+              "color": "#64748b",
+              "bg": "#f8fafc"
+            },
+            {
+              "id": "switch",
+              "label": "切换",
+              "color": "#1e293b",
+              "bg": "#f1f5f9"
+            }
+          ],
+          "logs": {}
+        },
+        "targetsStr": "",
+        "endDate": "2025-11-23"
+      },
+      "width": 212,
+      "height": 94,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -1864,
+        "y": 57
+      },
+      "dragging": false
+    },
+    {
+      "id": "1764240058779",
+      "type": "sectorNode",
+      "position": {
+        "x": -1764,
+        "y": 157
+      },
+      "data": {
+        "label": "新板块 8779",
+        "startDate": "2025-11-27",
+        "fundType": "游资",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "",
+          "stages": [],
+          "logs": {}
+        }
+      },
+      "width": 208,
+      "height": 86
+    }
+  ],
+  "edges": [
+    {
+      "source": "1763856767147",
+      "sourceHandle": null,
+      "target": "1763865269331",
+      "targetHandle": null,
+      "id": "e-1763865300472",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    },
+    {
+      "source": "1763862853101",
+      "sourceHandle": null,
+      "target": "1763865269331",
+      "targetHandle": null,
+      "id": "e-1763865302946",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    },
+    {
+      "source": "1763856767147",
+      "sourceHandle": null,
+      "target": "1763865313014",
+      "targetHandle": null,
+      "id": "e-1763865330316",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    },
+    {
+      "source": "1763862853101",
+      "sourceHandle": null,
+      "target": "1763865313014",
+      "targetHandle": null,
+      "id": "e-1763865332979",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    },
+    {
+      "source": "1763865269331",
+      "sourceHandle": null,
+      "target": "1763863241724",
+      "targetHandle": null,
+      "id": "e-1763865345516",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    },
+    {
+      "source": "1763865313014",
+      "sourceHandle": null,
+      "target": "1763863241724",
+      "targetHandle": null,
+      "id": "e-1763865347468",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    }
+  ],
+  "meta": {
+    "lastSaved": "2025-11-27T11:03:58.363Z",
+    "type": "file"
+  }
+}

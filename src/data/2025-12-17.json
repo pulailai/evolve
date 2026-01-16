@@ -1,0 +1,117 @@
+{
+  "updateTime": "2025年12月17日",
+  "dailyFlow": [
+    { "name": "通信", "netFlow": 64.49, "type": "in", "desc": "行业涨幅与资金净流入均居市场首位[citation:2]" },
+    { "name": "电子", "netFlow": 63.40, "type": "in", "desc": "半导体等板块走强，获主力资金大幅流入[citation:1][citation:2]" },
+    { "name": "有色金属", "netFlow": 39.30, "type": "in", "desc": "锂矿等板块活跃，资金净流入居前[citation:1][citation:2]" },
+    { "name": "国防军工", "netFlow": -48.70, "type": "out", "desc": "行业下跌，主力资金净流出规模最大[citation:2]" },
+    { "name": "商贸零售", "netFlow": -23.13, "type": "out", "desc": "板块小幅上涨但资金大幅流出[citation:2]" },
+    { "name": "汽车", "netFlow": -22.36, "type": "out", "desc": "主力资金净流出规模靠前[citation:2]" }
+  ],
+  "topStocks": [
+    { "name": "C沐曦-U", "value": 17.86, "type": "buy", "desc": "新股上市，主力资金净流入最多[citation:2]" },
+    { "name": "新易盛", "value": 14.10, "type": "buy", "desc": "CPO概念龙头，获主力大幅抢筹[citation:2]" },
+    { "name": "永辉超市", "value": -19.51, "type": "sell", "desc": "主力资金净流出额居两市首位[citation:2]" },
+    { "name": "航天电子", "value": -15.59, "type": "sell", "desc": "商业航天高标，资金大幅出逃[citation:2]" }
+  ],
+  "weeklyThemes": [
+    { "name": "科技权重（通信/半导体）", "value": 70, "color": "#3b82f6", "details": "板块放量大涨，成为引领市场反弹的绝对核心[citation:1][citation:2]" },
+    { "name": "大金融（保险/券商）", "value": 55, "color": "#ef4444", "details": "板块午后拉升，对指数上涨贡献显著[citation:1]" },
+    { "name": "商业航天", "value": 30, "color": "#10b981", "details": "板块整体调整，资金大幅流出，进入明显退潮期[citation:2]" },
+    { "name": "新零售", "value": 25, "color": "#f97316", "details": "资金大幅流出，短线炒作热度显著降温[citation:2]" }
+  ],
+  "marketVolume": [
+    { "date": "12-16", "volume": 1.72, "status": "缩量", "change": -0.05, "sentiment": 35, "desc": "前情参考" },
+    { "date": "12-17", "volume": 1.83, "status": "放量", "change": 0.11, "sentiment": 70, "desc": "成交额增加约1100亿元，市场情绪显著回暖[citation:1][citation:5]" }
+  ],
+  "themeLifecycle": [
+    {
+      "name": "科技权重（通信/半导体）",
+      "daysActive": 1,
+      "phase": "启动爆发",
+      "heat": 85,
+      "startDate": "12-17",
+      "trend": "up",
+      "insight": "在市场整体反弹环境下，前期调整充分的通信（光模块）、半导体等硬科技板块成为资金攻击的绝对核心。板块放量大涨，龙头股获巨额资金流入，显示市场风格可能向机构偏好的大容量赛道切换。",
+      "news": [
+        "【资金】通信、电子行业主力资金净流入分别高达64.49亿和63.40亿元，高居市场前两位[citation:2]。",
+        "【盘面】CPO、半导体、苹果概念等板块集体活跃，新易盛、中际旭创等龙头股大涨[citation:1][citation:2]。",
+        "【催化】市场预期美联储可能降息，有利于科技成长板块估值提升[citation:9]。"
+      ]
+    },
+    {
+      "name": "商业航天",
+      "daysActive": 19,
+      "phase": "主跌浪（退潮）",
+      "heat": 30,
+      "startDate": "2025-11-25",
+      "trend": "down",
+      "insight": "板块在经历长期炒作后，今日出现标志性退潮信号。行业指数下跌，且主力资金净流出高达48.70亿元，位居市场首位。前期高标股航天电子等资金大幅出逃，显示炒作资金正在集体撤离。",
+      "news": [
+        "【资金】国防军工（商业航天所属一级行业）主力资金净流出48.70亿元，为两市最多[citation:2]。",
+        "【个股】航天电子单日主力资金净流出15.59亿元，龙洲股份、华菱线缆等前期热门股均遭资金抛弃。"
+      ]
+    }
+  ],
+  "activeSeats": [
+    {
+      "name": "量化打板",
+      "type": "量化游资",
+      "tag": "进攻科技主线",
+      "direction": "通信（光模块）",
+      "stocks": [
+        { "name": "光迅科技", "amount": "+1.01亿", "date": "12-17" },
+        { "name": "通宇通讯", "amount": "榜上有名", "date": "12-17" }
+      ],
+      "desc": "操作方向与市场主线高度一致，大手笔买入当日领涨的CPO概念股光迅科技，显示出对科技权重行情的敏锐把握[citation:6]。"
+    },
+    {
+      "name": "成都系",
+      "type": "知名游资",
+      "tag": "获利了结 / 调仓",
+      "direction": "卖出前期热点",
+      "stocks": [
+        { "name": "永辉超市", "amount": "大概率卖出", "date": "12-17" },
+        { "name": "商业航天个股", "amount": "大概率卖出", "date": "12-17" }
+      ],
+      "desc": "从昨日（16日）活跃的多个热点中撤离。根据资金流向判断，其很可能在零售和商业航天板块的下跌中进行了卖出操作，符合其短线套利风格。"
+    },
+    {
+      "name": "机构席位",
+      "type": "主力",
+      "tag": "大举回补科技",
+      "direction": "通信、电子、锂电池",
+      "stocks": [
+        { "name": "光模块/半导体个股", "amount": "大幅净流入", "date": "12-17" },
+        { "name": "天际股份", "amount": "买卖分歧（机构净卖）", "date": "12-17" }
+      ],
+      "desc": "作为今日做多的绝对主力，集中火力流入通信、电子等核心科技板块，推动指数大涨[citation:2]。但在部分锂电池个股上，机构与游资出现博弈[citation:10]。"
+    }
+  ],
+  "fundNature": [
+    {
+      "sector": "科技权重（通信/半导体）",
+      "dominant": "机构与量化合力",
+      "icon": "Cpu",
+      "color": "bg-blue-100 text-blue-800",
+      "desc": "机构回补，游资助攻",
+      "composition": [
+        { "name": "机构资金", "val": 65, "color": "#1d4ed8" },
+        { "name": "量化/活跃游资", "val": 25, "color": "#60a5fa" },
+        { "name": "跟风盘", "val": 10, "color": "#93c5fd" }
+      ]
+    },
+    {
+      "sector": "商业航天",
+      "dominant": "资金集体撤离",
+      "icon": "Rocket",
+      "color": "bg-gray-100 text-gray-800",
+      "desc": "退潮期，多杀多",
+      "composition": [
+        { "name": "获利了结游资", "val": 50, "color": "#6b7280" },
+        { "name": "止损盘", "val": 35, "color": "#9ca3af" },
+        { "name": "零星承接", "val": 15, "color": "#d1d5db" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "updateTime": "12月05日 (周五)",
+  "dailyFlow": [
+    { "name": "航天航空", "netFlow": 24.5, "type": "in", "desc": "低空/军工发力" },
+    { "name": "软件服务", "netFlow": 18.2, "type": "in", "desc": "信创国产化" },
+    { "name": "多元金融", "netFlow": 15.6, "type": "in", "desc": "牛市预期升温" },
+    { "name": "食品饮料", "netFlow": -12.4, "type": "out", "desc": "消费复苏疲软" },
+    { "name": "医疗器械", "netFlow": -8.9, "type": "out", "desc": "集采情绪压制" },
+    { "name": "光伏设备", "netFlow": -6.5, "type": "out", "desc": "产能出清阵痛" }
+  ],
+  "topStocks": [
+    { "name": "航天科技", "value": 3.28, "type": "buy" },
+    { "name": "实达集团", "value": 0.94, "type": "buy" },
+    { "name": "红相股份", "value": 0.89, "type": "buy" },
+    { "name": "睿能科技", "value": -0.60, "type": "sell" },
+    { "name": "利仁科技", "value": -0.19, "type": "sell" }
+  ],
+  "weeklyThemes": [
+    { "name": "商业航天", "value": 35, "color": "#ef4444", "details": "航天科技、航天动力" },
+    { "name": "大金融", "value": 25, "color": "#f97316", "details": "赢时胜、东方财富" },
+    { "name": "机器人", "value": 20, "color": "#3b82f6", "details": "五洲新春、爱仕达" },
+    { "name": "高位消费(流出)", "value": 20, "color": "#94a3b8", "details": "桂发祥、广博股份" }
+  ],
+  "marketVolume": [
+    { "date": "12-02", "volume": 1.61, "status": "缩量", "change": -0.14, "sentiment": 60, "desc": "调整开始" },
+    { "date": "12-03", "volume": 1.68, "status": "平量", "change": 0.07, "sentiment": 65, "desc": "弱反弹" },
+    { "date": "12-04", "volume": 1.55, "status": "缩量", "change": -0.13, "sentiment": 45, "desc": "地量见底" },
+    { "date": "12-05", "volume": 1.74, "status": "放量", "change": 0.19, "sentiment": 85, "desc": "V型大反攻" }
+  ],
+  "themeLifecycle": [
+    {
+      "name": "商业航天",
+      "daysActive": 6,
+      "phase": "主升浪 (高潮)",
+      "heat": 90,
+      "startDate": "11-29",
+      "trend": "up",
+      "insight": "卫星互联网建设提速，资金抱团核心龙头。",
+      "news": [
+        "【榜单】航天科技净买入3.28亿，机构席位大举进场。",
+        "【行业】海南商业航天发射场首发临近，板块热度持续。"
+      ]
+    },
+    {
+      "name": "大消费",
+      "daysActive": 10,
+      "phase": "退潮期",
+      "heat": 30,
+      "startDate": "11-20",
+      "trend": "down",
+      "insight": "高位连板股批量跌停，资金向科技风格切换。",
+      "news": [
+        "【盘面】多只消费高位股出现核按钮，亏钱效应显著。",
+        "【策略】回避纯情绪炒作的消费连板股。"
+      ]
+    }
+  ],
+  "activeSeats": [
+    {
+      "name": "成都系",
+      "type": "超短游资",
+      "tag": "首板 / 挖掘",
+      "direction": "电网/军工",
+      "stocks": [
+        { "name": "红相股份", "amount": "+0.90亿", "date": "12-05" }
+      ],
+      "desc": "擅长做低位补涨，今日挖掘军工+电网属性。"
+    },
+    {
+      "name": "深股通",
+      "type": "北向",
+      "tag": "价值",
+      "direction": "科技成长",
+      "stocks": [
+        { "name": "实达集团", "amount": "+0.94亿", "date": "12-05" }
+      ],
+      "desc": "外资回流，重点加仓福建本地科技股。"
+    }
+  ],
+  "fundNature": [
+    {
+      "sector": "商业航天",
+      "dominant": "游资主导",
+      "icon": "Target",
+      "color": "bg-purple-100 text-purple-800",
+      "desc": "趋势加速",
+      "composition": [
+        { "name": "游资", "val": 50, "color": "#a855f7" },
+        { "name": "机构", "val": 30, "color": "#c084fc" },
+        { "name": "散户", "val": 20, "color": "#f3e8ff" }
+      ]
+    },
+    {
+      "sector": "大金融",
+      "dominant": "国家队/机构",
+      "icon": "Shield",
+      "color": "bg-blue-100 text-blue-800",
+      "desc": "指数护盘",
+      "composition": [
+        { "name": "国家队", "val": 60, "color": "#1d4ed8" },
+        { "name": "北向", "val": 30, "color": "#3b82f6" },
+        { "name": "散户", "val": 10, "color": "#93c5fd" }
+      ]
+    }
+  ]
+}

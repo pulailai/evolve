@@ -1,0 +1,111 @@
+{
+  "updateTime": "2026年1月5日",
+  "dailyFlow": [
+    { "name": "有色金属", "netFlow": 19.07, "type": "in", "desc": "行业主力资金净流入居首" },
+    { "name": "化工", "netFlow": 15.26, "type": "in", "desc": "行业主力资金净流入居前" },
+    { "name": "医药生物", "netFlow": 14.52, "type": "in", "desc": "板块大幅走高，近40股涨停或涨超10%" },
+    { "name": "汽车", "netFlow": -31.01, "type": "out", "desc": "行业主力资金净流出最多" },
+    { "name": "机械设备", "netFlow": -29.97, "type": "out", "desc": "主力资金净流出规模靠前" },
+    { "name": "通信", "netFlow": -28.05, "type": "out", "desc": "资金大幅净流出" }
+  ],
+  "topStocks": [
+    { "name": "胜宏科技", "value": 20.07, "type": "buy", "desc": "主力资金净流入额居两市首位" },
+    { "name": "天际股份", "value": 8.71, "type": "buy", "desc": "获主力资金大幅净买入" },
+    { "name": "航天发展", "value": -16.49, "type": "sell", "desc": "主力资金净流出最多" },
+    { "name": "新易盛", "value": -11.62, "type": "sell", "desc": "主力资金净流出额居前" }
+  ],
+  "weeklyThemes": [
+    { "name": "新年开门红", "value": 85, "color": "#ef4444", "details": "主要指数放量上涨，沪指收复4000点，两市超4180股上涨" },
+    { "name": "科技成长（传媒/AI/半导体）", "value": 80, "color": "#3b82f6", "details": "传媒、电子、计算机行业领涨，AI应用、存储芯片等概念活跃" },
+    { "name": "医药生物（含AI制药）", "value": 75, "color": "#10b981", "details": "行业涨幅居前，AI制药、脑机接口等概念掀起涨停潮" },
+    { "name": "商业航天", "value": 70, "color": "#8b5cf6", "details": "板块受利好消息提振，中国卫星、雷科防务等多股涨停" }
+  ],
+  "marketVolume": [
+    { "date": "12-24", "volume": null, "status": "待补充", "change": null, "sentiment": null, "desc": "历史数据缺失" },
+    { "date": "12-25", "volume": null, "status": "待补充", "change": null, "sentiment": null, "desc": "历史数据缺失" },
+    { "date": "12-26", "volume": 1.55, "status": "放量", "change": null, "sentiment": 65, "desc": "成交额超1.5万亿元" },
+    { "date": "12-29", "volume": 2.16, "status": "缩量", "change": -0.01, "sentiment": 55, "desc": "成交额超2万亿元" },
+    { "date": "12-30", "volume": 2.16, "status": "平量", "change": 0.00, "sentiment": 45, "desc": "全市场成交2.16万亿元" },
+    { "date": "12-31", "volume": 2.05, "status": "缩量", "change": -0.11, "sentiment": 50, "desc": "两市成交约2.05万亿元" },
+    { "date": "01-05", "volume": 2.55, "status": "大幅放量", "change": 0.50, "sentiment": 80, "desc": "沪深两市成交2.55万亿元，较上一交易日增加约5010亿元" }
+  ],
+  "themeLifecycle": [
+    {
+      "name": "新年开门红",
+      "daysActive": 1,
+      "phase": "启动爆发",
+      "heat": 90,
+      "startDate": "2026-01-05",
+      "trend": "up",
+      "insight": "在元旦假期港股上涨、人民币汇率走强以及市场对“春季躁动”行情期待等多重因素催化下，2026年A股首个交易日迎来放量普涨，沪指成功收复4000点重要心理关口，市场情绪和赚钱效应显著回暖[citation:8][citation:10]。",
+      "news": [
+        "【情绪】市场迎来“开门红”，沪指自2025年12月19日以来首次收盘站上4000点[citation:2][citation:10]。",
+        "【资金】沪深两市成交额大幅放量至2.55万亿元，显示增量资金入场迹象明显[citation:2][citation:10]。",
+        "【预期】多家机构认为，政策环境友好、企业盈利预期改善及流动性支撑等因素，有助于春季行情延续[citation:10]。"
+      ]
+    },
+    {
+      "name": "商业航天",
+      "daysActive": 26,
+      "phase": "事件驱动再走强",
+      "heat": 80,
+      "startDate": "2025-11-25",
+      "trend": "up",
+      "insight": "板块在低轨卫星互联网组网加速等产业利好消息刺激下，于新年首个交易日再度走强[citation:8]。但值得注意的是，板块内部出现分化，部分前期龙头股如航天发展遭遇主力资金大幅净流出，显示资金在高位进行激烈的筹码交换[citation:2]。",
+      "news": [
+        "【产业】商业航天板块受低轨卫星互联网组网加速、火箭回收技术攻坚等利好消息提振[citation:8]。",
+        "【盘面】中国卫星、雷科防务等多股涨停[citation:8]。但航天发展遭主力资金净流出16.49亿元[citation:2]。"
+      ]
+    }
+  ],
+  "activeSeats": [
+    {
+      "name": "机构席位",
+      "type": "主力",
+      "tag": "有买有卖 / 聚焦个股",
+      "direction": "科技与医药",
+      "stocks": [
+        { "name": "蓝色光标", "amount": "+1.86亿", "date": "01-05" },
+        { "name": "五洲新春", "amount": "-2.21亿", "date": "01-05" }
+      ],
+      "desc": "机构操作出现分歧，整体呈现净卖出。但在AI应用等方向，仍有个股如蓝色光标获得机构大额净买入[citation:2]。"
+    },
+    {
+      "name": "主力资金",
+      "type": "市场资金",
+      "tag": "高低切换 / 聚焦热点",
+      "direction": "流入有色化工，流出汽车机械",
+      "stocks": [
+        { "name": "胜宏科技", "amount": "+20.07亿", "date": "01-05" },
+        { "name": "航天发展", "amount": "-16.49亿", "date": "01-05" }
+      ],
+      "desc": "主力资金在进行明显的高低切换和热点再聚焦。一方面从汽车、机械等板块流出，另一方面流入有色金属、化工等板块，并在科技、医药内部精选个股[citation:2]。"
+    }
+  ],
+  "fundNature": [
+    {
+      "sector": "科技成长（传媒/AI/半导体）",
+      "dominant": "机构与游资合力",
+      "icon": "Cpu",
+      "color": "bg-blue-100 text-blue-800",
+      "desc": "风险偏好提升，资金集中攻击",
+      "composition": [
+        { "name": "机构资金", "val": 50, "color": "#3b82f6" },
+        { "name": "活跃游资", "val": 35, "color": "#60a5fa" },
+        { "name": "散户跟风", "val": 15, "color": "#93c5fd" }
+      ]
+    },
+    {
+      "sector": "商业航天",
+      "dominant": "游资主导，机构分歧",
+      "icon": "Rocket",
+      "color": "bg-purple-100 text-purple-800",
+      "desc": "高位博弈加剧，内部分化",
+      "composition": [
+        { "name": "游资 (攻击前排)", "val": 45, "color": "#8b5cf6" },
+        { "name": "散户跟风", "val": 30, "color": "#a78bfa" },
+        { "name": "机构 (获利了结)", "val": 25, "color": "#c4b5fd" }
+      ]
+    }
+  ]
+}
