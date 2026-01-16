@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
 import 'reactflow/dist/style.css';
 import CycleModule from './modules/CycleModule';
-import MonitorModule from './modules/MonitorModule';
+import MindModule from './modules/MindModule';
 import LBModule from './modules/LBModule';
 import { Icons, Logo } from './components/Icons';
 
 export default function App() {
-  const [activeModule, setActiveModule] = useState('cycle'); // cycle, monitor, news
+  const [activeModule, setActiveModule] = useState('cycle'); // cycle, mind, news
+
+  // 核心市场环境状态，由 CycleModule 设置，MindModule 共享
+  const [marketEnv, setMarketEnv] = useState({
+    mode: 'neutral',
+    initialDays: 0,
+    phase: 'normal',
+    startTime: new Date().toISOString()
+  });
 
   return (
     <div className="app-shell">
@@ -21,11 +29,11 @@ export default function App() {
           <Icons.Cycle active={activeModule === 'cycle'} />
         </div>
         <div
-          className={`nav-item ${activeModule === 'monitor' ? 'active' : ''}`}
-          onClick={() => setActiveModule('monitor')}
-          data-tooltip="全域雷达"
+          className={`nav-item ${activeModule === 'mind' ? 'active' : ''}`}
+          onClick={() => setActiveModule('mind')}
+          data-tooltip="心法录"
         >
-          <Icons.Radar active={activeModule === 'monitor'} />
+          <Icons.Mind active={activeModule === 'mind'} />
         </div>
         <div
           className={`nav-item ${activeModule === 'lb' ? 'active' : ''}`}
@@ -38,9 +46,22 @@ export default function App() {
 
       {/* 主内容区 */}
       <div className="main-viewport">
-        {activeModule === 'cycle' && <CycleModule />}
-        {activeModule === 'monitor' && <MonitorModule />}
-        {activeModule === 'lb' && <LBModule />}
+        {activeModule === 'cycle' && (
+          <CycleModule
+            marketEnv={marketEnv}
+            setMarketEnv={setMarketEnv}
+          />
+        )}
+        {activeModule === 'mind' && (
+          <MindModule
+            marketEnv={marketEnv}
+          />
+        )}
+        {activeModule === 'lb' && (
+          <LBModule
+            marketEnv={marketEnv}
+          />
+        )}
       </div>
     </div>
   );

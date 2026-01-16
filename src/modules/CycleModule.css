@@ -185,3 +185,229 @@
     -webkit-backdrop-filter: blur(12px);
     overflow: hidden;
 }
+
+/* ========== 环境感应节点样式 ========== */
+
+/* 通用节点增强 */
+.canvas-environment-hot .react-flow__node,
+.canvas-environment-cold .react-flow__node,
+.canvas-environment-neutral .react-flow__node {
+    transition: all 0.3s ease;
+}
+
+.canvas-environment-hot .sector-node-content,
+.canvas-environment-cold .sector-node-content,
+.canvas-environment-neutral .sector-node-content {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* ========== 狂热期 (HOT) ========== */
+.canvas-environment-hot .sector-node-content {
+    background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 50%, #fed7aa 100%) !important;
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.4), 0 4px 20px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid #f97316 !important;
+}
+
+.canvas-environment-hot .react-flow__node:hover .sector-node-content {
+    box-shadow: 0 0 40px rgba(249, 115, 22, 0.5), 0 8px 28px rgba(0, 0, 0, 0.2);
+    border-color: #ea580c !important;
+    transform: scale(1.02);
+}
+
+.canvas-environment-hot .diamond-shape,
+.canvas-environment-hot .circle-node-shape {
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%) !important;
+    box-shadow: 0 0 25px rgba(251, 146, 60, 0.4), 0 4px 16px rgba(0, 0, 0, 0.15);
+    border: 3px solid #fb923c !important;
+}
+
+.canvas-environment-hot .node-label {
+    color: #9a3412 !important;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+.canvas-environment-hot .react-flow__edge path {
+    stroke: #f97316 !important;
+    stroke-width: 3px;
+    filter: drop-shadow(0 0 4px rgba(249, 115, 22, 0.5));
+}
+
+.canvas-environment-hot .react-flow__background {
+    opacity: 0.25;
+}
+
+/* ========== 狂热期-枯竭阶段 (HOT-EXHAUSTED) 秋水长天主题 ========== */
+.canvas-phase-exhausted.canvas-environment-hot .sector-node-content {
+    background: linear-gradient(135deg, #fefce8 0%, #fef9c3 50%, #fde68a 100%) !important;
+    box-shadow: 0 0 30px rgba(180, 120, 60, 0.35), 0 4px 20px rgba(0, 0, 0, 0.18);
+    border: 3px solid #b45309 !important;
+}
+
+.canvas-phase-exhausted.canvas-environment-hot .react-flow__node:hover .sector-node-content {
+    box-shadow: 0 0 40px rgba(180, 120, 60, 0.5), 0 8px 28px rgba(0, 0, 0, 0.22);
+    border-color: #92400e !important;
+}
+
+.canvas-phase-exhausted.canvas-environment-hot .diamond-shape,
+.canvas-phase-exhausted.canvas-environment-hot .circle-node-shape {
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%) !important;
+    box-shadow: 0 0 25px rgba(180, 120, 60, 0.35), 0 4px 16px rgba(0, 0, 0, 0.15);
+    border: 3px solid #d97706 !important;
+}
+
+.canvas-phase-exhausted.canvas-environment-hot .node-label {
+    color: #78350f !important;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+.canvas-phase-exhausted.canvas-environment-hot .react-flow__edge path {
+    stroke: #b45309 !important;
+    stroke-width: 3px;
+    filter: drop-shadow(0 0 4px rgba(180, 83, 9, 0.5));
+}
+
+/* ========== 冰冷期 (COLD) ========== */
+.canvas-environment-cold .sector-node-content {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%) !important;
+    box-shadow: 0 0 35px rgba(14, 165, 233, 0.4), 0 0 60px rgba(147, 197, 253, 0.2), 0 4px 20px rgba(0, 0, 0, 0.12);
+    border: 3px solid #0ea5e9 !important;
+}
+
+.canvas-environment-cold .react-flow__node:hover .sector-node-content {
+    box-shadow: 0 0 45px rgba(14, 165, 233, 0.5), 0 0 70px rgba(147, 197, 253, 0.25), 0 8px 28px rgba(0, 0, 0, 0.15);
+    border-color: #0284c7 !important;
+    transform: scale(1.02);
+}
+
+.canvas-environment-cold .diamond-shape,
+.canvas-environment-cold .circle-node-shape {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%) !important;
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.4), 0 4px 16px rgba(0, 0, 0, 0.12);
+    border: 3px solid #38bdf8 !important;
+}
+
+.canvas-environment-cold .node-label {
+    color: #0c4a6e !important;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+.canvas-environment-cold .sector-node-content::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(186, 230, 253, 0.4) 0%, transparent 50%, rgba(125, 211, 252, 0.3) 100%);
+    z-index: -1;
+    pointer-events: none;
+    animation: frost-shimmer 3s ease-in-out infinite;
+}
+
+@keyframes frost-shimmer {
+
+    0%,
+    100% {
+        opacity: 0.4;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scale(1.01);
+    }
+}
+
+.canvas-environment-cold .react-flow__edge path {
+    stroke: #0ea5e9 !important;
+    stroke-width: 3px;
+    filter: drop-shadow(0 0 5px rgba(14, 165, 233, 0.5));
+}
+
+.canvas-environment-cold .react-flow__background {
+    opacity: 0.15;
+}
+
+
+/* ========== 轮动期 (NEUTRAL) - 更亮配色 ========== */
+.canvas-environment-neutral .sector-node-content {
+    background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 40%, #ede9fe 100%) !important;
+    box-shadow: 0 0 35px rgba(124, 58, 237, 0.4), 0 0 60px rgba(167, 139, 250, 0.25), 0 4px 20px rgba(0, 0, 0, 0.18);
+    border: 4px solid #7c3aed !important;
+    animation: neutral-pulse 3s ease-in-out infinite;
+}
+
+@keyframes neutral-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 30px rgba(124, 58, 237, 0.35), 0 0 50px rgba(167, 139, 250, 0.2), 0 4px 16px rgba(0, 0, 0, 0.15);
+        transform: scale(1);
+    }
+
+    50% {
+        box-shadow: 0 0 45px rgba(124, 58, 237, 0.5), 0 0 65px rgba(167, 139, 250, 0.35), 0 4px 16px rgba(0, 0, 0, 0.15);
+        transform: scale(1.015);
+    }
+}
+
+.canvas-environment-neutral .react-flow__node:hover .sector-node-content {
+    box-shadow: 0 0 55px rgba(124, 58, 237, 0.6), 0 0 80px rgba(167, 139, 250, 0.4), 0 8px 30px rgba(0, 0, 0, 0.22);
+    border-color: #6d28d9 !important;
+    transform: scale(1.03);
+}
+
+.canvas-environment-neutral .diamond-shape,
+.canvas-environment-neutral .circle-node-shape {
+    background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%) !important;
+    box-shadow: 0 0 30px rgba(124, 58, 237, 0.4), 0 4px 18px rgba(0, 0, 0, 0.15);
+    border: 4px solid #8b5cf6 !important;
+}
+
+.canvas-environment-neutral .node-label {
+    color: #4c1d95 !important;
+    font-weight: 900;
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 1);
+}
+
+.canvas-environment-neutral .react-flow__edge path {
+    stroke: #7c3aed !important;
+    stroke-width: 4px;
+    filter: drop-shadow(0 0 6px rgba(124, 58, 237, 0.6));
+}
+
+.canvas-environment-neutral .react-flow__background {
+
+    opacity: 0.1;
+}
+
+/* ========== 环境连接点 ========== */
+.canvas-environment-hot .react-flow__handle {
+    background: #ef4444;
+    box-shadow: 0 0 8px rgba(239, 68, 68, 0.5);
+}
+
+.canvas-environment-cold .react-flow__handle {
+    background: #3b82f6;
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+}
+
+.canvas-environment-neutral .react-flow__handle {
+    background: #8b5cf6;
+    box-shadow: 0 0 8px rgba(139, 92, 246, 0.5);
+}
+
+/* ========== 环境MiniMap ========== */
+.canvas-environment-hot .react-flow__minimap {
+    border-color: rgba(254, 202, 202, 0.6);
+}
+
+.canvas-environment-cold .react-flow__minimap {
+    border-color: rgba(191, 219, 254, 0.6);
+}
+
+.canvas-environment-neutral .react-flow__minimap {
+    border-color: rgba(196, 181, 253, 0.6);
+}

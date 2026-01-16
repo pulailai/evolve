@@ -1,0 +1,818 @@
+/* ========== 心法录 - 科技感笔记本样式 ========== */
+
+/* CSS变量 */
+:root {
+    --mind-bg: #0f0f1a;
+    --mind-sidebar-bg: #1a1a2e;
+    --mind-card-bg: #16213e;
+    --mind-border: #2d3561;
+    --mind-text: #e4e6eb;
+    --mind-text-secondary: #8b8fa3;
+    --mind-accent: var(--accent-color, #a855f7);
+    --mind-glow: rgba(168, 85, 247, 0.3);
+}
+
+/* 主容器 */
+.mind-module {
+    display: flex;
+    height: 100%;
+    background: var(--mind-bg);
+    color: var(--mind-text);
+    position: relative;
+    overflow: hidden;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* 背景网格 */
+.mind-bg-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        linear-gradient(rgba(45, 53, 97, 0.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(45, 53, 97, 0.3) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ========== 侧边栏 ========== */
+.mind-sidebar {
+    width: 260px;
+    min-width: 260px;
+    background: var(--mind-sidebar-bg);
+    border-right: 1px solid var(--mind-border);
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    position: relative;
+}
+
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid var(--mind-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-header h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(135deg, var(--mind-accent), #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.env-badge {
+    font-size: 10px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+}
+
+.sidebar-search {
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    margin: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--mind-border);
+}
+
+.sidebar-search svg {
+    width: 16px;
+    height: 16px;
+    color: var(--mind-text-secondary);
+}
+
+.sidebar-search input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--mind-text);
+    font-size: 13px;
+    outline: none;
+}
+
+.sidebar-search input::placeholder {
+    color: var(--mind-text-secondary);
+}
+
+/* 分类导航 */
+.category-nav {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px 12px;
+}
+
+.nav-section {
+    margin-bottom: 16px;
+}
+
+.nav-label {
+    display: block;
+    font-size: 10px;
+    color: var(--mind-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 8px 12px;
+    margin-bottom: 4px;
+}
+
+.nav-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: var(--mind-text);
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+    margin-bottom: 2px;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-item.active {
+    background: rgba(255, 255, 255, 0.08);
+    border-left: 3px solid var(--cat-color, var(--mind-accent));
+    color: var(--cat-color, var(--mind-accent));
+    font-weight: 600;
+}
+
+.nav-icon {
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.nav-text {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nav-count {
+    font-size: 11px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 6px;
+    border-radius: 10px;
+    color: var(--mind-text-secondary);
+    flex-shrink: 0;
+}
+
+
+/* 统计面板 */
+.sidebar-stats {
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    border-top: 1px solid var(--mind-border);
+}
+
+.stat-item {
+    flex: 1;
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--mind-accent);
+}
+
+.stat-label {
+    font-size: 10px;
+    color: var(--mind-text-secondary);
+}
+
+/* 导出按钮 */
+.export-btn {
+    margin: 12px;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid var(--mind-border);
+    border-radius: 8px;
+    color: var(--mind-text-secondary);
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.export-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--mind-text);
+    border-color: var(--mind-accent);
+}
+
+.export-btn svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* ========== 主内容区 ========== */
+.mind-main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 0;
+    z-index: 5;
+    position: relative;
+}
+
+/* 通用面板头部 */
+.panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--mind-border);
+}
+
+.panel-header h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--mind-text);
+}
+
+/* ========== 笔记列表 ========== */
+.notes-panel {
+    background: var(--mind-card-bg);
+    border-right: 1px solid var(--mind-border);
+    display: flex;
+    flex-direction: column;
+    grid-row: span 2;
+}
+
+.add-note-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    background: linear-gradient(135deg, var(--mind-accent), #9333ea);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.add-note-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.4);
+}
+
+.add-note-btn svg {
+    width: 14px;
+    height: 14px;
+}
+
+.notes-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px;
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    color: var(--mind-text-secondary);
+}
+
+.empty-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+    opacity: 0.5;
+}
+
+.note-item {
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    position: relative;
+}
+
+.note-item:hover {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: var(--mind-border);
+}
+
+.note-item.active {
+    background: rgba(168, 85, 247, 0.1);
+    border-color: var(--mind-accent);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.15);
+}
+
+.note-item.pinned {
+    border-left: 3px solid #eab308;
+}
+
+.pin-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 10px;
+}
+
+.note-item h4 {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0 0 4px;
+    color: var(--mind-text);
+}
+
+.note-item p {
+    font-size: 11px;
+    color: var(--mind-text-secondary);
+    margin: 0 0 8px;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.note-date {
+    font-size: 10px;
+    color: var(--mind-text-secondary);
+    opacity: 0.7;
+}
+
+/* ========== 编辑器面板 ========== */
+.editor-panel {
+    background: rgba(22, 33, 62, 0.6);
+    display: flex;
+    flex-direction: column;
+}
+
+.editor-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--mind-border);
+}
+
+.editor-title {
+    flex: 1;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--mind-text);
+    outline: none;
+}
+
+.editor-title::placeholder {
+    color: var(--mind-text-secondary);
+}
+
+.editor-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--mind-border);
+    border-radius: 6px;
+    color: var(--mind-text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+}
+
+.action-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--mind-text);
+}
+
+.action-btn.active {
+    background: rgba(234, 179, 8, 0.2);
+    border-color: #eab308;
+    color: #eab308;
+}
+
+.action-btn.danger:hover {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: #ef4444;
+    color: #ef4444;
+}
+
+.action-btn svg {
+    width: 14px;
+    height: 14px;
+}
+
+.editor-meta {
+    display: flex;
+    gap: 16px;
+    padding: 8px 20px;
+    font-size: 11px;
+    color: var(--mind-text-secondary);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.editor-content {
+    flex: 1;
+    padding: 20px;
+    background: transparent;
+    border: none;
+    color: var(--mind-text);
+    font-size: 14px;
+    line-height: 1.8;
+    resize: none;
+    outline: none;
+    font-family: inherit;
+}
+
+.editor-content::placeholder {
+    color: var(--mind-text-secondary);
+}
+
+.editor-footer {
+    padding: 10px 20px;
+    font-size: 11px;
+    color: var(--mind-text-secondary);
+    border-top: 1px solid var(--mind-border);
+    display: flex;
+    justify-content: space-between;
+}
+
+.editor-placeholder {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--mind-text-secondary);
+}
+
+.placeholder-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    opacity: 0.3;
+}
+
+.placeholder-hint {
+    font-size: 12px;
+    opacity: 0.6;
+    margin-top: 8px;
+}
+
+/* ========== 心法卡片区 ========== */
+.cards-panel {
+    grid-column: span 2;
+    background: rgba(15, 15, 26, 0.8);
+    border-top: 1px solid var(--mind-border);
+    max-height: 200px;
+}
+
+.add-card-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    background: transparent;
+    border: 1px dashed var(--mind-accent);
+    border-radius: 6px;
+    color: var(--mind-accent);
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.add-card-btn:hover {
+    background: rgba(168, 85, 247, 0.1);
+}
+
+.add-card-btn svg {
+    width: 12px;
+    height: 12px;
+}
+
+.cards-grid {
+    display: flex;
+    gap: 12px;
+    padding: 12px 16px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.wisdom-card {
+    min-width: 220px;
+    max-width: 220px;
+    padding: 16px;
+    background: linear-gradient(135deg, rgba(22, 33, 62, 0.9), rgba(26, 26, 46, 0.9));
+    border: 1px solid var(--mind-border);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.wisdom-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 30px var(--mind-glow);
+    border-color: var(--card-color, var(--mind-accent));
+}
+
+.wisdom-card.system {
+    border-left: 3px solid var(--card-color, var(--mind-accent));
+}
+
+.wisdom-card.custom {
+    border-left: 3px solid #10b981;
+}
+
+.card-text {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--mind-text);
+    margin: 0 0 12px;
+    font-style: italic;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-author {
+    font-size: 11px;
+    color: var(--mind-text-secondary);
+}
+
+.card-delete {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: var(--mind-text-secondary);
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+.wisdom-card:hover .card-delete {
+    opacity: 1;
+}
+
+.card-delete:hover {
+    color: #ef4444;
+}
+
+/* ========== 弹窗 ========== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    width: 90%;
+    max-width: 480px;
+    background: var(--mind-card-bg);
+    border: 1px solid var(--mind-border);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--mind-border);
+}
+
+.modal-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.close-btn {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: var(--mind-text-secondary);
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--mind-text);
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-body textarea {
+    width: 100%;
+    height: 100px;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--mind-border);
+    border-radius: 8px;
+    color: var(--mind-text);
+    font-size: 14px;
+    resize: none;
+    outline: none;
+    margin-bottom: 12px;
+    font-family: inherit;
+}
+
+.modal-body textarea:focus {
+    border-color: var(--mind-accent);
+}
+
+.modal-row {
+    display: flex;
+    gap: 12px;
+}
+
+.modal-row input,
+.modal-row select {
+    flex: 1;
+    padding: 10px 12px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--mind-border);
+    border-radius: 8px;
+    color: var(--mind-text);
+    font-size: 13px;
+    outline: none;
+}
+
+.modal-row input:focus,
+.modal-row select:focus {
+    border-color: var(--mind-accent);
+}
+
+.modal-row select {
+    cursor: pointer;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 16px 20px;
+    border-top: 1px solid var(--mind-border);
+}
+
+.cancel-btn,
+.confirm-btn {
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cancel-btn {
+    background: transparent;
+    border: 1px solid var(--mind-border);
+    color: var(--mind-text-secondary);
+}
+
+.cancel-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--mind-text);
+}
+
+.confirm-btn {
+    background: linear-gradient(135deg, var(--mind-accent), #9333ea);
+    border: none;
+    color: white;
+}
+
+.confirm-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.4);
+}
+
+/* ========== 环境主题变体 ========== */
+
+/* 狂热期 */
+.mind-module.mode-hot {
+    --mind-accent: #f97316;
+    --mind-glow: rgba(249, 115, 22, 0.3);
+}
+
+.mind-module.mode-hot .mind-bg-grid {
+    background-image:
+        linear-gradient(rgba(249, 115, 22, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(249, 115, 22, 0.1) 1px, transparent 1px);
+}
+
+/* 冰冷期 */
+.mind-module.mode-cold {
+    --mind-accent: #0ea5e9;
+    --mind-glow: rgba(14, 165, 233, 0.3);
+}
+
+.mind-module.mode-cold .mind-bg-grid {
+    background-image:
+        linear-gradient(rgba(14, 165, 233, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(14, 165, 233, 0.1) 1px, transparent 1px);
+}
+
+/* 轮动期 */
+.mind-module.mode-neutral {
+    --mind-accent: #a855f7;
+    --mind-glow: rgba(168, 85, 247, 0.3);
+}
+
+/* ========== 滚动条样式 ========== */
+.mind-module ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.mind-module ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.mind-module ::-webkit-scrollbar-thumb {
+    background: var(--mind-border);
+    border-radius: 3px;
+}
+
+.mind-module ::-webkit-scrollbar-thumb:hover {
+    background: var(--mind-accent);
+}
+
+/* ========== 动画 ========== */
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px var(--mind-glow);
+    }
+
+    50% {
+        box-shadow: 0 0 40px var(--mind-glow);
+    }
+}
+
+.note-item.active {
+    animation: pulse-glow 2s ease-in-out infinite;
+}

@@ -99,6 +99,23 @@ export const Icons = {
     </svg>
   ),
 
+  // 心法录 - 书本/卷轴
+  Mind: ({ active }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <defs>
+        <linearGradient id="icon-gradient-mind" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#10b981" />
+          <stop offset="100%" stopColor="#059669" />
+        </linearGradient>
+      </defs>
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke={active ? "currentColor" : "url(#icon-gradient-mind)"} />
+      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" stroke={active ? "currentColor" : "url(#icon-gradient-mind)"} />
+      <path d="M8 7h8" stroke={active ? "currentColor" : "url(#icon-gradient-mind)"} opacity="0.6" />
+      <path d="M8 11h8" stroke={active ? "currentColor" : "url(#icon-gradient-mind)"} opacity="0.6" />
+      <path d="M8 15h5" stroke={active ? "currentColor" : "url(#icon-gradient-mind)"} opacity="0.6" />
+    </svg>
+  ),
+
   // 龙虎榜 - 龙虎对峙
   News: ({ active }) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -196,6 +213,13 @@ export const Icons = {
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
       <line x1="18" y1="6" x2="6" y2="18" />
       <line x1="6" y1="6" x2="18" y2="18" />
+    </svg>
+  ),
+
+  Search: () => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="11" cy="11" r="8" />
+      <line x1="21" y1="21" x2="16.65" y2="16.65" />
     </svg>
   )
 };

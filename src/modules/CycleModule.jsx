@@ -25,7 +25,7 @@ import { ParticleCanvas } from '../components/ParticleCanvas';
 import { calculateTradingDaysWithHolidays } from '../utils/tradingDays';
 import { API_BASE, LOCAL_STORAGE_PREFIX, LAST_OPEN_KEY, DEFAULT_LIFECYCLE_STAGES } from '../config';
 
-const CycleModule = () => {
+const CycleModule = ({ marketEnv, setMarketEnv }) => {
   const nodeTypes = useMemo(() => ({
     sectorNode: SectorNode,
     infoNode: InfoNode,
@@ -48,13 +48,8 @@ const CycleModule = () => {
   const [showDbMenu, setShowDbMenu] = useState(false);
   const [isOffline, setIsOffline] = useState(false);
 
-  // 市场环境状态
-  const [marketEnv, setMarketEnv] = useState({
-    mode: 'neutral',
-    initialDays: 0,
-    phase: 'normal', // warming/heating/boiling/exhausted for hot mode
-    startTime: new Date().toISOString()
-  });
+  // 市场环境状态 (由父组件 App.jsx 提供)
+
   const [marketHistory, setMarketHistory] = useState([]);
   const [currentDays, setCurrentDays] = useState(0);
 
@@ -561,7 +556,7 @@ const CycleModule = () => {
           connectionMode="loose"
           fitView
           fitViewOptions={{ padding: 0.2, maxZoom: 1 }}
-          className={`canvas-environment-${marketEnv.mode}`}
+          className={`canvas-environment-${marketEnv.mode} canvas-phase-${marketEnv.phase}`}
         >
           <Background color="#e2e8f0" gap={20} size={1} />
           <Controls style={{ border: 'none', boxShadow: '0 2px 8px rgba(0,0,0,0.05)', borderRadius: '8px', overflow: 'hidden' }} />

@@ -65,7 +65,7 @@ const CustomTooltip = ({ active, payload, label }) => {
   return null;
 };
 
-const LhbDashboard = () => {
+const LhbDashboard = ({ marketEnv }) => {
   const [activeTab, setActiveTab] = useState('daily');
 
   const availableDates = useMemo(() => {
