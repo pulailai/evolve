@@ -8,6 +8,9 @@ import { dirname } from 'path';
 import http from 'http';
 import https from 'https';
 import { fetchAllMarketData } from './src/services/marketDataService.js';
+import mindRoutes from './server/routes/mind.js';
+import mindStorage from './server/utils/mindStorage.js';
+import { getDataPaths } from './server/config/paths.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -22,13 +25,15 @@ const PORT = 3001;
 // MiniMax API Key
 const MINIMAX_API_KEY = "sk-api-K7oDtGpVChNcx_XkEs_3lhdEGeytEpqICvwjSbOhwktiS1_28X9r55JXpgeNm77dudNTck7yaQofLVP1v-_sFzwJ9bBvh_agF3Rxqp3UAFksNm40MyytbJ4";
 
-// 文件夹配置
-const DATA_DIR = path.join(__dirname, 'data');
-const ANALYSIS_DIR = path.join(__dirname, 'A_Share_Analysis');
+// 文件夹配置 - 使用动态路径
+const { DATA_DIR, ANALYSIS_DIR, MARKET_DATA_DIR, MIND_DATA_DIR } = getDataPaths();
 const DICT_FILE = path.join(ANALYSIS_DIR, 'A股字典.json');
 
 app.use(cors());
 app.use(bodyParser.json({ limit: '50mb' }));
+
+// 注册心法录路由
+app.use('/api/mind', mindRoutes);
 
 // 初始化目录
 if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR);
@@ -687,7 +692,7 @@ app.post('/api/generate-daily-data', async (req, res) => {
 
         // 保存到文件
         const fileName = `${date.replace(/年|月|日/g, '-').replace(/\s/g, '')}.json`;
-        const filePath = path.join(__dirname, 'src', 'data', fileName);
+        const filePath = path.join(MARKET_DATA_DIR, fileName);
 
         fs.writeFileSync(filePath, JSON.stringify(marketData, null, 2), 'utf8');
 
@@ -709,8 +714,12 @@ app.post('/api/generate-daily-data', async (req, res) => {
     }
 });
 
+// 初始化心法录存储
+mindStorage.init().catch(console.error);
+
 app.listen(PORT, () => {
     console.log(`\n🌍 服务已启动: http://localhost:${PORT}`);
     console.log(`🛠️ 修复版: Socket挂起修复 | 去均线策略 | AI超时优化`);
+    console.log(`📖 心法录: 文件持久化已启用`);
     // startMonitoring().catch(console.error);
 });

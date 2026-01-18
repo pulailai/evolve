@@ -1,0 +1,13 @@
+/* Canvas Enhancement Layer Styles */
+
+.canvas-enhancement-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* 允许点击穿透 */
+    z-index: 1;
+    /* 在ParticleCanvas之上，ReactFlow之下 */
+}

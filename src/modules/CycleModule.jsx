@@ -24,8 +24,9 @@ import { Icons } from '../components/Icons';
 import { ParticleCanvas } from '../components/ParticleCanvas';
 import { calculateTradingDaysWithHolidays } from '../utils/tradingDays';
 import { API_BASE, LOCAL_STORAGE_PREFIX, LAST_OPEN_KEY, DEFAULT_LIFECYCLE_STAGES } from '../config';
+import { CanvasEnhancementLayer } from '../components/CanvasEnhancementLayer';
 
-const CycleModule = ({ marketEnv, setMarketEnv }) => {
+const CycleModule = ({ marketEnv, setMarketEnv, barrageEnabled, toggleBarrage }) => {
   const nodeTypes = useMemo(() => ({
     sectorNode: SectorNode,
     infoNode: InfoNode,
@@ -67,6 +68,7 @@ const CycleModule = ({ marketEnv, setMarketEnv }) => {
     const interval = setInterval(updateDays, 60 * 60 * 1000);
     return () => clearInterval(interval);
   }, [marketEnv.startTime, marketEnv.initialDays]);
+
 
   // 初始化
   useEffect(() => { refreshDocsList(); }, []);
@@ -427,10 +429,6 @@ const CycleModule = ({ marketEnv, setMarketEnv }) => {
     <div style={{ width: '100%', height: '100%', position: 'relative', display: 'flex', overflow: 'hidden' }}>
       <div className="toolbar-container">
         <button className="btn btn-primary" onClick={() => addSectorNode(false)} title="添加板块节点"><Icons.Plus /> 新增板块</button>
-        <div className="btn-group">
-          <button className="btn btn-outline" onClick={() => addGenericNode('diamondNode', '判断', '#f59e0b', '#fffbeb')} title="添加判断节点">◇ 判断</button>
-          <button className="btn btn-outline" onClick={() => addGenericNode('circleNode', '情绪', '#ec4899', '#fdf2f8')} title="添加情绪节点">○ 情绪</button>
-        </div>
         <div className="toolbar-divider"></div>
         <div className="btn-group">
           <button className="btn btn-outline" onClick={() => setShowDbMenu(!showDbMenu)}>{isOffline ? <Icons.CloudOff /> : <Icons.Cloud />} <span style={{ maxWidth: '120px', overflow: 'hidden', textOverflow: 'ellipsis' }}>{dbName}</span> ▼</button>
@@ -523,6 +521,19 @@ const CycleModule = ({ marketEnv, setMarketEnv }) => {
               <option value="frozen">🐧🧊 冰封期</option>
             </select>
           )}
+
+          {/* 弹幕开关 */}
+          <button
+            className={`toolbar-btn ${barrageEnabled ? 'active' : ''}`}
+            onClick={toggleBarrage}
+            title={barrageEnabled ? '关闭弹幕' : '开启弹幕'}
+            style={{
+              marginLeft: '8px',
+              background: barrageEnabled ? '#6366f1' : undefined
+            }}
+          >
+            {barrageEnabled ? '🔔' : '🔕'}
+          </button>
         </div>
         <div className="toolbar-divider"></div>
         <div className="btn-group">
@@ -538,6 +549,13 @@ const CycleModule = ({ marketEnv, setMarketEnv }) => {
 
         {/* 粒子动画层 */}
         <ParticleCanvas mode={marketEnv.mode} days={currentDays} phase={marketEnv.phase} />
+
+        {/* 增强特效层 - 光影、特效、交互 */}
+        <CanvasEnhancementLayer
+          mode={marketEnv.mode}
+          phase={marketEnv.phase}
+          intensity={marketEnv.intensity || 0.5}
+        />
 
 
         <ReactFlow
@@ -563,7 +581,6 @@ const CycleModule = ({ marketEnv, setMarketEnv }) => {
           <MiniMap nodeColor={n => n.data.color || '#e2e8f0'} style={{ border: 'none', boxShadow: '0 2px 8px rgba(0,0,0,0.05)', borderRadius: '8px' }} />
         </ReactFlow>
       </div>
-
 
       <EditPanel node={selectedNode} onUpdate={updateNodeData} onDelete={deleteNode} onClose={() => setSelectedNode(null)} />
     </div>

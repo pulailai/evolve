@@ -5,7 +5,7 @@
       "type": "sectorNode",
       "position": {
         "x": -368.8907283722625,
-        "y": 115.61210867918007
+        "y": 116.61210867918007
       },
       "data": {
         "label": "商业航天",
@@ -65,11 +65,11 @@
         ]
       },
       "width": 217,
-      "height": 125,
+      "height": 123,
       "selected": false,
       "positionAbsolute": {
         "x": -368.8907283722625,
-        "y": 115.61210867918007
+        "y": 116.61210867918007
       },
       "dragging": false
     },
@@ -77,8 +77,8 @@
       "id": "1768484552049",
       "type": "sectorNode",
       "position": {
-        "x": 29.645402114267,
-        "y": 119.62968070676342
+        "x": 30.645402114267,
+        "y": 120.62968070676342
       },
       "data": {
         "label": "AI应用 低位+春节应用端爆发",
@@ -90,7 +90,14 @@
           "利欧"
         ],
         "strategy": "",
-        "trades": [],
+        "trades": [
+          {
+            "id": "t_1768612842332",
+            "name": "",
+            "result": "wait",
+            "reflection": ""
+          }
+        ],
         "lifecycle": {
           "current": "c_1768487169228",
           "stages": [
@@ -144,11 +151,107 @@
         ]
       },
       "width": 241,
-      "height": 125,
+      "height": 123,
       "selected": false,
       "positionAbsolute": {
-        "x": 29.645402114267,
-        "y": 119.62968070676342
+        "x": 30.645402114267,
+        "y": 120.62968070676342
+      },
+      "dragging": false
+    },
+    {
+      "id": "1768751131912",
+      "type": "sectorNode",
+      "position": {
+        "x": -560.1335669795469,
+        "y": 537.6775900586925
+      },
+      "data": {
+        "label": "政策+发展推动电力",
+        "startDate": "2026-01-15",
+        "fundType": "机构 量化",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [
+          "特工变电",
+          "保变"
+        ],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "c_1768751357936",
+          "stages": [
+            {
+              "id": "c_1768751357936",
+              "typeId": "startup",
+              "label": "启动",
+              "color": "#f59e0b",
+              "bg": "#fef3c7",
+              "time": "2026-01-15 23:49",
+              "remark": "",
+              "prediction": ""
+            }
+          ],
+          "logs": {}
+        },
+        "targetsStr": "特工变电, 保变",
+        "volumeDataStr": "",
+        "volumeData": []
+      },
+      "width": 214,
+      "height": 103,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -560.1335669795469,
+        "y": 537.6775900586925
+      },
+      "dragging": false
+    },
+    {
+      "id": "1768751275127",
+      "type": "sectorNode",
+      "position": {
+        "x": -165.81834462743362,
+        "y": 540.0798350728022
+      },
+      "data": {
+        "label": "半导设备-扩产需求",
+        "startDate": "2026-01-16",
+        "fundType": "游资",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [
+          "长川",
+          "北方",
+          "通富"
+        ],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "c_1768751342571",
+          "stages": [
+            {
+              "id": "c_1768751342571",
+              "typeId": "startup",
+              "label": "启动",
+              "color": "#f59e0b",
+              "bg": "#fef3c7",
+              "time": "2026-01-16 23:49",
+              "remark": "",
+              "prediction": ""
+            }
+          ],
+          "logs": {}
+        },
+        "targetsStr": "长川，北方，通富",
+        "volumeDataStr": ""
+      },
+      "width": 214,
+      "height": 103,
+      "selected": true,
+      "positionAbsolute": {
+        "x": -165.81834462743362,
+        "y": 540.0798350728022
       },
       "dragging": false
     }
@@ -172,6 +275,42 @@
         "color": "#94a3b8"
       },
       "selected": false
+    },
+    {
+      "source": "1767620839274",
+      "sourceHandle": "bottom",
+      "target": "1768751131912",
+      "targetHandle": "top",
+      "id": "e-1768751378999",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    },
+    {
+      "source": "1767620839274",
+      "sourceHandle": "bottom",
+      "target": "1768751275127",
+      "targetHandle": "top",
+      "id": "e-1768751385806",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
     }
   ],
   "marketHistory": [
@@ -794,16 +933,344 @@
       "actualDays": 1,
       "startTime": "2026-01-16T12:39:19.511Z",
       "endTime": "2026-01-16T12:50:48.451Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "freezing",
+      "actualDays": 1,
+      "startTime": "2026-01-16T12:50:48.451Z",
+      "endTime": "2026-01-17T01:17:05.357Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 0,
+      "startTime": "2026-01-17T01:17:05.357Z",
+      "endTime": "2026-01-17T01:18:25.406Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 0,
+      "startTime": "2026-01-17T01:18:25.406Z",
+      "endTime": "2026-01-17T01:19:11.665Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "warming",
+      "actualDays": 0,
+      "startTime": "2026-01-17T01:19:11.665Z",
+      "endTime": "2026-01-17T01:23:11.742Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "frozen",
+      "actualDays": 0,
+      "startTime": "2026-01-17T01:23:11.742Z",
+      "endTime": "2026-01-17T01:24:14.294Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 0,
+      "startTime": "2026-01-17T01:24:14.294Z",
+      "endTime": "2026-01-17T01:29:55.044Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "frozen",
+      "actualDays": 0,
+      "startTime": "2026-01-17T01:29:55.044Z",
+      "endTime": "2026-01-17T01:36:03.909Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "boiling",
+      "actualDays": 0,
+      "startTime": "2026-01-17T01:36:03.909Z",
+      "endTime": "2026-01-17T01:43:28.377Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "chilly",
+      "actualDays": 0,
+      "startTime": "2026-01-17T01:43:28.377Z",
+      "endTime": "2026-01-17T01:44:57.931Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 0,
+      "startTime": "2026-01-17T01:44:57.931Z",
+      "endTime": "2026-01-17T01:50:01.748Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "frozen",
+      "actualDays": 0,
+      "startTime": "2026-01-17T01:50:01.748Z",
+      "endTime": "2026-01-17T03:20:45.718Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 0,
+      "startTime": "2026-01-17T03:20:45.718Z",
+      "endTime": "2026-01-17T04:45:16.493Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "freezing",
+      "actualDays": 0,
+      "startTime": "2026-01-17T04:45:16.493Z",
+      "endTime": "2026-01-17T14:10:11.836Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "frozen",
+      "actualDays": 0,
+      "startTime": "2026-01-17T14:10:11.836Z",
+      "endTime": "2026-01-18T03:08:19.643Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 0,
+      "startTime": "2026-01-18T03:08:19.643Z",
+      "endTime": "2026-01-18T03:08:25.581Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "warming",
+      "actualDays": 0,
+      "startTime": "2026-01-18T03:08:25.581Z",
+      "endTime": "2026-01-18T03:08:30.405Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "chilly",
+      "actualDays": 0,
+      "startTime": "2026-01-18T03:08:30.405Z",
+      "endTime": "2026-01-18T04:22:51.175Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 0,
+      "startTime": "2026-01-18T04:22:51.175Z",
+      "endTime": "2026-01-18T04:23:12.314Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 0,
+      "startTime": "2026-01-18T04:23:12.314Z",
+      "endTime": "2026-01-18T04:23:17.968Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "frozen",
+      "actualDays": 0,
+      "startTime": "2026-01-18T04:23:17.968Z",
+      "endTime": "2026-01-18T04:49:33.840Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 0,
+      "startTime": "2026-01-18T04:49:33.840Z",
+      "endTime": "2026-01-18T04:56:50.779Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "frozen",
+      "actualDays": 0,
+      "startTime": "2026-01-18T04:56:50.779Z",
+      "endTime": "2026-01-18T04:57:09.440Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 0,
+      "startTime": "2026-01-18T04:57:09.440Z",
+      "endTime": "2026-01-18T04:58:00.183Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "chilly",
+      "actualDays": 0,
+      "startTime": "2026-01-18T04:58:00.183Z",
+      "endTime": "2026-01-18T04:58:09.846Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 0,
+      "startTime": "2026-01-18T04:58:09.846Z",
+      "endTime": "2026-01-18T04:59:34.583Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 0,
+      "startTime": "2026-01-18T04:59:34.583Z",
+      "endTime": "2026-01-18T04:59:38.771Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "frozen",
+      "actualDays": 0,
+      "startTime": "2026-01-18T04:59:38.771Z",
+      "endTime": "2026-01-18T09:11:20.093Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 0,
+      "startTime": "2026-01-18T09:11:20.093Z",
+      "endTime": "2026-01-18T09:12:53.099Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "freezing",
+      "actualDays": 0,
+      "startTime": "2026-01-18T09:12:53.099Z",
+      "endTime": "2026-01-18T09:14:40.468Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 0,
+      "startTime": "2026-01-18T09:14:40.468Z",
+      "endTime": "2026-01-18T09:17:06.579Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 0,
+      "startTime": "2026-01-18T09:17:06.579Z",
+      "endTime": "2026-01-18T09:17:22.019Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "freezing",
+      "actualDays": 0,
+      "startTime": "2026-01-18T09:17:22.019Z",
+      "endTime": "2026-01-18T09:18:38.095Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 0,
+      "startTime": "2026-01-18T09:18:38.095Z",
+      "endTime": "2026-01-18T09:19:00.852Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "chilly",
+      "actualDays": 0,
+      "startTime": "2026-01-18T09:19:00.852Z",
+      "endTime": "2026-01-18T11:16:42.939Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "warming",
+      "actualDays": 0,
+      "startTime": "2026-01-18T11:16:42.939Z",
+      "endTime": "2026-01-18T11:16:51.714Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "chilly",
+      "actualDays": 0,
+      "startTime": "2026-01-18T11:16:51.714Z",
+      "endTime": "2026-01-18T11:19:11.102Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 0,
+      "startTime": "2026-01-18T11:19:11.102Z",
+      "endTime": "2026-01-18T11:19:15.172Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "warming",
+      "actualDays": 0,
+      "startTime": "2026-01-18T11:19:15.172Z",
+      "endTime": "2026-01-18T11:20:44.317Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "frozen",
+      "actualDays": 0,
+      "startTime": "2026-01-18T11:20:44.317Z",
+      "endTime": "2026-01-18T15:52:01.339Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "warming",
+      "actualDays": 0,
+      "startTime": "2026-01-18T15:52:01.339Z",
+      "endTime": "2026-01-18T15:54:56.175Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "frozen",
+      "actualDays": 1,
+      "startTime": "2026-01-18T15:54:56.175Z",
+      "endTime": "2026-01-18T16:05:33.153Z"
     }
   ],
   "currentEnv": {
     "mode": "cold",
-    "initialDays": 0,
-    "phase": "chilly",
-    "startTime": "2026-01-16T12:50:48.451Z"
+    "initialDays": 3,
+    "phase": "frozen",
+    "startTime": "2026-01-18T16:05:33.153Z"
   },
   "meta": {
-    "lastSaved": "2026-01-16T12:50:48.552Z",
+    "lastSaved": "2026-01-18T16:05:33.257Z",
     "type": "file"
   }
 }

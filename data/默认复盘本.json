@@ -76,8 +76,8 @@
         "targetsStr": "",
         "endDate": "2025-11-23"
       },
-      "width": 212,
-      "height": 94,
+      "width": 180,
+      "height": 89,
       "selected": false,
       "positionAbsolute": {
         "x": -2406.5205351914938,
@@ -152,8 +152,8 @@
         "targetsStr": "",
         "endDate": "2025-11-23"
       },
-      "width": 212,
-      "height": 94,
+      "width": 180,
+      "height": 89,
       "selected": false,
       "positionAbsolute": {
         "x": -2412,
@@ -176,8 +176,8 @@
         "startDate": "2025-11-21",
         "mood": "ice"
       },
-      "width": 92,
-      "height": 92,
+      "width": 80,
+      "height": 80,
       "selected": false,
       "dragging": false,
       "positionAbsolute": {
@@ -252,8 +252,8 @@
         "targetsStr": "",
         "endDate": "2025-11-23"
       },
-      "width": 212,
-      "height": 94,
+      "width": 180,
+      "height": 89,
       "selected": false,
       "positionAbsolute": {
         "x": -1869,
@@ -328,8 +328,8 @@
         "targetsStr": "",
         "endDate": "2025-11-23"
       },
-      "width": 212,
-      "height": 94,
+      "width": 180,
+      "height": 89,
       "selected": false,
       "positionAbsolute": {
         "x": -1864,
@@ -359,8 +359,8 @@
           "logs": {}
         }
       },
-      "width": 208,
-      "height": 86
+      "width": 180,
+      "height": 74
     }
   ],
   "edges": [
@@ -473,8 +473,948 @@
       }
     }
   ],
+  "marketHistory": [
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "actualDays": 1,
+      "startTime": "2026-01-16T05:52:54.374Z",
+      "endTime": "2026-01-16T05:56:16.336Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 3,
+      "actualDays": 4,
+      "startTime": "2026-01-16T05:56:16.336Z",
+      "endTime": "2026-01-16T05:59:41.585Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 3,
+      "actualDays": 4,
+      "startTime": "2026-01-16T05:59:41.585Z",
+      "endTime": "2026-01-16T06:00:01.721Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 2,
+      "actualDays": 3,
+      "startTime": "2026-01-16T06:00:01.721Z",
+      "endTime": "2026-01-16T06:00:10.083Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 3,
+      "actualDays": 4,
+      "startTime": "2026-01-16T06:00:10.083Z",
+      "endTime": "2026-01-16T06:02:36.313Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 1,
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:02:36.313Z",
+      "endTime": "2026-01-16T06:06:10.013Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 4,
+      "actualDays": 5,
+      "startTime": "2026-01-16T06:06:10.013Z",
+      "endTime": "2026-01-16T06:06:26.119Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 1,
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:06:26.119Z",
+      "endTime": "2026-01-16T06:06:51.086Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "actualDays": 1,
+      "startTime": "2026-01-16T06:06:51.086Z",
+      "endTime": "2026-01-16T06:09:48.607Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 3,
+      "actualDays": 4,
+      "startTime": "2026-01-16T06:09:48.607Z",
+      "endTime": "2026-01-16T06:10:00.333Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "actualDays": 1,
+      "startTime": "2026-01-16T06:10:00.333Z",
+      "endTime": "2026-01-16T06:11:22.124Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "actualDays": 1,
+      "startTime": "2026-01-16T06:11:22.124Z",
+      "endTime": "2026-01-16T06:11:29.616Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "actualDays": 1,
+      "startTime": "2026-01-16T06:11:29.616Z",
+      "endTime": "2026-01-16T06:13:46.103Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 4,
+      "actualDays": 5,
+      "startTime": "2026-01-16T06:13:46.103Z",
+      "endTime": "2026-01-16T06:13:54.913Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 8,
+      "actualDays": 9,
+      "startTime": "2026-01-16T06:13:54.913Z",
+      "endTime": "2026-01-16T06:14:00.587Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 10,
+      "actualDays": 11,
+      "startTime": "2026-01-16T06:14:00.587Z",
+      "endTime": "2026-01-16T06:14:36.776Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 13,
+      "actualDays": 14,
+      "startTime": "2026-01-16T06:14:36.776Z",
+      "endTime": "2026-01-16T06:14:43.623Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 20,
+      "actualDays": 21,
+      "startTime": "2026-01-16T06:14:43.623Z",
+      "endTime": "2026-01-16T06:14:49.659Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 10,
+      "actualDays": 11,
+      "startTime": "2026-01-16T06:14:49.659Z",
+      "endTime": "2026-01-16T06:16:44.036Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 1,
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:16:44.036Z",
+      "endTime": "2026-01-16T06:18:25.169Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 10,
+      "phase": "normal",
+      "actualDays": 11,
+      "startTime": "2026-01-16T06:18:25.169Z",
+      "endTime": "2026-01-16T06:18:34.334Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 1,
+      "phase": "normal",
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:18:34.334Z",
+      "endTime": "2026-01-16T06:19:07.038Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 12,
+      "phase": "warming",
+      "actualDays": 13,
+      "startTime": "2026-01-16T06:19:07.038Z",
+      "endTime": "2026-01-16T06:22:12.302Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 12,
+      "phase": "normal",
+      "actualDays": 13,
+      "startTime": "2026-01-16T06:22:12.302Z",
+      "endTime": "2026-01-16T06:22:20.215Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 1,
+      "phase": "warming",
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:22:20.215Z",
+      "endTime": "2026-01-16T06:24:28.778Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 1,
+      "phase": "frozen",
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:24:28.778Z",
+      "endTime": "2026-01-16T06:26:17.711Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 1,
+      "phase": "warming",
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:26:17.711Z",
+      "endTime": "2026-01-16T06:26:38.865Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 1,
+      "phase": "frozen",
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:26:38.865Z",
+      "endTime": "2026-01-16T06:29:10.312Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 1,
+      "phase": "exhausted",
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:29:10.312Z",
+      "endTime": "2026-01-16T06:42:24.717Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 1,
+      "phase": "chilly",
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:42:24.717Z",
+      "endTime": "2026-01-16T06:42:30.769Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 1,
+      "phase": "exhausted",
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:42:30.769Z",
+      "endTime": "2026-01-16T06:46:55.902Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 1,
+      "startTime": "2026-01-16T06:46:55.902Z",
+      "endTime": "2026-01-16T06:47:04.345Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 2,
+      "phase": "frozen",
+      "actualDays": 3,
+      "startTime": "2026-01-16T06:47:04.345Z",
+      "endTime": "2026-01-16T06:54:17.038Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 1,
+      "phase": "exhausted",
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:54:17.038Z",
+      "endTime": "2026-01-16T06:54:41.357Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 1,
+      "phase": "frozen",
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:54:41.357Z",
+      "endTime": "2026-01-16T06:55:03.244Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 1,
+      "phase": "exhausted",
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:55:03.244Z",
+      "endTime": "2026-01-16T06:56:23.215Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 1,
+      "phase": "frozen",
+      "actualDays": 2,
+      "startTime": "2026-01-16T06:56:23.215Z",
+      "endTime": "2026-01-16T08:56:15.153Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 1,
+      "phase": "warming",
+      "actualDays": 2,
+      "startTime": "2026-01-16T08:56:15.153Z",
+      "endTime": "2026-01-16T10:33:43.638Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 1,
+      "startTime": "2026-01-16T10:33:43.638Z",
+      "endTime": "2026-01-16T10:38:50.811Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "warming",
+      "actualDays": 1,
+      "startTime": "2026-01-16T10:38:50.811Z",
+      "endTime": "2026-01-16T10:41:39.999Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 1,
+      "startTime": "2026-01-16T10:41:39.999Z",
+      "endTime": "2026-01-16T10:41:43.643Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 1,
+      "startTime": "2026-01-16T10:41:43.643Z",
+      "endTime": "2026-01-16T10:41:46.894Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "freezing",
+      "actualDays": 1,
+      "startTime": "2026-01-16T10:41:46.894Z",
+      "endTime": "2026-01-16T10:41:52.680Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 1,
+      "startTime": "2026-01-16T10:41:52.680Z",
+      "endTime": "2026-01-16T10:46:08.947Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 1,
+      "startTime": "2026-01-16T10:46:08.947Z",
+      "endTime": "2026-01-16T10:46:16.270Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "chilly",
+      "actualDays": 1,
+      "startTime": "2026-01-16T10:46:16.270Z",
+      "endTime": "2026-01-16T10:50:27.504Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 1,
+      "startTime": "2026-01-16T10:50:27.504Z",
+      "endTime": "2026-01-16T10:52:18.759Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "chilly",
+      "actualDays": 1,
+      "startTime": "2026-01-16T10:52:18.759Z",
+      "endTime": "2026-01-16T10:53:05.417Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 1,
+      "startTime": "2026-01-16T10:53:05.417Z",
+      "endTime": "2026-01-16T10:54:11.889Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "chilly",
+      "actualDays": 1,
+      "startTime": "2026-01-16T10:54:11.889Z",
+      "endTime": "2026-01-16T10:55:12.674Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 1,
+      "startTime": "2026-01-16T10:55:12.674Z",
+      "endTime": "2026-01-16T10:55:16.415Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "frozen",
+      "actualDays": 1,
+      "startTime": "2026-01-16T10:55:16.415Z",
+      "endTime": "2026-01-16T10:55:31.552Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 1,
+      "startTime": "2026-01-16T10:55:31.552Z",
+      "endTime": "2026-01-16T10:58:18.267Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "frozen",
+      "actualDays": 1,
+      "startTime": "2026-01-16T10:58:18.267Z",
+      "endTime": "2026-01-16T10:58:31.996Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 1,
+      "startTime": "2026-01-16T10:58:31.996Z",
+      "endTime": "2026-01-16T11:02:49.030Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 1,
+      "startTime": "2026-01-16T11:02:49.030Z",
+      "endTime": "2026-01-16T11:02:53.356Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "chilly",
+      "actualDays": 1,
+      "startTime": "2026-01-16T11:02:53.356Z",
+      "endTime": "2026-01-16T11:02:58.845Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 1,
+      "startTime": "2026-01-16T11:02:58.845Z",
+      "endTime": "2026-01-16T11:04:50.051Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "frozen",
+      "actualDays": 1,
+      "startTime": "2026-01-16T11:04:50.051Z",
+      "endTime": "2026-01-16T11:05:01.042Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 1,
+      "startTime": "2026-01-16T11:05:01.042Z",
+      "endTime": "2026-01-16T11:54:49.987Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "chilly",
+      "actualDays": 1,
+      "startTime": "2026-01-16T11:54:49.987Z",
+      "endTime": "2026-01-16T11:56:05.279Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 1,
+      "startTime": "2026-01-16T11:56:05.279Z",
+      "endTime": "2026-01-16T11:56:22.130Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "chilly",
+      "actualDays": 1,
+      "startTime": "2026-01-16T11:56:22.130Z",
+      "endTime": "2026-01-16T11:56:44.134Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 1,
+      "startTime": "2026-01-16T11:56:44.134Z",
+      "endTime": "2026-01-16T11:59:35.378Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 1,
+      "startTime": "2026-01-16T11:59:35.378Z",
+      "endTime": "2026-01-16T11:59:47.325Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "frozen",
+      "actualDays": 1,
+      "startTime": "2026-01-16T11:59:47.325Z",
+      "endTime": "2026-01-16T11:59:55.380Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 1,
+      "startTime": "2026-01-16T11:59:55.380Z",
+      "endTime": "2026-01-16T12:05:01.082Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "frozen",
+      "actualDays": 1,
+      "startTime": "2026-01-16T12:05:01.082Z",
+      "endTime": "2026-01-16T12:05:08.625Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 1,
+      "startTime": "2026-01-16T12:05:08.625Z",
+      "endTime": "2026-01-16T12:05:36.362Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "warming",
+      "actualDays": 1,
+      "startTime": "2026-01-16T12:05:36.362Z",
+      "endTime": "2026-01-16T12:09:33.347Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "frozen",
+      "actualDays": 1,
+      "startTime": "2026-01-16T12:09:33.347Z",
+      "endTime": "2026-01-16T12:09:39.903Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 1,
+      "startTime": "2026-01-16T12:09:39.903Z",
+      "endTime": "2026-01-16T12:10:45.389Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "warming",
+      "actualDays": 1,
+      "startTime": "2026-01-16T12:10:45.389Z",
+      "endTime": "2026-01-16T12:11:45.580Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 1,
+      "startTime": "2026-01-16T12:11:45.580Z",
+      "endTime": "2026-01-16T12:12:00.397Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "chilly",
+      "actualDays": 1,
+      "startTime": "2026-01-16T12:12:00.397Z",
+      "endTime": "2026-01-16T12:17:00.561Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 1,
+      "startTime": "2026-01-16T12:17:00.561Z",
+      "endTime": "2026-01-16T12:18:33.308Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "chilly",
+      "actualDays": 1,
+      "startTime": "2026-01-16T12:18:33.308Z",
+      "endTime": "2026-01-16T12:18:39.736Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 3,
+      "phase": "freezing",
+      "actualDays": 4,
+      "startTime": "2026-01-16T12:18:39.736Z",
+      "endTime": "2026-01-16T12:39:13.237Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 1,
+      "startTime": "2026-01-16T12:39:13.237Z",
+      "endTime": "2026-01-16T12:39:19.511Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "warming",
+      "actualDays": 1,
+      "startTime": "2026-01-16T12:39:19.511Z",
+      "endTime": "2026-01-16T12:50:48.451Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "freezing",
+      "actualDays": 1,
+      "startTime": "2026-01-16T12:50:48.451Z",
+      "endTime": "2026-01-17T01:17:05.357Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 0,
+      "startTime": "2026-01-17T01:17:05.357Z",
+      "endTime": "2026-01-17T01:18:25.406Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 0,
+      "startTime": "2026-01-17T01:18:25.406Z",
+      "endTime": "2026-01-17T01:19:11.665Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "warming",
+      "actualDays": 0,
+      "startTime": "2026-01-17T01:19:11.665Z",
+      "endTime": "2026-01-17T01:23:11.742Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "frozen",
+      "actualDays": 0,
+      "startTime": "2026-01-17T01:23:11.742Z",
+      "endTime": "2026-01-17T01:24:14.294Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 0,
+      "startTime": "2026-01-17T01:24:14.294Z",
+      "endTime": "2026-01-17T01:29:55.044Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "frozen",
+      "actualDays": 0,
+      "startTime": "2026-01-17T01:29:55.044Z",
+      "endTime": "2026-01-17T01:36:03.909Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "boiling",
+      "actualDays": 0,
+      "startTime": "2026-01-17T01:36:03.909Z",
+      "endTime": "2026-01-17T01:43:28.377Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "chilly",
+      "actualDays": 0,
+      "startTime": "2026-01-17T01:43:28.377Z",
+      "endTime": "2026-01-17T01:44:57.931Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 0,
+      "startTime": "2026-01-17T01:44:57.931Z",
+      "endTime": "2026-01-17T01:50:01.748Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "frozen",
+      "actualDays": 0,
+      "startTime": "2026-01-17T01:50:01.748Z",
+      "endTime": "2026-01-17T03:20:45.718Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 0,
+      "startTime": "2026-01-17T03:20:45.718Z",
+      "endTime": "2026-01-17T04:45:16.493Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "freezing",
+      "actualDays": 0,
+      "startTime": "2026-01-17T04:45:16.493Z",
+      "endTime": "2026-01-17T14:10:11.836Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "frozen",
+      "actualDays": 0,
+      "startTime": "2026-01-17T14:10:11.836Z",
+      "endTime": "2026-01-18T03:08:19.643Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 0,
+      "startTime": "2026-01-18T03:08:19.643Z",
+      "endTime": "2026-01-18T03:08:25.581Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "warming",
+      "actualDays": 0,
+      "startTime": "2026-01-18T03:08:25.581Z",
+      "endTime": "2026-01-18T03:08:30.405Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "chilly",
+      "actualDays": 0,
+      "startTime": "2026-01-18T03:08:30.405Z",
+      "endTime": "2026-01-18T04:22:51.175Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 0,
+      "startTime": "2026-01-18T04:22:51.175Z",
+      "endTime": "2026-01-18T04:23:12.314Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 0,
+      "startTime": "2026-01-18T04:23:12.314Z",
+      "endTime": "2026-01-18T04:23:17.968Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "frozen",
+      "actualDays": 0,
+      "startTime": "2026-01-18T04:23:17.968Z",
+      "endTime": "2026-01-18T04:49:33.840Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 0,
+      "startTime": "2026-01-18T04:49:33.840Z",
+      "endTime": "2026-01-18T04:56:50.779Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "frozen",
+      "actualDays": 0,
+      "startTime": "2026-01-18T04:56:50.779Z",
+      "endTime": "2026-01-18T04:57:09.440Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 0,
+      "startTime": "2026-01-18T04:57:09.440Z",
+      "endTime": "2026-01-18T04:58:00.183Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "chilly",
+      "actualDays": 0,
+      "startTime": "2026-01-18T04:58:00.183Z",
+      "endTime": "2026-01-18T04:58:09.846Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 0,
+      "startTime": "2026-01-18T04:58:09.846Z",
+      "endTime": "2026-01-18T04:59:34.583Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 0,
+      "startTime": "2026-01-18T04:59:34.583Z",
+      "endTime": "2026-01-18T04:59:38.771Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "frozen",
+      "actualDays": 0,
+      "startTime": "2026-01-18T04:59:38.771Z",
+      "endTime": "2026-01-18T09:11:20.093Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 0,
+      "startTime": "2026-01-18T09:11:20.093Z",
+      "endTime": "2026-01-18T09:12:53.099Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "freezing",
+      "actualDays": 0,
+      "startTime": "2026-01-18T09:12:53.099Z",
+      "endTime": "2026-01-18T09:14:40.468Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 0,
+      "startTime": "2026-01-18T09:14:40.468Z",
+      "endTime": "2026-01-18T09:17:06.579Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 0,
+      "startTime": "2026-01-18T09:17:06.579Z",
+      "endTime": "2026-01-18T09:17:22.019Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "freezing",
+      "actualDays": 0,
+      "startTime": "2026-01-18T09:17:22.019Z",
+      "endTime": "2026-01-18T09:18:38.095Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "exhausted",
+      "actualDays": 0,
+      "startTime": "2026-01-18T09:18:38.095Z",
+      "endTime": "2026-01-18T09:19:00.852Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "chilly",
+      "actualDays": 0,
+      "startTime": "2026-01-18T09:19:00.852Z",
+      "endTime": "2026-01-18T11:16:42.939Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "warming",
+      "actualDays": 0,
+      "startTime": "2026-01-18T11:16:42.939Z",
+      "endTime": "2026-01-18T11:16:51.714Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "chilly",
+      "actualDays": 0,
+      "startTime": "2026-01-18T11:16:51.714Z",
+      "endTime": "2026-01-18T11:19:11.102Z"
+    },
+    {
+      "mode": "neutral",
+      "initialDays": 0,
+      "phase": "normal",
+      "actualDays": 0,
+      "startTime": "2026-01-18T11:19:11.102Z",
+      "endTime": "2026-01-18T11:19:15.172Z"
+    },
+    {
+      "mode": "hot",
+      "initialDays": 0,
+      "phase": "warming",
+      "actualDays": 0,
+      "startTime": "2026-01-18T11:19:15.172Z",
+      "endTime": "2026-01-18T11:20:44.317Z"
+    },
+    {
+      "mode": "cold",
+      "initialDays": 0,
+      "phase": "chilly",
+      "actualDays": 0,
+      "startTime": "2026-01-18T11:20:44.317Z",
+      "endTime": "2026-01-18T13:17:45.410Z"
+    }
+  ],
+  "currentEnv": {
+    "mode": "neutral",
+    "initialDays": 0,
+    "phase": "normal",
+    "startTime": "2026-01-18T13:17:45.410Z"
+  },
   "meta": {
-    "lastSaved": "2025-11-27T11:03:58.363Z",
+    "lastSaved": "2026-01-18T13:17:45.511Z",
     "type": "file"
   }
 }

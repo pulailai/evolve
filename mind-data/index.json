@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-01-18T16:21:37.139Z",
+  "stats": {
+    "totalNotes": 1,
+    "notesByCategory": {
+      "hot": 1,
+      "cold": 0,
+      "neutral": 0,
+      "general": 0,
+      "insight": 0,
+      "journal": 0,
+      "lesson": 0
+    }
+  },
+  "recentNotes": [
+    {
+      "id": "note_1705456789123",
+      "category": "hot",
+      "title": "狂热期顶部识别要点",
+      "updatedAt": "2026-01-18T16:21:37.135Z"
+    }
+  ]
+}

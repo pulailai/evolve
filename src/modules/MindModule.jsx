@@ -1,5 +1,9 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import './MindModule.css';
+import RichTextEditor from '../components/RichTextEditor';
+import { noteTemplates, availableTags } from '../config/noteTemplates';
+import { barrageStyleTemplates } from '../config/barrageStyles';
+
 
 // 内联图标组件
 const SearchIcon = () => (
@@ -73,17 +77,42 @@ const MindModule = ({ marketEnv }) => {
     const [wisdomCards, setWisdomCards] = useState([]);
     const [showCardModal, setShowCardModal] = useState(false);
     const [newCard, setNewCard] = useState({ text: '', author: '', category: 'general' });
+    const [showTemplateModal, setShowTemplateModal] = useState(false);
+    const [barrageSettingsCollapsed, setBarrageSettingsCollapsed] = useState(false);
 
-    // 初始化加载
+
+    // 从HTML中提取纯文本用于预览
+    const stripHtml = (html) => {
+        if (!html) return '';
+        const tmp = document.createElement('div');
+        tmp.innerHTML = html;
+        return tmp.textContent || tmp.innerText || '';
+    };
+
+    // 初始化加载所有笔记
     useEffect(() => {
-        try {
-            const savedNotes = localStorage.getItem('mind_notes');
-            const savedCards = localStorage.getItem('mind_cards');
-            if (savedNotes) setNotes(JSON.parse(savedNotes));
-            if (savedCards) setWisdomCards(JSON.parse(savedCards));
-        } catch (e) {
-            console.error('Failed to load data:', e);
-        }
+        const loadAllNotes = async () => {
+            try {
+                const response = await fetch('http://localhost:3001/api/mind/notes');
+                const data = await response.json();
+                setNotes(data);
+            } catch (e) {
+                console.error('Failed to load notes:', e);
+            }
+        };
+
+        const loadCards = async () => {
+            try {
+                const response = await fetch('http://localhost:3001/api/mind/cards/custom');
+                const data = await response.json();
+                setWisdomCards(data);
+            } catch (e) {
+                console.error('Failed to load cards:', e);
+            }
+        };
+
+        loadAllNotes();
+        loadCards();
     }, []);
 
     // 环境变化时自动切换分类
@@ -93,16 +122,35 @@ const MindModule = ({ marketEnv }) => {
         }
     }, [mode]);
 
-    // 保存笔记
-    const saveNotes = useCallback((updatedNotes) => {
-        setNotes(updatedNotes);
-        localStorage.setItem('mind_notes', JSON.stringify(updatedNotes));
+    // 切换分类时清空选中的笔记
+    useEffect(() => {
+        setSelectedNote(null);
+    }, [activeCategory]);
+
+    // 保存笔记到服务器
+    const saveNoteToServer = useCallback(async (note) => {
+        try {
+            await fetch('http://localhost:3001/api/mind/notes', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(note)
+            });
+        } catch (error) {
+            console.error('Failed to save note:', error);
+        }
     }, []);
 
-    // 保存卡片
-    const saveCards = useCallback((updatedCards) => {
-        setWisdomCards(updatedCards);
-        localStorage.setItem('mind_cards', JSON.stringify(updatedCards));
+    // 保存卡片到服务器
+    const saveCardsToServer = useCallback(async (cards) => {
+        try {
+            await fetch('http://localhost:3001/api/mind/cards/custom', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ cards })
+            });
+        } catch (error) {
+            console.error('Failed to save cards:', error);
+        }
     }, []);
 
     // 筛选当前分类的笔记
@@ -136,8 +184,10 @@ const MindModule = ({ marketEnv }) => {
             createdAt: new Date().toISOString(),
             updatedAt: new Date().toISOString()
         };
-        saveNotes([newNote, ...notes]);
+        const updatedNotes = [newNote, ...notes];
+        setNotes(updatedNotes);
         setSelectedNote(newNote);
+        saveNoteToServer(newNote);
     };
 
     // 更新笔记
@@ -145,17 +195,66 @@ const MindModule = ({ marketEnv }) => {
         const updated = notes.map(n =>
             n.id === id ? { ...n, ...changes, updatedAt: new Date().toISOString() } : n
         );
-        saveNotes(updated);
+        setNotes(updated);
         if (selectedNote && selectedNote.id === id) {
-            setSelectedNote({ ...selectedNote, ...changes });
+            const updatedNote = { ...selectedNote, ...changes, updatedAt: new Date().toISOString() };
+            setSelectedNote(updatedNote);
+            saveNoteToServer(updatedNote);
         }
     };
 
     // 删除笔记
-    const deleteNote = (id) => {
+    const deleteNote = async (id) => {
         if (!window.confirm('确定删除这条笔记吗？')) return;
-        saveNotes(notes.filter(n => n.id !== id));
-        if (selectedNote && selectedNote.id === id) setSelectedNote(null);
+
+        const note = notes.find(n => n.id === id);
+        if (!note) return;
+
+        try {
+            await fetch(`http://localhost:3001/api/mind/notes/${note.category}/${id}`, {
+                method: 'DELETE'
+            });
+            setNotes(notes.filter(n => n.id !== id));
+            if (selectedNote && selectedNote.id === id) setSelectedNote(null);
+        } catch (error) {
+            console.error('Failed to delete note:', error);
+        }
+    };
+
+    // 从模板创建笔记
+    const createNoteFromTemplate = async (template) => {
+        const newNote = {
+            id: `note_${Date.now()}`,
+            title: template.name,
+            content: template.content,
+            category: activeCategory,
+            tags: template.defaultTags || [],
+            isBarrageEnabled: template.isBarrageEnabled || false,
+            barrageText: template.defaultTags.length > 0 ? stripHtml(template.content).slice(0, 50) : '',
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString(),
+            isPinned: false,
+        };
+
+        setNotes([newNote, ...notes]);
+        setSelectedNote(newNote);
+        setShowTemplateModal(false);
+
+        // 保存到服务器
+        await saveNoteToServer(newNote);
+    };
+
+    // 切换笔记标签
+    const toggleTag = (noteId, tag) => {
+        const note = notes.find(n => n.id === noteId);
+        if (!note) return;
+
+        const tags = note.tags || [];
+        const newTags = tags.includes(tag)
+            ? tags.filter(t => t !== tag)
+            : [...tags, tag];
+
+        updateNote(noteId, { tags: newTags });
     };
 
     // 添加心法卡片
@@ -166,7 +265,9 @@ const MindModule = ({ marketEnv }) => {
             ...newCard,
             createdAt: new Date().toISOString()
         };
-        saveCards([card, ...wisdomCards]);
+        const updatedCards = [card, ...wisdomCards];
+        setWisdomCards(updatedCards);
+        saveCardsToServer(updatedCards);
         setNewCard({ text: '', author: '', category: 'general' });
         setShowCardModal(false);
     };
@@ -174,7 +275,9 @@ const MindModule = ({ marketEnv }) => {
     // 删除心法卡片
     const deleteCard = (id) => {
         if (id.startsWith('sys_')) return;
-        saveCards(wisdomCards.filter(c => c.id !== id));
+        const updatedCards = wisdomCards.filter(c => c.id !== id);
+        setWisdomCards(updatedCards);
+        saveCardsToServer(updatedCards);
     };
 
     // 导出笔记
@@ -218,13 +321,13 @@ const MindModule = ({ marketEnv }) => {
                         {CATEGORIES.filter(c => c.type === 'environment').map(cat => (
                             <button
                                 key={cat.id}
-                                className={`nav-item ${activeCategory === cat.id ? 'active' : ''}`}
+                                className={`mind-nav-item ${activeCategory === cat.id ? 'active' : ''}`}
                                 onClick={() => setActiveCategory(cat.id)}
                                 style={{ '--cat-color': cat.color }}
                             >
-                                <span className="nav-icon">{cat.icon}</span>
-                                <span className="nav-text">{cat.name.slice(2)}</span>
-                                <span className="nav-count">{notes.filter(n => n.category === cat.id).length}</span>
+                                <span className="mind-nav-icon">{cat.icon}</span>
+                                <span className="mind-nav-text">{cat.name.slice(2)}</span>
+                                <span className="mind-nav-count">{notes.filter(n => n.category === cat.id).length}</span>
                             </button>
                         ))}
                     </div>
@@ -234,13 +337,13 @@ const MindModule = ({ marketEnv }) => {
                         {CATEGORIES.filter(c => c.type === 'fixed').map(cat => (
                             <button
                                 key={cat.id}
-                                className={`nav-item ${activeCategory === cat.id ? 'active' : ''}`}
+                                className={`mind-nav-item ${activeCategory === cat.id ? 'active' : ''}`}
                                 onClick={() => setActiveCategory(cat.id)}
                                 style={{ '--cat-color': cat.color }}
                             >
-                                <span className="nav-icon">{cat.icon}</span>
-                                <span className="nav-text">{cat.name.slice(2)}</span>
-                                <span className="nav-count">{notes.filter(n => n.category === cat.id).length}</span>
+                                <span className="mind-nav-icon">{cat.icon}</span>
+                                <span className="mind-nav-text">{cat.name.slice(2)}</span>
+                                <span className="mind-nav-count">{notes.filter(n => n.category === cat.id).length}</span>
                             </button>
                         ))}
                     </div>
@@ -268,7 +371,7 @@ const MindModule = ({ marketEnv }) => {
                 <section className="notes-panel">
                     <div className="panel-header">
                         <h3>{getCategoryInfo(activeCategory).name}</h3>
-                        <button className="add-note-btn" onClick={createNote}>
+                        <button className="add-note-btn" onClick={() => setShowTemplateModal(true)}>
                             <PlusIcon /> 新建笔记
                         </button>
                     </div>
@@ -287,7 +390,7 @@ const MindModule = ({ marketEnv }) => {
                                     onClick={() => setSelectedNote(note)}
                                 >
                                     <h4>{note.title}</h4>
-                                    <p>{(note.content || '').slice(0, 60) || '空白笔记...'}</p>
+                                    <p>{stripHtml(note.content).slice(0, 60) || '空白笔记...'}</p>
                                     <span className="note-date">
                                         {new Date(note.updatedAt).toLocaleDateString()}
                                     </span>
@@ -322,14 +425,95 @@ const MindModule = ({ marketEnv }) => {
                             <div className="editor-meta">
                                 <span>创建于 {new Date(selectedNote.createdAt).toLocaleString()}</span>
                             </div>
-                            <textarea
-                                className="editor-content"
-                                value={selectedNote.content}
-                                onChange={(e) => updateNote(selectedNote.id, { content: e.target.value })}
-                                placeholder="在此记录你的交易心法与感悟..."
+
+                            <RichTextEditor
+                                content={selectedNote.content}
+                                onChange={(html) => updateNote(selectedNote.id, { content: html })}
                             />
+
+                            {/* 弹幕设置 - 可折叠 */}
+                            <div className="barrage-settings">
+                                <div className="barrage-settings-header" onClick={() => setBarrageSettingsCollapsed(!barrageSettingsCollapsed)}>
+                                    <div className="setting-row">
+                                        <label className="checkbox-label" onClick={(e) => e.stopPropagation()}>
+                                            <input
+                                                type="checkbox"
+                                                checked={selectedNote.isBarrageEnabled || false}
+                                                onChange={(e) => updateNote(selectedNote.id, {
+                                                    isBarrageEnabled: e.target.checked
+                                                })}
+                                            />
+                                            <span>🎬 启用弹幕提醒</span>
+                                        </label>
+                                        {selectedNote.isBarrageEnabled && (
+                                            <button className="collapse-btn" type="button">
+                                                {barrageSettingsCollapsed ? '▼' : '▲'}
+                                            </button>
+                                        )}
+                                    </div>
+                                </div>
+
+                                {selectedNote.isBarrageEnabled && !barrageSettingsCollapsed && (
+                                    <>
+                                        <div className="setting-row">
+                                            <label>弹幕文本：</label>
+                                            <input
+                                                type="text"
+                                                className="barrage-text-input"
+                                                value={selectedNote.barrageText || ''}
+                                                onChange={(e) => updateNote(selectedNote.id, {
+                                                    barrageText: e.target.value
+                                                })}
+                                                placeholder="输入弹幕显示的文字..."
+                                                maxLength={50}
+                                            />
+                                            <span className="char-count">{(selectedNote.barrageText || '').length}/50</span>
+                                        </div>
+
+                                        <div className="setting-row">
+                                            <label>适用环境：</label>
+                                            <div className="tag-selector">
+                                                {availableTags.environment.map(tag => (
+                                                    <button
+                                                        key={tag.id}
+                                                        className={`tag-btn ${selectedNote.tags?.includes(tag.label) ? 'active' : ''}`}
+                                                        style={{
+                                                            '--tag-color': tag.color,
+                                                            borderColor: selectedNote.tags?.includes(tag.label) ? tag.color : '#e5e7eb',
+                                                            backgroundColor: selectedNote.tags?.includes(tag.label) ? `${tag.color}15` : 'transparent'
+                                                        }}
+                                                        onClick={() => toggleTag(selectedNote.id, tag.label)}
+                                                    >
+                                                        {tag.label}
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        </div>
+
+                                        <div className="setting-row">
+                                            <label>弹幕样式：</label>
+                                            <div className="template-selector">
+                                                {Object.entries(barrageStyleTemplates).map(([key, template]) => (
+                                                    <button
+                                                        key={key}
+                                                        className={`template-mini-btn ${(selectedNote.barrageTemplate || 'modern') === key ? 'active' : ''}`}
+                                                        onClick={() => updateNote(selectedNote.id, {
+                                                            barrageTemplate: key
+                                                        })}
+                                                        title={template.description}
+                                                    >
+                                                        <span className="template-icon">{template.icon}</span>
+                                                        <span className="template-name">{template.name}</span>
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </>
+                                )}
+                            </div>
+
                             <div className="editor-footer">
-                                字数: {(selectedNote.content || '').length} | 自动保存已启用
+                                <span>字数: {(selectedNote.content || '').length} | 自动保存已启用</span>
                             </div>
                         </React.Fragment>
                     ) : (
@@ -412,6 +596,34 @@ const MindModule = ({ marketEnv }) => {
 
             {/* 背景装饰 */}
             <div className="mind-bg-grid"></div>
+
+            {/* 模板选择Modal */}
+            {showTemplateModal && (
+                <div className="template-modal-overlay" onClick={() => setShowTemplateModal(false)}>
+                    <div className="template-modal" onClick={(e) => e.stopPropagation()}>
+                        <div className="template-modal-header">
+                            <h3>选择笔记模板</h3>
+                            <button className="modal-close-btn" onClick={() => setShowTemplateModal(false)}>✕</button>
+                        </div>
+                        <div className="template-grid">
+                            {noteTemplates.map(template => (
+                                <div
+                                    key={template.id}
+                                    className="template-card"
+                                    onClick={() => createNoteFromTemplate(template)}
+                                >
+                                    <div className="template-icon">{template.icon}</div>
+                                    <h4>{template.name}</h4>
+                                    <p>{template.description}</p>
+                                    {template.category === 'alert' && (
+                                        <span className="template-badge">⚡ 弹幕</span>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

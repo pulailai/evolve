@@ -1,11 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './MarketEnvironment.css';
+import BarrageDisplay from './BarrageDisplay';
 
 /**
  * MarketEnvironment - 市场环境控制器
  * 根据成交额和指数趋势计算并显示市场环境状态
  */
 export const MarketEnvironment = ({ mode = 'neutral', volumeTrend = [], intensity = 0.5 }) => {
+    const [barrageEnabled, setBarrageEnabled] = useState(() => {
+        return localStorage.getItem('barrageEnabled') !== 'false';
+    });
+    const [notes, setNotes] = useState([]);
+
+    // 加载笔记
+    useEffect(() => {
+        fetch('http://localhost:3001/api/mind/notes/all')
+            .then(res => res.json())
+            .then(data => setNotes(data))
+            .catch(err => console.error('Failed to load notes:', err));
+    }, []);
+
+    // 保存弹幕开关状态
+    const toggleBarrage = () => {
+        const newState = !barrageEnabled;
+        setBarrageEnabled(newState);
+        localStorage.setItem('barrageEnabled', newState);
+    };
+
     const getEnvironmentInfo = () => {
         switch (mode) {
             case 'hot':
@@ -39,6 +60,22 @@ export const MarketEnvironment = ({ mode = 'neutral', volumeTrend = [], intensit
 
     return (
         <div className="market-environment-indicator">
+            {/* 弹幕开关 */}
+            <button
+                className="barrage-toggle"
+                onClick={toggleBarrage}
+                title={barrageEnabled ? '关闭弹幕' : '开启弹幕'}
+            >
+                {barrageEnabled ? '🔔' : '🔕'}
+            </button>
+
+            {/* 弹幕显示 */}
+            <BarrageDisplay
+                notes={notes}
+                currentEnvironment={mode}
+                isEnabled={barrageEnabled}
+            />
+
             <div className="env-icon" style={{ color: env.color }}>
                 {env.icon}
             </div>

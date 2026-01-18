@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Test</title>
+</head>
+
+<body>
+    <h1>Debug Test Page</h1>
+    <div id="test">Loading...</div>
+    <script>
+        console.log('Test script loaded');
+        document.getElementById('test').textContent = 'JavaScript is working!';
+        console.log('User Agent:', navigator.userAgent);
+        console.log('Is Electron:', navigator.userAgent.toLowerCase().includes('electron'));
+    </script>
+</body>
+
+</html>

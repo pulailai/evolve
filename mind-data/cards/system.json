@@ -1,0 +1,52 @@
+{
+    "cards": [
+        {
+            "id": "sys_general_1",
+            "text": "市场先生是你的仆人，而非主人",
+            "author": "本杰明·格雷厄姆",
+            "category": "general"
+        },
+        {
+            "id": "sys_general_2",
+            "text": "在别人贪婪时恐惧，在别人恐惧时贪婪",
+            "author": "沃伦·巴菲特",
+            "category": "general"
+        },
+        {
+            "id": "sys_general_3",
+            "text": "风险来自于你不知道自己在做什么",
+            "author": "沃伦·巴菲特",
+            "category": "general"
+        },
+        {
+            "id": "sys_hot_1",
+            "text": "狂热时刻，保持清醒比追逐利润更重要",
+            "author": "市场智慧",
+            "category": "hot"
+        },
+        {
+            "id": "sys_hot_2",
+            "text": "当所有人都在谈论股票时，该是离场的时候了",
+            "author": "约瑟夫·肯尼迪",
+            "category": "hot"
+        },
+        {
+            "id": "sys_cold_1",
+            "text": "冰冷期是播种的季节，而非收割的时刻",
+            "author": "市场智慧",
+            "category": "cold"
+        },
+        {
+            "id": "sys_cold_2",
+            "text": "最黑暗的时刻往往是黎明前的时刻",
+            "author": "市场智慧",
+            "category": "cold"
+        },
+        {
+            "id": "sys_neutral_1",
+            "text": "轮动期考验的是耐心和选择",
+            "author": "市场智慧",
+            "category": "neutral"
+        }
+    ]
+}

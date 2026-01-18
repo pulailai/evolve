@@ -1,0 +1,256 @@
+/* 弹幕样式模板 CSS */
+
+/* 基础样式 - 经典 */
+.barrage-classic {
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid currentColor;
+    border-radius: 24px;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 基础样式 - 现代（玻璃态） */
+.barrage-modern {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    font-weight: 500;
+    text-shadow: 0 0 10px currentColor, 2px 2px 8px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* 基础样式 - 简约 */
+.barrage-minimal {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    font-weight: 400;
+    text-shadow:
+        2px 2px 0 #000, -2px -2px 0 #000,
+        2px -2px 0 #000, -2px 2px 0 #000,
+        0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+/* 基础样式 - 醒目 */
+.barrage-bold {
+    background: currentColor;
+    border: 3px solid #fff;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #fff !important;
+    text-shadow:
+        0 0 5px rgba(0, 0, 0, 0.5),
+        0 0 10px rgba(0, 0, 0, 0.3),
+        2px 2px 4px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 特效样式 - 彩虹渐变 */
+.barrage-rainbow {
+    background: linear-gradient(90deg,
+            #ff0000, #ff7f00, #ffff00, #00ff00,
+            #0000ff, #4b0082, #9400d3, #ff0000);
+    background-size: 400% 100%;
+    animation: rainbow-flow 3s linear infinite;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    font-weight: 700;
+    color: #fff !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes rainbow-flow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* 特效样式 - 霓虹发光 */
+.barrage-neon {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid currentColor;
+    border-radius: 12px;
+    font-weight: 600;
+    text-shadow:
+        0 0 5px currentColor,
+        0 0 10px currentColor,
+        0 0 20px currentColor,
+        0 0 40px currentColor;
+    box-shadow:
+        0 0 10px currentColor,
+        0 0 20px currentColor,
+        inset 0 0 10px rgba(255, 255, 255, 0.1);
+    animation: neon-pulse 2s ease-in-out infinite;
+}
+
+@keyframes neon-pulse {
+
+    0%,
+    100% {
+        filter: brightness(1);
+        text-shadow: 0 0 5px currentColor, 0 0 10px currentColor;
+    }
+
+    50% {
+        filter: brightness(1.3);
+        text-shadow:
+            0 0 10px currentColor,
+            0 0 20px currentColor,
+            0 0 30px currentColor,
+            0 0 40px currentColor;
+    }
+}
+
+/* 特效样式 - 抖动警示 */
+.barrage-shake {
+    background: linear-gradient(135deg, #dc2626, #ef4444);
+    border: 3px solid #fff;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #fff !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.5);
+    animation: shake 0.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateX(-2px) rotate(-1deg);
+    }
+
+    75% {
+        transform: translateX(2px) rotate(1deg);
+    }
+}
+
+/* 特效样式 - 弹跳效果 */
+.barrage-bounce {
+    background: linear-gradient(135deg, #f59e0b, #f97316);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 24px;
+    font-weight: 600;
+    color: #fff !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+    animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* 特效样式 - 渐入渐出 */
+.barrage-fade {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fade-pulse 3s ease-in-out infinite;
+}
+
+@keyframes fade-pulse {
+
+    0%,
+    100% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* 特效样式 - 粒子特效 */
+.barrage-particle {
+    position: relative;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.9), rgba(99, 102, 241, 0.9));
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    font-weight: 600;
+    color: #fff !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+    overflow: visible;
+}
+
+.barrage-particle::before,
+.barrage-particle::after {
+    content: '✨';
+    position: absolute;
+    font-size: 12px;
+    animation: particle-float 2s ease-in-out infinite;
+}
+
+.barrage-particle::before {
+    left: -20px;
+    animation-delay: 0s;
+}
+
+.barrage-particle::after {
+    right: -20px;
+    animation-delay: 1s;
+}
+
+@keyframes particle-float {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(-15px) scale(1.2);
+        opacity: 1;
+    }
+}
+
+/* 尺寸变体 */
+.barrage-size-small {
+    font-size: 12px;
+    padding: 8px 14px;
+}
+
+.barrage-size-medium {
+    font-size: 15px;
+    padding: 10px 18px;
+}
+
+.barrage-size-large {
+    font-size: 18px;
+    padding: 12px 22px;
+}
+
+/* 通用样式 */
+.barrage-item-styled {
+    position: fixed;
+    white-space: nowrap;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    transition: opacity 0.3s ease;
+}

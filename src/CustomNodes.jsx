@@ -92,12 +92,9 @@ export const SectorNode = memo(({ data, selected }) => {
         )}
       </div>
 
-      {/* Node Content */}
       <div
         className={`sector-node-content ${effectClass}`}
         style={{
-          border: effectClass ? undefined : `2px solid ${selected ? '#000' : themeColor}`,
-          background: effectClass ? undefined : (data.bgColor || '#ffffff'),
           opacity: isFrozen ? 0.8 : 1
         }}
       >
