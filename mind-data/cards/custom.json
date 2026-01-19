@@ -1,3 +1,11 @@
 {
-    "cards": []
+  "cards": [
+    {
+      "id": "card_1768785841213",
+      "text": "市场在于跟，不在于意淫，市场永远是对的。",
+      "author": "XXX",
+      "category": "general",
+      "createdAt": "2026-01-19T01:24:01.213Z"
+    }
+  ]
 }

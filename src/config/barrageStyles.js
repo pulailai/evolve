@@ -99,15 +99,15 @@ export const barrageSpeedOptions = {
 export const barrageAreaOptions = {
     top: {
         name: '顶部',
-        getPosition: (index) => 70 + (index % 2) * 50,
+        getPosition: (index) => 70 + (index % 2) * 70, // 2行，间隔70px
     },
     full: {
         name: '全屏',
-        getPosition: (index) => 70 + (index % 4) * 40,
+        getPosition: (index) => 70 + (index % 3) * 80, // 3行分布
     },
     bottom: {
         name: '底部',
-        getPosition: (index) => window.innerHeight - 150 + (index % 2) * 50,
+        getPosition: (index) => window.innerHeight - 180 + (index % 2) * 70,
     },
 };
 

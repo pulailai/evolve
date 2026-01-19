@@ -69,16 +69,16 @@ const BarrageDisplay = ({ notes, currentEnvironment, isEnabled, settings = {} })
             id: note.id,
             text: note.barrageText.replace(/\n/g, ' ').trim(),
             color: getBarrageColor(note.tags),
-            row: index % 2,
+            row: index % 2, // 只使用2行，保持在顶部区域
             templateClass: barrageStyleTemplates[note.barrageTemplate || 'modern']?.className || 'barrage-modern',
             sizeClass: `barrage-size-${size}`,
         }));
 
         setBarrages(barrageData);
 
-        // 初始化位置
+        // 初始化位置 - 大幅增加水平间距避免同行弹幕重叠
         barragePositionsRef.current = barrageData.map((_, index) => ({
-            x: window.innerWidth + index * 400, // 错开起始位置
+            x: window.innerWidth + index * 1000, // 1000px间距确保同行弹幕不会追上
         }));
     }, [notes, currentEnvironment]);
 
@@ -102,12 +102,12 @@ const BarrageDisplay = ({ notes, currentEnvironment, isEnabled, settings = {} })
         const speed = barrageSpeedOptions[settings.speed || 'medium']?.speed || 0.8;
 
         const animate = () => {
-            barragePositionsRef.current = barragePositionsRef.current.map((pos) => {
+            barragePositionsRef.current = barragePositionsRef.current.map((pos, index) => {
                 let newX = pos.x - speed; // 使用设置的速度
 
-                // 如果完全移出屏幕左侧，重置到右侧
+                // 如果完全移出屏幕左侧，重置到右侧，保持间距
                 if (newX < -500) {
-                    newX = window.innerWidth + 200;
+                    newX = window.innerWidth + 200 + index * 1000; // 保持1000px间距
                 }
 
                 return { x: newX };

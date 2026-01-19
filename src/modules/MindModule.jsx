@@ -230,7 +230,7 @@ const MindModule = ({ marketEnv }) => {
             category: activeCategory,
             tags: template.defaultTags || [],
             isBarrageEnabled: template.isBarrageEnabled || false,
-            barrageText: template.defaultTags.length > 0 ? stripHtml(template.content).slice(0, 50) : '',
+            barrageText: template.defaultTags.length > 0 ? stripHtml(template.content).slice(0, 100) : '',
             createdAt: new Date().toISOString(),
             updatedAt: new Date().toISOString(),
             isPinned: false,
@@ -465,9 +465,9 @@ const MindModule = ({ marketEnv }) => {
                                                     barrageText: e.target.value
                                                 })}
                                                 placeholder="输入弹幕显示的文字..."
-                                                maxLength={50}
+                                                maxLength={100}
                                             />
-                                            <span className="char-count">{(selectedNote.barrageText || '').length}/50</span>
+                                            <span className="char-count">{(selectedNote.barrageText || '').length}/100</span>
                                         </div>
 
                                         <div className="setting-row">

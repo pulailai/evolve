@@ -4,6 +4,7 @@
     flex-direction: column;
     flex: 1;
     overflow: hidden;
+    position: relative;
 }
 
 /* Toolbar Styles */
@@ -76,6 +77,29 @@
 }
 
 .editor-toolbar .font-selector:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
+}
+
+.editor-toolbar .font-size-selector {
+    min-width: 100px;
+    height: 32px;
+    padding: 0 8px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    color: #374151;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    outline: none;
+}
+
+.editor-toolbar .font-size-selector:hover {
+    border-color: #6366f1;
+}
+
+.editor-toolbar .font-size-selector:focus {
     border-color: #6366f1;
     box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
 }
@@ -254,4 +278,118 @@
     background-color: #fef08a;
     padding: 2px 4px;
     border-radius: 2px;
+}
+
+/* Image Button */
+.editor-toolbar button.image-btn {
+    font-size: 16px;
+}
+
+/* Images in Editor */
+.ProseMirror img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 12px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: block;
+}
+
+.ProseMirror img:hover {
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+}
+
+.ProseMirror img.ProseMirror-selectednode {
+    outline: 2px solid #6366f1;
+    outline-offset: 2px;
+}
+
+/* Image alignment support */
+.ProseMirror p[style*="text-align: left"] img,
+.ProseMirror div[style*="text-align: left"] img {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.ProseMirror p[style*="text-align: center"] img,
+.ProseMirror div[style*="text-align: center"] img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ProseMirror p[style*="text-align: right"] img,
+.ProseMirror div[style*="text-align: right"] img {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* Resize Handles */
+.ProseMirror .resize-trigger {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #6366f1;
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: nwse-resize;
+    z-index: 10;
+}
+
+.ProseMirror .resize-trigger:hover {
+    background: #4f46e5;
+    transform: scale(1.2);
+}
+
+/* Image wrapper for resize */
+.ProseMirror span[data-type="resizableImage"] {
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+}
+
+.ProseMirror span[data-type="resizableImage"]:hover .resize-trigger {
+    opacity: 1;
+}
+
+.ProseMirror span[data-type="resizableImage"] .resize-trigger {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+/* Upload Indicator */
+.upload-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #6366f1;
+    border-radius: 12px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    font-size: 14px;
+    color: #1f2937;
+    font-weight: 500;
+}
+
+.upload-spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #e5e7eb;
+    border-top-color: #6366f1;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }

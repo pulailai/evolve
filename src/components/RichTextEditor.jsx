@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import { Color } from '@tiptap/extension-color';
@@ -6,9 +6,15 @@ import { TextStyle } from '@tiptap/extension-text-style';
 import { Underline } from '@tiptap/extension-underline';
 import { Highlight } from '@tiptap/extension-highlight';
 import { FontFamily } from '@tiptap/extension-font-family';
+import TextAlign from '@tiptap/extension-text-align';
+import ResizableImage from 'tiptap-extension-resize-image';
+import FontSize from './FontSizeExtension';
 import './RichTextEditor.css';
 
 const RichTextEditor = ({ content, onChange, onReady }) => {
+    const [isUploading, setIsUploading] = useState(false);
+    const isUpdatingRef = useRef(false);
+
     const editor = useEditor({
         extensions: [
             StarterKit.configure({
@@ -23,10 +29,21 @@ const RichTextEditor = ({ content, onChange, onReady }) => {
             FontFamily.configure({
                 types: ['textStyle'],
             }),
+            ResizableImage.configure({
+                inline: true,
+                allowBase64: true,
+            }),
+            TextAlign.configure({
+                types: ['heading', 'paragraph', 'image'],
+                alignments: ['left', 'center', 'right'],
+            }),
+            FontSize,
         ],
         content: content || '',
         onUpdate: ({ editor }) => {
-            onChange(editor.getHTML());
+            if (!isUpdatingRef.current) {
+                onChange(editor.getHTML());
+            }
         },
         onCreate: ({ editor }) => {
             if (onReady) onReady(editor);
@@ -35,8 +52,115 @@ const RichTextEditor = ({ content, onChange, onReady }) => {
             attributes: {
                 class: 'prose prose-sm focus:outline-none',
             },
+            handlePaste: (view, event) => {
+                const items = event.clipboardData?.items;
+                if (!items) return false;
+
+                // 遍历剪贴板项目，查找图片
+                for (let i = 0; i < items.length; i++) {
+                    const item = items[i];
+
+                    // 检查是否为图片
+                    if (item.type.indexOf('image') !== -1) {
+                        event.preventDefault();
+
+                        const file = item.getAsFile();
+                        if (file) {
+                            // 检查文件大小（限制 5MB）
+                            if (file.size > 5 * 1024 * 1024) {
+                                alert('图片大小不能超过 5MB，请选择更小的图片或压缩后上传');
+                                return true;
+                            }
+
+                            // 显示加载提示
+                            setIsUploading(true);
+                            const fileSize = (file.size / 1024 / 1024).toFixed(2);
+                            console.log(`正在粘贴图片 (${fileSize}MB)...`);
+
+                            // 转换为 Base64 并插入
+                            const reader = new FileReader();
+                            reader.onload = () => {
+                                // 使用 editor.chain() 插入图片
+                                if (editor) {
+                                    editor.chain()
+                                        .focus()
+                                        .setImage({ src: reader.result })
+                                        .enter() // 在图片后插入新段落
+                                        .run();
+                                }
+                                setIsUploading(false);
+                                console.log('图片粘贴成功！');
+                            };
+                            reader.onerror = () => {
+                                setIsUploading(false);
+                                alert('图片粘贴失败，请重试');
+                            };
+                            reader.readAsDataURL(file);
+                        }
+                        return true;
+                    }
+                }
+                return false;
+            },
         },
     });
+
+    // 当 content prop 变化时更新编辑器内容
+    useEffect(() => {
+        if (editor && content !== editor.getHTML()) {
+            isUpdatingRef.current = true;
+            editor.commands.setContent(content || '');
+            // 使用 setTimeout 确保 setContent 完成后再重置标志
+            setTimeout(() => {
+                isUpdatingRef.current = false;
+            }, 0);
+        }
+    }, [content, editor]);
+
+    // 图片上传处理
+    const addImage = () => {
+        if (!editor) {
+            alert('编辑器未就绪，请稍后再试');
+            return;
+        }
+
+        const input = document.createElement('input');
+        input.type = 'file';
+        input.accept = 'image/*';
+        input.onchange = (e) => {
+            const file = e.target.files?.[0];
+            if (file) {
+                // 检查文件大小（限制 5MB）
+                if (file.size > 5 * 1024 * 1024) {
+                    alert('图片大小不能超过 5MB，请选择更小的图片或压缩后上传');
+                    return;
+                }
+
+                // 显示加载提示
+                setIsUploading(true);
+                const fileSize = (file.size / 1024 / 1024).toFixed(2);
+                console.log(`正在上传图片 (${fileSize}MB)...`);
+
+                // 转换为 Base64
+                const reader = new FileReader();
+                reader.onload = () => {
+                    editor.chain()
+                        .focus()
+                        .setImage({ src: reader.result })
+                        .enter() // 在图片后插入新段落
+                        .run();
+                    setIsUploading(false);
+                    console.log('图片上传成功！');
+                };
+                reader.onerror = () => {
+                    setIsUploading(false);
+                    alert('图片上传失败，请重试');
+                };
+                reader.readAsDataURL(file);
+            }
+        };
+        input.click();
+    };
 
     // 工具栏组件
     const Toolbar = () => {
@@ -93,6 +217,29 @@ const RichTextEditor = ({ content, onChange, onReady }) => {
                     <option value="'Impact', fantasy" style={{ fontFamily: "'Impact', fantasy" }}>冲击体 Impact</option>
                 </select>
 
+                {/* 字号选择器 */}
+                <select
+                    onChange={(e) => {
+                        if (e.target.value) {
+                            editor.chain().focus().setFontSize(e.target.value).run();
+                        } else {
+                            editor.chain().focus().unsetFontSize().run();
+                        }
+                    }}
+                    value={editor.getAttributes('textStyle').fontSize || ''}
+                    className="font-size-selector"
+                    title="字号"
+                >
+                    <option value="">默认</option>
+                    <option value="12px">12px (小)</option>
+                    <option value="14px">14px (正常)</option>
+                    <option value="16px">16px (大)</option>
+                    <option value="18px">18px (较大)</option>
+                    <option value="20px">20px (特大)</option>
+                    <option value="24px">24px (巨大)</option>
+                    <option value="32px">32px (超大)</option>
+                </select>
+
                 <div className="toolbar-divider"></div>
 
                 {/* 标题 */}
@@ -116,6 +263,31 @@ const RichTextEditor = ({ content, onChange, onReady }) => {
                     title="三级标题"
                 >
                     H3
+                </button>
+
+                <div className="toolbar-divider"></div>
+
+                {/* 对齐方式 */}
+                <button
+                    onClick={() => editor.chain().focus().setTextAlign('left').run()}
+                    className={editor.isActive({ textAlign: 'left' }) ? 'is-active' : ''}
+                    title="左对齐"
+                >
+                    ≡
+                </button>
+                <button
+                    onClick={() => editor.chain().focus().setTextAlign('center').run()}
+                    className={editor.isActive({ textAlign: 'center' }) ? 'is-active' : ''}
+                    title="居中对齐"
+                >
+                    ≣
+                </button>
+                <button
+                    onClick={() => editor.chain().focus().setTextAlign('right').run()}
+                    className={editor.isActive({ textAlign: 'right' }) ? 'is-active' : ''}
+                    title="右对齐"
+                >
+                    ≡
                 </button>
 
                 <div className="toolbar-divider"></div>
@@ -195,6 +367,17 @@ const RichTextEditor = ({ content, onChange, onReady }) => {
 
                 <div className="toolbar-divider"></div>
 
+                {/* 图片 */}
+                <button
+                    onClick={addImage}
+                    title="插入图片"
+                    className="image-btn"
+                >
+                    🖼️
+                </button>
+
+                <div className="toolbar-divider"></div>
+
                 {/* 撤销/重做 */}
                 <button
                     onClick={() => editor.chain().focus().undo().run()}
@@ -217,6 +400,12 @@ const RichTextEditor = ({ content, onChange, onReady }) => {
     return (
         <div className="rich-text-editor">
             <Toolbar />
+            {isUploading && (
+                <div className="upload-indicator">
+                    <div className="upload-spinner"></div>
+                    <span>正在上传图片，请稍候...</span>
+                </div>
+            )}
             <EditorContent editor={editor} className="editor-content-wrapper" />
         </div>
     );

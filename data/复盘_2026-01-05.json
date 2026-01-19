@@ -65,7 +65,7 @@
         ]
       },
       "width": 217,
-      "height": 123,
+      "height": 125,
       "selected": false,
       "positionAbsolute": {
         "x": -368.8907283722625,
@@ -151,7 +151,7 @@
         ]
       },
       "width": 241,
-      "height": 123,
+      "height": 125,
       "selected": false,
       "positionAbsolute": {
         "x": 30.645402114267,
@@ -163,8 +163,8 @@
       "id": "1768751131912",
       "type": "sectorNode",
       "position": {
-        "x": -560.1335669795469,
-        "y": 537.6775900586925
+        "x": -719.0397052445858,
+        "y": 535.7061316241994
       },
       "data": {
         "label": "政策+发展推动电力",
@@ -198,12 +198,12 @@
         "volumeDataStr": "",
         "volumeData": []
       },
-      "width": 214,
-      "height": 103,
+      "width": 180,
+      "height": 105,
       "selected": false,
       "positionAbsolute": {
-        "x": -560.1335669795469,
-        "y": 537.6775900586925
+        "x": -719.0397052445858,
+        "y": 535.7061316241994
       },
       "dragging": false
     },
@@ -211,8 +211,8 @@
       "id": "1768751275127",
       "type": "sectorNode",
       "position": {
-        "x": -165.81834462743362,
-        "y": 540.0798350728022
+        "x": -349.8183468616089,
+        "y": 545.0698636472208
       },
       "data": {
         "label": "半导设备-扩产需求",
@@ -246,12 +246,59 @@
         "targetsStr": "长川，北方，通富",
         "volumeDataStr": ""
       },
-      "width": 214,
-      "height": 103,
+      "width": 180,
+      "height": 105,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -349.8183468616089,
+        "y": 545.0698636472208
+      },
+      "dragging": false
+    },
+    {
+      "id": "1768782180616",
+      "type": "sectorNode",
+      "position": {
+        "x": -22.04465451103175,
+        "y": 539.6454146853627
+      },
+      "data": {
+        "label": "机器人+春节+量产",
+        "startDate": "2026-01-16",
+        "fundType": "游资",
+        "color": "#f59e0b",
+        "bgColor": "#fef3c7",
+        "targets": [
+          "三花",
+          "五洲"
+        ],
+        "strategy": "",
+        "trades": [],
+        "lifecycle": {
+          "current": "c_1768782233611",
+          "stages": [
+            {
+              "id": "c_1768782233611",
+              "typeId": "startup",
+              "label": "启动",
+              "color": "#f59e0b",
+              "bg": "#fef3c7",
+              "time": "2026-01-16 08:23",
+              "remark": "商业航天高位后一直资金想去切换的地方",
+              "prediction": ""
+            }
+          ],
+          "logs": {}
+        },
+        "targetsStr": "三花, 五洲",
+        "volumeDataStr": ""
+      },
+      "width": 180,
+      "height": 105,
       "selected": true,
       "positionAbsolute": {
-        "x": -165.81834462743362,
-        "y": 540.0798350728022
+        "x": -22.04465451103175,
+        "y": 539.6454146853627
       },
       "dragging": false
     }
@@ -292,7 +339,8 @@
       "markerEnd": {
         "type": "arrowclosed",
         "color": "#94a3b8"
-      }
+      },
+      "selected": false
     },
     {
       "source": "1767620839274",
@@ -300,6 +348,24 @@
       "target": "1768751275127",
       "targetHandle": "top",
       "id": "e-1768751385806",
+      "type": "custom",
+      "label": "资金流向",
+      "animated": true,
+      "style": {
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#94a3b8"
+      }
+    },
+    {
+      "source": "1767620839274",
+      "sourceHandle": "bottom",
+      "target": "1768782180616",
+      "targetHandle": "top",
+      "id": "e-1768782267457",
       "type": "custom",
       "label": "资金流向",
       "animated": true,
@@ -1270,7 +1336,7 @@
     "startTime": "2026-01-18T16:05:33.153Z"
   },
   "meta": {
-    "lastSaved": "2026-01-18T16:05:33.257Z",
+    "lastSaved": "2026-01-19T00:24:51.786Z",
     "type": "file"
   }
 }
